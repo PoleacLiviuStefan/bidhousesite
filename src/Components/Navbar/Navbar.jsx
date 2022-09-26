@@ -20,9 +20,9 @@ const Navbar = () => {
           offset={50}
           delay={200}
         >
-          <div className="relative w-[181px] h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
+          <div className="relative ml-[5rem] w-[181px] h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
         </Link>
-        <div className="relative flex justify-center align-end  gap-[20px] font-[400] text-[16px] text-white top-[30px] w-[70%] h-full">
+        <div className="relative mr-[12rem] flex justify-center align-end  gap-[20px] font-[400] text-[16px] text-white top-[30px] w-[70%] h-full">
           <button className="relative  rounded-[20px] bg-slate-500   w-[84px] h-full left-0 top-0">
             Home
           </button>
