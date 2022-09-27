@@ -2,7 +2,9 @@
 import './App.css';
 import Hero from './Components/Hero/Hero';
 import Navbar from './Components/Navbar/Navbar';
-import TeachingAboutNFT from './Components/TeachingaboutNFT/TeachingAboutNFT';
+import PrincipalInfo from './Components/TeachingaboutNFT/PrincipalInfo';
+import TheBenefits from './Components/TheBenefits/TheBenefits';
+
 import WeAreBidHouse from './Components/WeAreBidHouse/WeAreBidHouse';
 
 
@@ -11,9 +13,9 @@ function App() {
     <div >
       <Navbar />
       <Hero />
-      <WeAreBidHouse />
-      <TeachingAboutNFT />
-      
+      <TheBenefits />
+      <PrincipalInfo />
+
     </div>
   );
 }

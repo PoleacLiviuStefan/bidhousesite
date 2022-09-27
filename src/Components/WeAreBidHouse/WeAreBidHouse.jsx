@@ -4,9 +4,6 @@ import Slide from "react-reveal/Slide";
 const WeAreBidHouse = () => {
   return (
     <div className="relative w-full  h-[900px] bg-black">
-      <Fade delay={400} left>
-        <div className="absolute left-0  z-40 bg-[url('/public/weareleft.png')] bg-cover h-[633px] w-[378px]" />
-      </Fade>
       <div className="absolute top-[200px] z-50 right-[2rem]  w-[800px] h-[680px] opacity-80 bg-[url('/public/glowarea.png')] bg-cover" />
       <div className="absolute top-[500px] z-50 left-[-9rem] opacity-70  w-[500px] h-[400px]  bg-[url('/public/glowarea.png')] bg-cover" />
       <Slide duration={2400} delay={400} right>
@@ -14,13 +11,16 @@ const WeAreBidHouse = () => {
       </Slide>
       <div className="absolute right-0 top-[70px] bg-[url('/public/rightphotowearebg.png')] bg-cover h-[570px] w-[530px]" />
 
-      <div className=" absolute left-0 top-[110px] bg-[url('/public/wearetextbg.png')] bg-cover  w-[60%] h-[75%]">
-        <div className="absolute right-[1rem] top-0">
+      <div className=" absolute flex justify-between left-0 top-[110px] bg-[url('/public/wearetextbg.png')] bg-cover  w-[65%] h-[75%]">
+        <Fade delay={400} left>
+          <div className="relative left-0  z-40 bg-[url('/public/weareleft.png')] bg-cover h-[633px] w-[30%]" />
+        </Fade>
+        <div className="relative right-[1rem] top-0">
           <Fade delay={400} bottom>
             <div className="relative text-[96px] w-[463px] h-[184px] right-[4rem]  bg-[url('/public/wearetext.png')] bg-cover font-[600] text-white " />
           </Fade>
           <Fade delay={800} bottom>
-            <p className="absolute right-0 top-[215px] text-opacity-70   text-white w-[522px] font-[200] text-[20px] leading-[28px] h-[55px]">
+            <p className="absolute ml-10 right-0 top-[215px] text-opacity-70   text-white w-[522px] font-[200] text-[20px] leading-[28px] h-[55px]">
               Our project will buy real apartaments around the world in order to
               benefit from them as owner of our NFTs
             </p>
