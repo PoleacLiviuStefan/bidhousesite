@@ -28,7 +28,7 @@ const PrincipalInfo = () => {
           ownership. We will walk you through the meaning behind a picture, what
           makes an NFT valuable and its use cases.
         </div>
-        <div className="relative flex xl:flex-row flex-col  xl:left-0 left-[24rem] xl:left-[20rem] flex-col top-[10rem] w-[1137px] justify-between">
+        <div className="relative flex xl:flex-row flex-col  xl:left-0 left-[24rem] xl:left-[0rem] flex-col top-[10rem] w-[1137px] justify-between">
           <div className="relative xl:top-[0rem]">
             <CardInfo
               description={
@@ -77,7 +77,7 @@ const PrincipalInfo = () => {
             />
           </div>
         </div>
-        <div className="relative flex xl:flex-row flex-col xl:left-0 left-[22rem] xl:left-[20rem] xl:top-[10rem] w-[1137px] justify-between">
+        <div className="relative flex xl:flex-row flex-col xl:left-0 left-[22rem] xl:left-[0rem] xl:top-[12rem] w-[1137px] justify-between">
           <div className="relative top-[30rem] xl:top-[0rem]">
             <CardInfo
               description={
@@ -119,22 +119,22 @@ const PrincipalInfo = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-[170rem] xl:top-[80rem] w-full">
+      <div className="absolute top-[170rem] xl:top-[90rem] w-full">
         <WhatWeWantToDo />
       </div>
-      <div className="absolute top-[240rem] xl:top-[150rem] w-full">
+      <div className="absolute top-[240rem] xl:top-[160rem] w-full">
         <WhoAreWe />
       </div>
-      <div className="absolute top-[260rem] xl:top-[220rem] w-full">
+      <div className="absolute top-[260rem] xl:top-[230rem] w-full">
         <WhenTheMintStart />
       </div>
-      <div className="absolute top-[285rem] w-full">
+      <div className="absolute top-[295rem] w-full">
         <Roadmap />
       </div>
-      <div className="absolute top-[340rem] w-full">
+      <div className="absolute top-[350rem] w-full">
         <ApartamentsGoal />
       </div>
-      <div className="absolute top-[375rem] w-full">
+      <div className="absolute top-[385rem] w-full">
         <ApartamentsBucharest />
       </div>
     </div>
