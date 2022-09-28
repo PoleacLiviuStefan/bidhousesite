@@ -9,3 +9,10 @@
   line-height: 56px;
   width: 70rem;
 }
+@media only screen and (max-width: 1280px) {
+  .ourproject {
+    font-size: 24px;
+    width: 22rem;
+    text-align: left;
+  }
+}

@@ -17,3 +17,8 @@
   height: 358px;
   width: 70rem;
 }
+@media only screen and (max-width: 1280px) {
+  .title {
+    font-size: 30px;
+  }
+}

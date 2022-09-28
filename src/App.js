@@ -2,7 +2,8 @@
 import './App.css';
 import Hero from './Components/Hero/Hero';
 import Navbar from './Components/Navbar/Navbar';
-import PrincipalInfo from './Components/TeachingaboutNFT/PrincipalInfo';
+import NavbarMobile from './Components/Navbar/NavbarMobile';
+import PrincipalInfo from './Components/PrincipalInfo/PrincipalInfo';
 import TheBenefits from './Components/TheBenefits/TheBenefits';
 
 import WeAreBidHouse from './Components/WeAreBidHouse/WeAreBidHouse';
@@ -11,7 +12,12 @@ import WeAreBidHouse from './Components/WeAreBidHouse/WeAreBidHouse';
 function App() {
   return (
     <div >
-      <Navbar />
+      <div className='hidden xl:block'>
+        <Navbar />
+      </div>
+      <div className='block xl:hidden'>
+        <NavbarMobile />
+      </div>
       <Hero />
       <TheBenefits />
       <PrincipalInfo />
