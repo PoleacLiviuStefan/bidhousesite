@@ -2,6 +2,8 @@ import React from "react";
 import ApartamentsBucharest from "../ApartamentsBucharest/ApartamentsBucharest";
 
 import ApartamentsGoal from "../ApartamentsGoal/ApartamentsGoal";
+import HelpUsToGrow from "../HelpUsToGrow/HelpUsToGrow";
+import ReleaseSoon from "../ReleaseSoon/ReleaseSoon";
 import Roadmap from "../Roadmap/Roadmap";
 import WhatWeWantToDo from "../WhatWeWantToDo/WhatWeWantToDo";
 import WhenTheMintStart from "../WhenTheMintStart/WhenTheMintStart";
@@ -11,7 +13,7 @@ import CardInfo from "./CardInfo";
 import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
-    <div className="relative bg-black w-full h-[500rem]">
+    <div className="relative bg-black w-full h-[800rem]">
       <div className="absolute w-full h-[70rem]">
         <div className="absolute right-0  bg-[url('/public/purpleglow.png')] bottom-[-20rem] bg-cover w-[1137px] h-[1234px] " />
         <div className="absolute bg-[url('/public/yellowglow.png')] bg-cover  w-[1224px] h-[1132px]" />
@@ -136,6 +138,12 @@ const PrincipalInfo = () => {
       </div>
       <div className="absolute top-[385rem] w-full">
         <ApartamentsBucharest />
+      </div>
+      <div className="absolute top-[490rem] w-full">
+        <ReleaseSoon />
+      </div>
+      <div className="absolute top-[575rem] w-full">
+        <HelpUsToGrow />
       </div>
     </div>
   );
