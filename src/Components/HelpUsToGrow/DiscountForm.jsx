@@ -138,7 +138,7 @@ const DiscountForm = ({ showDiscountForm }) => {
           required
         ></input>
         <input
-          className="relative outline-none px-8 text-[18px] left-[-1.5rem]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+          className="relative outline-none top-6 px-8 text-[18px] left-[-1.5rem]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
           placeholder="Enter your Wallet Adress *"
           required
         ></input>
