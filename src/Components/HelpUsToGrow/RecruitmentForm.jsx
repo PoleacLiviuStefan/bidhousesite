@@ -9,17 +9,17 @@ const RecruitmentForm = ({showRecruitmentForm}) => {
         : "animate-[disappear_.5s_ease-in-out_forwards]"
     } w-full `}
   >
-    <label className="relative left-[-10.5rem] text-white text-[24px] font-[400]">
+    <label className="relative left-[-12rem] text-white text-[24px] font-[400]">
       Fill the form
     </label>
 
     <input
-      className="relative outline-none px-8 top-8 text-[18px]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+      className="relative outline-none px-8 top-8 left-[-1.3rem] text-[18px]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
       placeholder="Enter your Twitter account *"
       required
     ></input>
     <input
-      className="relative outline-none px-8 text-[18px] top-16 rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+      className="relative outline-none px-8 text-[18px] left-[-1.3rem] top-16 rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
       placeholder="Enter your Discord account *"
       required
     ></input>
@@ -63,7 +63,7 @@ a great community have more than one.
       </p>
     </div>
 
-    <div className="relative top-[31rem] left-[-9rem] flex ">
+    <div className="relative top-[31rem] left-[-9.3rem] flex ">
       <div className="w-[40px] flex justify-center items-center rounded-[10px] h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
         <div className="w-[30px] h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]"></div>
       </div>
@@ -96,18 +96,18 @@ PLEASE FILL OUT THIS FORM BELOW
     </label>
     <textarea
       placeholder="Say a few words, why did you choose us?"
-      className="relative opacity-70  top-[52rem] left-[-1rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
+      className="relative opacity-70 px-10 py-4  top-[52rem] left-[-1rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
     ></textarea>
-     <label className="relative top-[55rem] left-[-8.3rem] text-white text-[24px] font-[400]">
+     <label className="relative top-[55rem] left-[-8.1rem] text-white text-[24px] font-[400]">
       Something about you
     </label>
     <textarea
       placeholder="If you have something to say, we are listening...!"
-      className="relative opacity-70  top-[57rem] left-[-1rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
+      className="relative opacity-70 px-10 py-4   top-[57rem] left-[-1rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
     ></textarea>
     <button
       type="submit"
-      className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[64rem] left-[-3rem] w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
+      className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[64rem] left-[-1.3rem] w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
     >
       Send
     </button>

@@ -5,7 +5,8 @@
   width: 142px;
   height: 57px;
   left: 172px;
-  top: 395px;
+  z-index: 999;
+  top: 435px;
   font-weight: 600;
   font-size: 16px;
   background: linear-gradient(
@@ -43,7 +44,8 @@
   width: 142px;
   height: 57px;
   left: 0;
-  top: 395px;
+  z-index: 999;
+  top: 435px;
   font-weight: 600;
   font-size: 16px;
   background: linear-gradient(
@@ -70,9 +72,11 @@
   pointer-events: none;
 }
 .playbtn {
+
   position: absolute;
-  left: 85%;
+  left: 84.3%;
   display: flex;
+  top:35px;
   justify-content: center;
   align-items: center;
 }
