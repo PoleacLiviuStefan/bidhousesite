@@ -2,6 +2,7 @@ import React from "react";
 import ApartamentsBucharest from "../ApartamentsBucharest/ApartamentsBucharest";
 
 import ApartamentsGoal from "../ApartamentsGoal/ApartamentsGoal";
+import BenefitsForHolders from "../BenefitsForHolders/BenefitsForHolders";
 import HelpUsToGrow from "../HelpUsToGrow/HelpUsToGrow";
 import ReleaseSoon from "../ReleaseSoon/ReleaseSoon";
 import Roadmap from "../Roadmap/Roadmap";
@@ -10,7 +11,7 @@ import WhenTheMintStart from "../WhenTheMintStart/WhenTheMintStart";
 import WhoAreWe from "../WhoAreWe/WhoAreWe";
 import WhyTheProjectWillBeSuccessful from "../WhyTheProjectWillBeSuccessful/WhyTheProjectWillBeSuccessful";
 import CardInfo from "./CardInfo";
-import styles from "./PrincipalInfo.module.css"
+import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
     <div className="relative bg-black w-full h-[1000rem]">
@@ -30,7 +31,7 @@ const PrincipalInfo = () => {
           ownership. We will walk you through the meaning behind a picture, what
           makes an NFT valuable and its use cases.
         </div>
-        <div className="relative flex xl:flex-row flex-col  xl:left-0 left-[23.5rem] xl:left-[0rem] flex-col top-[10rem] w-[1137px] justify-between">
+        <div className="relative flex xl:flex-row    left-[23.5rem] xl:left-[0rem] flex-col top-[10rem] w-[1137px] justify-between">
           <div className="relative xl:top-[0rem]">
             <CardInfo
               description={
@@ -79,7 +80,7 @@ const PrincipalInfo = () => {
             />
           </div>
         </div>
-        <div className="relative flex xl:flex-row flex-col xl:left-0 left-[23.5rem] xl:left-[0rem] xl:top-[12rem] w-[1137px] justify-between">
+        <div className="relative flex xl:flex-row flex-col  left-[23.5rem] xl:left-[0rem] xl:top-[12rem] w-[1137px] justify-between">
           <div className="relative top-[30rem] xl:top-[0rem]">
             <CardInfo
               description={
@@ -144,6 +145,9 @@ const PrincipalInfo = () => {
       </div>
       <div className="absolute top-[620rem] xl:top-[525rem] w-full">
         <HelpUsToGrow />
+      </div>
+      <div className="absolute top-[680rem] xl:top-[605rem] w-full">
+        <BenefitsForHolders />
       </div>
     </div>
   );
