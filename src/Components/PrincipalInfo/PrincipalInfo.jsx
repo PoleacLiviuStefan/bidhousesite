@@ -4,6 +4,7 @@ import ApartamentsBucharest from "../ApartamentsBucharest/ApartamentsBucharest";
 import ApartamentsGoal from "../ApartamentsGoal/ApartamentsGoal";
 import BenefitsForHolders from "../BenefitsForHolders/BenefitsForHolders";
 import HelpUsToGrow from "../HelpUsToGrow/HelpUsToGrow";
+import Rarity from "../Rarity/Rarity";
 import ReleaseSoon from "../ReleaseSoon/ReleaseSoon";
 import Roadmap from "../Roadmap/Roadmap";
 import WhatWeWantToDo from "../WhatWeWantToDo/WhatWeWantToDo";
@@ -148,6 +149,9 @@ const PrincipalInfo = () => {
       </div>
       <div className="absolute top-[680rem] xl:top-[605rem] w-full">
         <BenefitsForHolders />
+      </div>
+      <div className="absolute top-[680rem] xl:top-[700rem] w-full">
+        <Rarity />
       </div>
     </div>
   );
