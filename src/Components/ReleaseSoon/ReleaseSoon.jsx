@@ -13,16 +13,19 @@ const ReleaseSoon = () => {
               TOKENOMICS $BHC
             </h3>
           </div>
+          
           <div className="relative flex justify-center items-center top-6 bg-[url('/public/mintpolygon.png')] bg-cover   w-[270px] h-[306px]  ">
             <h3 className="  font-[700]  text-[26px] text-white">
               MINT
             </h3>
           </div>
+          <a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>
           <div className="relative flex justify-center items-center top-7 bg-[url('/public/whitepaper1.png')] bg-cover w-[290px] h-[290px] rounded-[150px] ">
             <h3 className="relative font-[700] text-[26px] text-white">
               WHITEPAPER
             </h3>
           </div>
+          </a>
         </div>
       </div>
     </div>

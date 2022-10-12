@@ -3,10 +3,17 @@ import ApartamentsBucharest from "../ApartamentsBucharest/ApartamentsBucharest";
 
 import ApartamentsGoal from "../ApartamentsGoal/ApartamentsGoal";
 import BenefitsForHolders from "../BenefitsForHolders/BenefitsForHolders";
+import Forms from "../Forms/FormsStart";
+
+
 import HelpUsToGrow from "../HelpUsToGrow/HelpUsToGrow";
 import Rarity from "../Rarity/Rarity";
 import ReleaseSoon from "../ReleaseSoon/ReleaseSoon";
 import Roadmap from "../Roadmap/Roadmap";
+import Team from "../Team/Team";
+import WhatGaryVeeThink from "../WhatGaryVeeThink/WhatGaryVeeThink";
+import WhatInvestorsThink from "../WhatInvestorsThink/WhatInvestorsThink";
+
 import WhatWeWantToDo from "../WhatWeWantToDo/WhatWeWantToDo";
 import WhenTheMintStart from "../WhenTheMintStart/WhenTheMintStart";
 import WhoAreWe from "../WhoAreWe/WhoAreWe";
@@ -138,20 +145,30 @@ const PrincipalInfo = () => {
       <div className="absolute top-[430rem] xl:top-[320rem] w-full">
         <ApartamentsGoal />
       </div>
-      <div className="absolute top-[450rem] xl:top-[355rem] w-full">
+      <div className="absolute top-[450rem] xl:top-[365rem] w-full">
         <ApartamentsBucharest />
       </div>
-      <div className="absolute top-[550rem] xl:top-[450rem] w-full">
+      <div className="absolute top-[550rem] xl:top-[470rem] w-full">
         <ReleaseSoon />
       </div>
       <div className="absolute top-[620rem] xl:top-[525rem] w-full">
-        <HelpUsToGrow />
+      <BenefitsForHolders />
       </div>
-      <div className="absolute top-[680rem] xl:top-[605rem] w-full">
-        <BenefitsForHolders />
+      <div className="absolute top-[680rem] xl:top-[630rem] w-full">
+       <Rarity />
       </div>
-      <div className="absolute top-[680rem] xl:top-[700rem] w-full">
-        <Rarity />
+      <div className="absolute top-[680rem] xl:top-[690rem] w-full">
+       
+        <Team />
+      </div>
+      <div className="absolute top-[680rem] xl:top-[775rem] w-full">
+         <Forms />
+      </div>
+      <div className="absolute top-[680rem] xl:top-[830rem] w-full">
+         <WhatInvestorsThink />
+      </div>
+      <div className="absolute top-[680rem] xl:top-[900rem] w-full">
+         <WhatGaryVeeThink />
       </div>
     </div>
   );

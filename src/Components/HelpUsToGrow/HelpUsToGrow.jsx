@@ -19,12 +19,7 @@ const HelpUsToGrow = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-[130rem] ">
       <div className="flex flex-col items-start w-[78rem]">
-        <h1 className="font-[600] text-[45px] 2xl:text-[80px] 3xl:text-[96px] leading-[112px] text-white   ">
-          HELP US TO{" "}
-          <span className="text-transparent bg-clip-text bg-[#8a3eff] ">
-            GROW{" "}
-          </span>
-        </h1>
+        
         <div className="relative top-[10rem] flex flex-col w-full  ">
           <div
             className={`w-full flex cursor-pointer  ${
