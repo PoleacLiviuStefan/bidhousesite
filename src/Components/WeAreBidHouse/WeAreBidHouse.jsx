@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 const WeAreBidHouse = () => {
   return (
-    <div className="relative w-full  h-[900px] bg-black">
+    <div name="WeAre" className="relative w-full  h-[900px] bg-black">
       <div className="absolute top-[200px] z-50 right-[2rem]  w-[800px] h-[680px] opacity-80 bg-[url('/public/glowarea.png')] bg-cover" />
       <div className="absolute top-[500px] z-50 left-[-9rem] opacity-70  w-[500px] h-[400px]  bg-[url('/public/glowarea.png')] bg-cover" />
       <Slide duration={2400} delay={400} right>
