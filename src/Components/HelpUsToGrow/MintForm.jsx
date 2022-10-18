@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 const MintForm = ({showFormMint}) => {
   return (
@@ -9,25 +9,25 @@ const MintForm = ({showFormMint}) => {
           : "animate-[disappear_.5s_ease-in-out_forwards]"
       } w-full `}
     >
-      <label className="relative left-[-2.5rem] text-white text-[24px] font-[400]">
+      <label className="relative left-[-4rem] text-white text-[24px] font-[400]">
         Your opinion is very important to us!
       </label>
 
       <input
-        className="relative outline-none px-8 top-8 text-[18px]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+        className="relative outline-none px-8 left-[-1.3rem] top-8 text-[18px]  rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
         placeholder="Enter your Twitter account *"
         required
       ></input>
       <input
-        className="relative outline-none px-8 text-[18px] top-16 rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        className="relative outline-none px-8 left-[-1.3rem] text-[18px] top-16 rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
         placeholder="Enter your Discord account *"
         required
       ></input>
 
-      <label className="relative top-[9rem] left-[-5.7rem] text-white text-[24px] font-[400]">
+      <label className="relative top-[9rem] left-[-6.7rem] text-white text-[24px] font-[400]">
         How do you prefer to mint?
       </label>
-      <div className="relative top-[13rem] left-[-11.5rem] flex ">
+      <div className="relative top-[13rem] left-[-11.7rem] flex ">
         <div className="w-[40px] flex justify-center items-center rounded-[10px] h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
           <div className="w-[30px] h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]"></div>
         </div>
@@ -124,16 +124,16 @@ const MintForm = ({showFormMint}) => {
           </div>
         </div>
       </div>
-      <label className="relative top-[58rem] left-[-5.7rem] text-white text-[24px] font-[400]">
+      <label className="relative top-[58rem] left-[-3.9rem] text-white text-[24px] font-[400]">
         Your opinion is very important to us!{" "}
       </label>
       <textarea
         placeholder="If you have something to say, we are listening...!"
-        className="relative opacity-70  top-[60rem] left-[-3rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
+        className="relative opacity-80  top-[60rem] px-10 py-4 left-[-1.3rem] rounded-[10px] font-[200] text-white text-[20px] w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
       ></textarea>
       <button
         type="submit"
-        className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[64rem] left-[-3rem] w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
+        className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[64rem] left-[-1.3rem] w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
       >
         Send
       </button>

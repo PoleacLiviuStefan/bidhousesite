@@ -5,9 +5,12 @@
   width: 142px;
   height: 57px;
   left: 172px;
-  top: 395px;
+  z-index: 40;
+  top: 435px;
   font-weight: 600;
   font-size: 16px;
+  -webkit-box-shadow: 0px 0px 46px -1px #401D6B; 
+  box-shadow: 0px 0px 46px -1px #401D6B;
   background: linear-gradient(
     281.69deg,
     rgba(153, 69, 255, 0.1452) 1.41%,
@@ -43,7 +46,8 @@
   width: 142px;
   height: 57px;
   left: 0;
-  top: 395px;
+  z-index: 40;
+  top: 435px;
   font-weight: 600;
   font-size: 16px;
   background: linear-gradient(
@@ -70,9 +74,11 @@
   pointer-events: none;
 }
 .playbtn {
+
   position: absolute;
-  left: 85%;
+  left: 84.3%;
   display: flex;
+  top:35px;
   justify-content: center;
   align-items: center;
 }
@@ -80,7 +86,7 @@
   box-sizing: border-box;
   color: white;
   position: absolute;
-  z-index: 50;
+  z-index: 40;
   top: 315px;
   display: flex;
   justify-content: center;
