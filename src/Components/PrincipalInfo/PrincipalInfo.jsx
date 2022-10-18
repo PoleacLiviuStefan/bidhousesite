@@ -4,8 +4,11 @@ import ApartamentsBucharest from "../ApartamentsBucharest/ApartamentsBucharest";
 import ApartamentsGoal from "../ApartamentsGoal/ApartamentsGoal";
 import BenefitsForHolders from "../BenefitsForHolders/BenefitsForHolders";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ContactUs from "../Contactus/ContactUs";
 import FAQ from "../FAQ/FAQ";
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 import Forms from "../Forms/FormsStart";
@@ -13,8 +16,11 @@ import Forms from "../Forms/FormsStart";
 
 import HelpUsToGrow from "../HelpUsToGrow/HelpUsToGrow";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import JoinOurCommunity from "../JoinOurCommunity/JoinOurCommunity";
 import Phase2 from "../Phase2/Phase2";
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 import Rarity from "../Rarity/Rarity";
@@ -33,7 +39,11 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="relative bg-black w-full h-[1600rem]">
+=======
+    <div className="relative bg-black w-full h-[1000rem]">
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
     <div className="relative bg-black w-full h-[1000rem]">
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
@@ -54,10 +64,13 @@ const PrincipalInfo = () => {
           makes an NFT valuable and its use cases.
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
      
         
      
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
         <div className="relative flex xl:flex-row    left-[23.5rem] xl:left-[0rem] flex-col top-[10rem] w-[1137px] justify-between">
           <div className="relative xl:top-[0rem]">
             <CardInfo
@@ -155,6 +168,7 @@ const PrincipalInfo = () => {
       </div>
       <div className="absolute top-[260rem] xl:top-[150rem] w-full">
 <<<<<<< HEAD
+<<<<<<< HEAD
         
       <WhoAreWe />
       </div>
@@ -218,6 +232,22 @@ const PrincipalInfo = () => {
       <div className="absolute top-[450rem] xl:top-[365rem] w-full">
         <ApartamentsBucharest />
       </div>
+=======
+        <WhoAreWe />
+      </div>
+      <div className="absolute top-[340rem] xl:top-[220rem] w-full">
+        <WhenTheMintStart />
+      </div>
+      <div className="absolute top-[380rem] xl:top-[275rem] w-full">
+        <Roadmap />
+      </div>
+      <div className="absolute top-[430rem] xl:top-[320rem] w-full">
+        <ApartamentsGoal />
+      </div>
+      <div className="absolute top-[450rem] xl:top-[365rem] w-full">
+        <ApartamentsBucharest />
+      </div>
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
       <div className="absolute top-[550rem] xl:top-[470rem] w-full">
         <ReleaseSoon />
       </div>
@@ -239,6 +269,9 @@ const PrincipalInfo = () => {
       </div>
       <div className="absolute top-[680rem] xl:top-[900rem] w-full">
          <WhatGaryVeeThink />
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
       </div>
     </div>

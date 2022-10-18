@@ -18,7 +18,10 @@
     "react-scroll-locky": "^1.5.0",
     "react-scrolllock": "^5.0.1",
     "tailwindcss-border-gradient-radius": "^3.0.1",
+<<<<<<< HEAD
     "video-react": "^0.15.0",
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.19"
   },

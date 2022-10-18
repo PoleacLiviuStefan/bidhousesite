@@ -1,12 +1,16 @@
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import DescriptionSlider from './DescriptionSlider';
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 import MemberCard from './MemberCard';
 
 const Team = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div name="Team" className="relative flex flex-col items-center w-full h-[130rem] ">
     <div className="flex flex-col h-[70rem] items-center w-[78rem]">
@@ -44,6 +48,8 @@ const Team = () => {
       <div className='absolute top-[270rem] '>
       <DescriptionSlider />
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
     <div className="relative flex flex-col items-center w-full h-[130rem] ">
     <div className="flex flex-col items-center w-[78rem]">
       <h1 className="font-[600] text-[45px] 2xl:text-[80px] 3xl:text-[96px] leading-[112px] text-white   ">
@@ -51,6 +57,9 @@ const Team = () => {
       </h1>
       <div  className='relative flex justify-center w-full h-[50rem] top-[10rem] w-full '>
       <MemberCard rolemember="Founder" namemember="CRISTIAN " />
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
       </div>
       </div>

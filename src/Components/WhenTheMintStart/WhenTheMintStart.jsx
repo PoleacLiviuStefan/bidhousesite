@@ -12,6 +12,9 @@ const WhenTheMintStart = () => {
       <div className="absolute z-40 left-[-35rem] top-[-30rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1450px]" />
       <div className="flex flex-col items-start  xl:left-0 w-[24rem] xl:w-[78rem]">
         <h1 className="font-[600] text-[30px] 2xl:text-[80px] 3xl:text-[96px] xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
           WHEN MINT <span className="text-transparent">START?</span>
         </h1>

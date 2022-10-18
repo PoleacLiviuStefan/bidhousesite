@@ -4,6 +4,7 @@ const WhatWeWantToDo = () => {
   return (
     <div className=" bg-black  rounded-[20px] h-[70rem] w-full">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="absolute  right-0   z-40 bg-[url('/public/logowe.png')] bg-cover w-[200px] h-[306px] xl:w-[700px] xl:h-[700px]" />
       <div className="absolute bg-[url('/public/bg.png')] top-[80px] w-[95%] h-[934px] right-0 bg-cover">
         <div className="absolute left-[-25rem] z-40 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
@@ -25,6 +26,8 @@ From the total collection of the project only 10,000 NFTs will be released for s
 The remaining 111 NFTs will be shared amongst the team behind the project. With the funds raised from the sale of the NFTs we plan to purchase new apartments, to start with in Bucharest, Romania and later as the project develops, to expand nationally and internationally.
 
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
       <div className="absolute  right-0   z-40 bg-[url('/public/weareright.png')] bg-cover w-[300px] h-[306px] xl:w-[721px] xl:h-[733px]" />
       <div className="absolute bg-[url('/public/bg.png')] top-[80px] w-[95%] h-[734px] right-0 bg-cover">
         <div className="absolute left-[-25rem] z-40 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />

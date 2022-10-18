@@ -12,8 +12,11 @@ const Navbar = () => {
   return (
     <div className="fixed z-50 flex justify-center gap-[20px] w-full h-[110px] left-0 top-0 bg-gradient-to-b from-black to-transparent ">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="relative   flex align-center justify-center    gap-[200px] w-full h-[40px]">
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
       <div className="relative   flex align-center justify-center    gap-[260px] w-full h-[40px]">
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
         <Link
@@ -25,7 +28,11 @@ const Navbar = () => {
           delay={200}
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="relative ml-[12rem] w-[181px] cursor-pointer h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
+=======
+          <div className="relative ml-[5rem] w-[181px] cursor-pointer h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
           <div className="relative ml-[5rem] w-[181px] cursor-pointer h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8

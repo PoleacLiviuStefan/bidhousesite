@@ -8,6 +8,7 @@ const ApartamentsBucharest = () => {
     setSlideImage(1);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSlide= (index,tile)=>{
     if(index>=0 && index<=2)
       {if(tile==3 ||tile==0 )  
@@ -33,6 +34,13 @@ const ApartamentsBucharest = () => {
         console.log(slideImage)
   }
   return (
+=======
+  const handleSlide= (index)=>{
+        setSlideImage(index);
+        console.log(slideImage)
+  }
+  return (
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
     <div className="relative overflow-hidden flex flex-col items-center w-full h-[70rem] bg-black">
        <div className={`absolute ${showImages==0 && "hidden"}   w-[78rem] h-full flex justify-center items-center `}>
               <div onClick={()=>handleSlide(slideImage-1)} className={`relative z-40 mr-6 ${slideImage==2 && "bg-[url('/public/2ap2.jpeg')]"} ${slideImage==0 ? "bg-transparent" : "bg-[url('/public/2ap1.jpeg')]"} bg-cover w-[400px] h-[300px] rounded-[20px]`}>
@@ -41,6 +49,9 @@ const ApartamentsBucharest = () => {
                 </div>
               <div onClick={()=>handleSlide(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.jpeg')]"} ${slideImage==1 && "bg-[url('/public/2ap2.jpeg')]"} ${slideImage==0 && "bg-[url('/public/2ap1.jpeg')]"}  bg-cover  w-[500px] h-[375px]  rounded-[20px]`}/>
               <div onClick={()=>handleSlide(slideImage+1)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.jpeg')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.jpeg')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
                 <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
@@ -50,8 +61,11 @@ const ApartamentsBucharest = () => {
       <div className="flex flex-col items-start w-[78rem]">
      
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h1 className="font-[600] text-[45px] 2xl:text-[76px]  leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
         <h1 className="font-[600] text-[45px] 2xl:text-[80px] 3xl:text-[96px] leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
           APARTMENTS{" "}

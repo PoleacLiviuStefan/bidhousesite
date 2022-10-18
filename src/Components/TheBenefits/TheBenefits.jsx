@@ -4,7 +4,11 @@ import styles from "./TheBenefits.module.css";
 const TheBenefits = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div name="TheBenefits" className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
+=======
+    <div className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
     <div className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8

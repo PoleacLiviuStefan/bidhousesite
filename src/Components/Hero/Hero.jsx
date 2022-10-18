@@ -38,7 +38,11 @@ const Hero = () => {
             </h3>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <button className={styles.accesbtn}><a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>Whitepaper</a></button>
+=======
+          <button className={styles.accesbtn}><a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>White Paper</a></button>
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
           <button className={styles.accesbtn}><a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>White Paper</a></button>
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
@@ -58,11 +62,15 @@ const Hero = () => {
 =======
             <button className={styles.playbg}>
               <BsFillPlayFill className="text-white z-40 rounded-[3px] text-5xl" />
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
             </button>
          
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <div className={`absolute flex justify-center items-center ${!popupVideo && "hidden"} top-0 left-0 z-40 bg-black bg-opacity-70 w-full h-full `}>
@@ -76,6 +84,8 @@ const Hero = () => {
 
             </div>
             
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 =======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
         <div className="absolute flex z-40   items-center flex-col  bottom-[-10rem]  xl:bottom-[-5rem]">

@@ -4,15 +4,21 @@ import CardBenefit from "./CardBenefit";
 const BenefitsForHolders = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div name="Benefits" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="flex flex-col items-start w-[78rem]">
         {" "}
         <h1 className="font-[600] text-[45px] 2xl:text-[76px]  leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
     <div className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="flex flex-col items-start w-[78rem]">
         {" "}
         <h1 className="font-[600] text-[45px] 2xl:text-[80px] 3xl:text-[96px] leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
           BENEFITS FOR<span className="text-transparent"> HOLDERS</span>
         </h1>

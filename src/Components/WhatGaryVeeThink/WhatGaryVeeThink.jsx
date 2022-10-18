@@ -1,5 +1,6 @@
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import video1 from './GaryVee.mp4'
 const WhatGaryVeeThink = () => {
   return (
@@ -13,6 +14,8 @@ const WhatGaryVeeThink = () => {
         <video src={video1} width="400" height="200" controls="controls" autoplay="true" />
         </div>
 =======
+=======
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
 
 const WhatGaryVeeThink = () => {
   return (
@@ -22,6 +25,9 @@ const WhatGaryVeeThink = () => {
           WHAT GARY VEE <span className="text-transparent"> THINK</span>
         </h1>
         <h3 className='text-white font-[400] text-[32px]'>ABOUT REAL ESTATE</h3>
+<<<<<<< HEAD
+>>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
+=======
 >>>>>>> f561e35afb1aa40fede2b32598c9017a0f6ae9a8
         </div>
       </div>
