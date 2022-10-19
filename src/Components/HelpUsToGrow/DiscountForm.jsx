@@ -23,7 +23,11 @@ const DiscountForm = ({ showDiscountForm }) => {
         placeholder="Enter your Discord account *"
         required
       ></input>
-
+   <input
+        className="relative outline-none px-8 left-[-1.3rem] text-[18px] top-[6rem] rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        placeholder="Enter your Email *"
+        required
+      ></input>
       <label className="relative top-[9rem] left-[-9.8rem] text-white text-[24px] font-[400]">
         Make your choice
       </label>

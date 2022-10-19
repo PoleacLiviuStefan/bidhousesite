@@ -89,19 +89,19 @@ const PrincipalInfo = () => {
       <div className="absolute top-[680rem] xl:top-[1250rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1325rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1335rem] w-full">
       <WhatInvestorsThink /> 
       </div>
-      <div className="absolute top-[680rem] xl:top-[1400rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1410rem] w-full">
       <WhatGaryVeeThink />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1490rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1500rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1600rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1610rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1670rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1680rem] w-full">
       <JoinOurCommunity />
         
       </div>

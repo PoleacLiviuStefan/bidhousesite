@@ -24,7 +24,11 @@ const RecruitmentForm = ({showRecruitmentForm}) => {
       required
     ></input>
 
-    
+<input
+        className="relative outline-none px-8 left-[-1.3rem] text-[18px] top-[6rem] rounded-[10px] w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        placeholder="Enter your Email *"
+        required
+      ></input>
     <div className="relative top-[13rem] left-[-11.7rem] flex ">
       <div className="w-[40px] flex justify-center items-center rounded-[10px] h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
         <div className="w-[30px] h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]"></div>
