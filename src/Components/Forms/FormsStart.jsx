@@ -23,7 +23,7 @@ const FormsStart = () => {
                <button onClick={()=>handleForm(2)} className={`absolute ${showForm<0 ?"z-40":"z-20"} cursor-pointer z-40 top-[28.5rem]  bg-gradient-to-r from-[#2F2175] to-[#7B48ED] font-[700] w-[350px] h-[88px] rounded-[20px]  text-white text-[32px]`}>START</button>
           </div>
       
-          <div className={`absolute left-0 ${showForm<0 && "animate-[disappear_1s_linear_forwards]" } z-30 w-full h-[200rem] bg-black bg-opacity-90`} />
+          <div className={`absolute left-0 ${showForm<0 ? "animate-[disappear_1s_linear_forwards] z-0":"z-30" }  w-full h-[200rem] bg-black bg-opacity-90`} />
         <div className={`absolute top-[-12rem] w-[80rem] h-full flex justify-center items-center ${showForm<0 ?"z-20" :"z-30"}`}>
         <div className={`absolute ${showForm<0 && "hidden" } text-white z-40 right-[20rem] cursor-pointer w-[30px] h-[30px] top-[7rem] text-[32px]`} onClick={()=>handleForm(-1)}><AiOutlineClose /></div>
           <MintForm showFormMint={showForm==0} />

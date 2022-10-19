@@ -98,10 +98,10 @@ const PrincipalInfo = () => {
       <div className="absolute top-[680rem] xl:top-[1500rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1610rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1600rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[680rem] xl:top-[1680rem] w-full">
+      <div className="absolute top-[680rem] xl:top-[1670rem] w-full">
       <JoinOurCommunity />
         
       </div>
