@@ -31,12 +31,12 @@ module.exports = {
             height: '0rem'
           },
           '100%': {
-            height: '130rem'
+            height: '25rem'
           },
         },
         retraceform: {
           '0%': {
-            height: '130rem'
+            height: '25rem'
           },
           '100%': {
             height: '0rem'
