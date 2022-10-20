@@ -4,9 +4,11 @@ const ContactUs = () => {
   return (
     <div name="Contact" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
     <div className="flex flex-col items-center w-[78rem]">
+  
       <h1 className="font-[600] text-[45px]  2xl:text-[76px] leading-[112px] text-white  bg-clip-text bg-gradient-to-b from-[#17DD8A] to-[#0d7abf] ">
         CONTACT<span className="text-transparent"> US</span>
       </h1>
+      
                   <form className='relative top-[6rem] flex flex-col text-white text-[18px]'>
                     <label className='font-[400] text-[24px]'>Contact us directly on e-mail</label>
                     <input
