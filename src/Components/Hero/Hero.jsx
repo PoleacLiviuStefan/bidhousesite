@@ -4,7 +4,15 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { useState } from "react";
 import herovideo from './herovideo.mp4'
 import {AiOutlineClose} from 'react-icons/ai'
-
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 const Hero = () => {
   const [popupVideo,setPopupVideo] =useState(false)
   const [toggle, setToggle] = useState(false);
@@ -38,7 +46,15 @@ const Hero = () => {
           </div>
 
           <button className={styles.accesbtn}><a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>Whitepaper</a></button>
-          <button className={styles.contactbtn}>Contact Us</button>
+          <Link
+          activeClass="active"
+          to="Contact"
+          spy={true}
+          smooth={true}
+          offset={50}
+          delay={200}
+        > <button className={styles.contactbtn}>Contact Us</button>
+        </Link>
           <p className="absolute z-40 text-[16px] text-opacity-80  text-white w-[311px] h-[38px] left-[66%] top-[455px]">
             <span className="font-[700]">We start </span> to buy first{" "}
             <span className=" font-[700]">in Europe </span>
@@ -57,14 +73,14 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className={`absolute flex justify-center items-center ${!popupVideo && "hidden"} top-0 left-0 z-40 bg-black bg-opacity-70 w-full h-full `}>
-        
-        <div className='absolute z-50'>
-        
+        <div  className={`absolute flex  justify-center items-center ${!popupVideo && "hidden"} top-0 left-0 z-40 bg-black bg-opacity-70 w-full h-full `}>
+        <div onClick={handlePlayVideo} className="absolute top-0 left-0 w-full h-full z-20"></div>
+        <div className='absolute z-30'>
+       
         <video ref={vidRef} width="900" height="900" controls >
       <source src={herovideo} type="video/mp4"/>
 </video>
-<div onClick={handlePlayVideo} className={`absolute cursor-pointer z-50 top-[-5rem] left-[-3rem] text-white w-full text-[30px]  `}><AiOutlineClose /></div>
+<div  className={`absolute cursor-pointer z-50 top-[-5rem] left-[-3rem] text-white w-full text-[30px]  `}></div>
   </div>
 
             </div>

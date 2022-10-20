@@ -1,31 +1,57 @@
 import React,{useState} from "react";
-
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 const ApartamentsBucharest = () => {
   const [showImages,setShowImages] = useState(0);
   const [slideImage,setSlideImage] = useState(1);
+  const [imgWidth,setImgWidth]=useState("w-[500px]");
+  const [imgHeight,setImgHeight]=useState("h-[375px]");
   const handleImages=()=>{
     setShowImages(prev=>!prev);
     setSlideImage(1);
   }
   const handleSlide= (index,tile)=>{
       if(index>=0 && index<=2)
-      {if(tile==3 ||tile==0 )  
+      {     
+        if(tile==2 ||tile==0 )  
       setSlideImage(index);
        if(!(slideImage==0 &&index==1))
         if(!(slideImage==2 &&index==1 ))
         setSlideImage(index);
+  
        }
-        console.log(slideImage)
+       if(tile==1 && imgWidth==="w-[500px]" && imgHeight==="h-[375px]")
+       {setImgWidth("w-[1000px]");
+       setImgHeight("h-[750px]");}
+       else
+       {
+        setImgWidth("w-[500px]");
+       setImgHeight("h-[375px]");
+       }
+        console.log("slideimage:",slideImage);
+        console.log("tile:",tile);
   }
   return (
-    <div className="relative overflow-hidden flex flex-col items-center w-full h-[110rem] bg-black">
-  <div className={`absolute ${showImages==0 && "hidden"}   w-[78rem] h-full flex justify-center items-center `}>
+    <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full h-[110rem] bg-black">
+  <div name="showing" className={`absolute ${showImages==0 && "hidden"}   w-[78rem] h-full flex justify-center items-center `}>
               <div onClick={()=>handleSlide(slideImage-1,0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[400px] h-[300px] rounded-[20px] `}>
                 
                 <div className={`bg-black ${slideImage==0 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
-              <div onClick={()=>handleSlide(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"}  bg-cover  w-[500px] h-[375px]  rounded-[20px]`}/>
-              <div onClick={()=>handleSlide(slideImage+1,3)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
+              <div onClick={()=>handleSlide(1,1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"}  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
+                    
+              
+                </div>
+              <div onClick={()=>handleSlide(slideImage+1,2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
+                    
+              <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div></div>
             <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
       <div className="flex flex-col items-start w-[78rem]">
@@ -42,9 +68,17 @@ const ApartamentsBucharest = () => {
             <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[100px] h-[100px]" />
           </div>
-          <div onClick={handleImages} className="relative flex justify-center items-center left-0 bg-cover  w-[339px] h-[538px] bg-[url('/public/2ap.png')]">
+          <Link
+          activeClass="active"
+          to="ApartmentsBucharest"
+          spy={true}
+          smooth={true}
+          offset={450}
+          delay={0}
+        >
+          <div onClick={handleImages} className="relative flex justify-center items-center left-0 bg-cover  w-[339px] h-[538px] bg-[url('/public/2ap.png')]" />
           
-          </div>
+          </Link>
           <div className="relative left-[4.65rem] flex flex-col w-[700px]">
             <div className="flex">
               <div className="relative flex justify-center items-center bg-cover w-[267px] h-[259px] bg-[url('/public/3ap.png')]">

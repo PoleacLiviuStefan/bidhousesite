@@ -9,7 +9,7 @@ const FAQ = () => {
         setShowQuestion(-1);
     }
   return (
-    <div name="fAQ" className="relative flex flex-col items-center w-full h-[130rem] ">
+    <div name="faq" className="relative flex flex-col items-center w-full h-[130rem] ">
     <div className="flex flex-col items-start w-[78rem]">
       
       <div className="relative top-[10rem] flex flex-col w-full  ">

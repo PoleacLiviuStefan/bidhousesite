@@ -39,7 +39,7 @@ const PrincipalInfo = () => {
         <div className="absolute bg-[url('/public/yellowglow.png')] bg-cover  w-[1224px] h-[1132px]" />
         <div className="absolute bg-[url('/public/greenglow.png')] right-0  bottom-[-40rem] bg-cover w-[782px] h-[1137px]" />
       </div>
-      <div className="absolute top-[200px] w-full h-full flex flex-col items-center">
+      <div className="absolute top-[500px] w-full h-full flex flex-col items-center">
         <h2 className={styles.ourproject}>
           Our project will buy real apartments around the world in order to
           benefit from them as a owner of our

@@ -4,7 +4,7 @@ import {AiFillTwitterCircle} from 'react-icons/ai'
 
 const JoinOurCommunity = () => {
   return (
-    <div name="Join" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
+    <div name="Social" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
     <div className="flex flex-col items-center w-[78rem]">
       <h1 className="font-[600] text-[45px] 2xl:text-[76px]  leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#231998] via-[#9945FF] to-[#17DD8A] ">
         JOIN OUR<span className="text-transparent"> COMMUNITY</span>

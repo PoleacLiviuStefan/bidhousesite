@@ -52,7 +52,7 @@ const Navbar = () => {
           </Link>
           <Link
           activeClass="active"
-          to="ApartamentsBucharest"
+          to="ApartmentsBucharest"
           spy={true}
           smooth={true}
           offset={-100}
@@ -86,7 +86,18 @@ const Navbar = () => {
             Benefits
           </button>
           </Link>
-          
+          <Link
+          activeClass="active"
+          to="Rarity"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          delay={200}
+        >
+          <button className="relative w-[44px] h-full left-0 top-0 ">
+            Rarity
+          </button>
+          </Link>
           <Link
           activeClass="active"
           to="Team"
@@ -111,36 +122,47 @@ const Navbar = () => {
             Forms
           </button>
           </Link>
+         
+        
+       
+        
           <Link
           activeClass="active"
-          to="Rarity"
+          to="Supporters"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-50}
           delay={200}
         >
-          <button className="relative w-[44px] h-full left-0 top-0 ">
-            Rarity
+          
+      
+          <button className="relative w-[85px] h-full left-0 top-0 ">
+            Supporters
           </button>
           </Link>
           <Link
           activeClass="active"
-          to="FAQ"
+          to="faq"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={0}
           delay={200}
         >
           <button className="relative w-[31px] h-full left-0 top-0 ">
             FAQ
           </button>
           </Link>
+          <Link
+          activeClass="active"
+          to="Social"
+          spy={true}
+          smooth={true}
+          offset={-250}
+          delay={200}>
           <button className="relative w-[46px] h-full left-0 top-0 ">
             Social
           </button>
-          <button className="relative w-[85px] h-full left-0 top-0 ">
-            Supporters
-          </button>
+          </Link>
           <button className="relative w-[62px] h-full left-0 top-0 ">
             Booking
           </button>
