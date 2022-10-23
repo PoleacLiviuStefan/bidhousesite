@@ -16,7 +16,7 @@ const FormCard = ({ subtitle,title,geometricForm,index }) => {
    
       
 
-            <button className='absolute z-20 top-[28.5rem] z-40 bg-gradient-to-r from-[#2F2175] to-[#7B48ED] font-[700] w-[350px] h-[88px] rounded-[20px]  text-white text-[32px]'>START</button>
+            
             <div className='relative w-full h-full '>
             <div className={`absolute    ${geometricForm} `}/>
             </div>

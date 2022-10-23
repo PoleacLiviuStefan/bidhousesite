@@ -4,22 +4,22 @@ import styles from "./TheBenefits.module.css";
 const TheBenefits = () => {
   return (
 
-    <div name="TheBenefits" className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
-    <div className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
+    <div name="TheBenefits" className="relative bg-black w-full py-[17rem]  h-[80rem] xl:h-[75rem]">
+    
 
-    <div className="relative bg-black w-full xl:h-[85rem] py-[17rem] h-[85rem]">
+    
 
       <div className="relative bg-[url('/public/TheBenefitsbg.png')] flex  justify-center w-full h-[57rem] xl:h-[770px] bg-cover">
         <div className="w-[80%] flex justify-center ">
           <div className="relative flex xl:flex-row flex-col">
         
-            <div className="relative left-[3%] w-[350px] top-20">
-              <div className="absolute xl:left-[-8rem] bottom-[-42.4rem] xl:bottom-[-1.3rem] rotate-[15deg] bg-[url('/public/SolanaWithLogo.svg')] bg-cover w-[100px] h-[87px] xl:w-[237px] xl:h-[212px]" />
-              <h1 className=" font-[600]  left-0 leading-[20px] xl:leading-[90px] w-[460px] text-[30px] xl:text-[76px] text-white">
+            <div className="relative left-0 w-[350px] top-20">
+              <div className="absolute xl:left-[-6.3rem] bottom-[-42.4rem] xl:bottom-[-1.3rem] rotate-[15deg] bg-[url('/public/SolanaWithLogo.svg')] bg-cover w-[100px] h-[87px] xl:w-[237px] xl:h-[212px]" />
+              <h1 className="relative  font-[600]  left-0 leading-[45px] xl:leading-[70px] w-[460px] text-[30px] xl:text-[52px] 2xl:text-[76px] text-white">
                 THE BENEFITS <br />
-                OF HOLDING <span className={styles.title}>OUR NFT</span>
+                OF HOLDING <br /><span className={styles.title}>OUR NFT</span>
               </h1>
-              <h3 className="relative  text-white opacity-80 w-[100%] top-6 text-[20px] font-[200] leading-[28px]">
+              <h3 className="relative  text-white opacity-80 w-[100%] top-6 text-[18px] 2xl:text-[20px] font-[200] leading-[28px]">
                 {" "}
                 Our project will buy real apartments around the world in order
                 to benefit from them as owner of our NFTs.
@@ -68,8 +68,8 @@ const TheBenefits = () => {
         </div>
       </div>
     </div>
-    </div>
-    </div>
+    
+   
   );
 };
 

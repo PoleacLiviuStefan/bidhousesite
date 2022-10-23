@@ -11,11 +11,11 @@ const Rarity = () => {
     <div className="flex flex-col items-center w-[78rem]">
     
 
-      <h1 className="font-[600] text-[45px] 2xl:text-[76px]  leading-[112px] text-transparent bg-clip-text bg-gradient-to-r from-[#15c796] to-[#17DD8A]   ">
+      <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-transparent bg-clip-text bg-gradient-to-r from-[#15c796] to-[#17DD8A]   ">
 
        RARITY
       </h1>
-           <div className='relative top-24 flex '>
+           <div className='relative right-3 top-24 flex xl:flex-row flex-col '>
                 <RarityCard   
                 keyimg=" bg-[url('/public/common.png')] "
                 title="COMMON"

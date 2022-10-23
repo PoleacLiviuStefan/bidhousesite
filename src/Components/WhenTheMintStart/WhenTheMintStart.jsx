@@ -6,9 +6,9 @@ const WhenTheMintStart = () => {
 
 
     <div className="relative flex flex-col items-center w-full h-[70rem] bg-black">
-      <div className="absolute z-40 left-[-35rem] top-[-30rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1450px]" />
-      <div className="flex flex-col items-start  xl:left-0 w-[24rem] xl:w-[78rem]">
-        <h1 className="font-[600] text-[30px] 2xl:text-[80px] 3xl:text-[96px] xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+      <div className="absolute z-30 left-[-35rem] top-[-30rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1450px]" />
+      <div className="flex flex-col items-start  xl:left-0 w-[23rem] xl:w-[70rem] 2xl:w-[78rem]">
+        <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           WHEN MINT <span className="text-transparent">START?</span>
         </h1>
@@ -16,7 +16,7 @@ const WhenTheMintStart = () => {
           To be announced on<span className="text-purple-400 cursor-pointer "> <a href="https://discord.gg/VQghzgJz">Discord </a></span> on{" "}
           <span className="text-blue-400"><a href="https://twitter.com/bidhouse_nft">Twitter</a></span>
         </h3>
-        <div className="relative top-20 flex w-full h-[1.3rem]">
+        <div className="relative top-20 z-40 flex w-full h-[1.3rem]">
           <div className="bg-slate-600 flex items-center justify-center w-[22rem] xl:w-[10rem] rounded-xl h-full">
             <h3 className="text-white text-[12px] xl:text-[14px] font-[600]">Prototype</h3>
           </div>
@@ -34,7 +34,7 @@ const WhenTheMintStart = () => {
             </h3>
           </div>
         </div>
-        <h3 className="relative top-[15rem] text-[14px]  xl:text-[20px] font-[200] opacity-70 text-justify text-white">
+        <h3 className="relative  top-[10rem] xl:top-[15rem] text-[16px]  xl:text-[20px] font-[200] opacity-70 text-left text-white">
           " We are very sincere peoples and we know is unprofessional to say
           that, but we don't really like paperhands. <br />
           <br />
@@ -46,7 +46,7 @@ const WhenTheMintStart = () => {
           NFT's on Magic Eden below the mint price and then we will sell it at
           the fixed price. "
         </h3>
-        <h1 className="absolute top-[40rem] tracking-[1px] font-[700] text-[24px]  text-transparent  bg-clip-text bg-gradient-to-r from-[#c291ff] to-[#a75fff] ">
+        <h1 className="absolute top-[35rem] xl:top-[40rem] tracking-[1px] font-[700] text-[24px]  text-transparent  bg-clip-text bg-gradient-to-r from-[#c291ff] to-[#a75fff] ">
           -Founders-
         </h1>
       </div>

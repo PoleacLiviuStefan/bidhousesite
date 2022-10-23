@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="fixed z-50 flex justify-center gap-[20px] w-full h-[110px] left-0 top-0 bg-gradient-to-b from-black to-transparent ">
       
 
-      <div className="relative   flex align-center justify-center    gap-[260px] w-full h-[40px]">
+      <div className="relative   flex align-center justify-center  xl:gap-[160px]  2xl:gap-[200px] w-full h-[40px]">
         <Link
           activeClass="active"
           to="hero"
@@ -23,10 +23,10 @@ const Navbar = () => {
           delay={200}
         >
 
-          <div className="relative ml-[12rem] w-[181px] cursor-pointer h-[41px] left-[100px] top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
+          <div className="relative ml-[12rem] 2xl:w-[181px] 2xl:h-[41px]  xl:w-[140px] xl:h-[32px] cursor-pointer left-[100px] xl:top-[35px] 2xl:top-[30px] bg-[url('/public/logo.svg')] bg-cover" />
 
         </Link>
-        <div className="relative mr-[18rem] flex justify-center align-end  gap-[20px] font-[400] text-[16px] text-white top-[30px] w-[78%] h-full">
+        <div className="relative mr-[19rem] flex justify-center align-end  gap-[20px] font-[400] xl:text-[14px] 2xl:text-[16px] text-white top-[30px] w-[82%] h-full">
          
         <Link
           activeClass="active"

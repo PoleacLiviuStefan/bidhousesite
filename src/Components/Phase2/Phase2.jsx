@@ -3,18 +3,18 @@ import herovideo from '../Hero/herovideo.mp4'
 const Phase2 = () => {
   return (
     <div className=" bg-black  rounded-[20px] h-[70rem] w-full">
-      <div className="absolute top-[15rem]  right-0   z-40 " >
-      <video className='z-50'  width="900" height="900" controls >
+      <div className="absolute top-[2rem] xl:top-[15rem]  right-0   z-40 " >
+      <video className='z-50 xl:w-[600px] xl:h-[400px] 2xl:w-[900px] 2xl:h-[600px]'    controls >
       <source src={herovideo} type="video/mp4"/>
 </video>
 </div>
       <div className="absolute bg-[url('/public/bg.png')] top-[80px] w-[95%] h-[934px] right-0 bg-cover">
-        <div className="absolute left-[-25rem] z-40 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
+        <div className="absolute left-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
         <div className="absolute z-40 left-[40px] top-[250px] xl:top-[110px] ">
-          <h2 className="font-[600] text-[30px]  2xl:text-[76px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+          <h2 className="font-[600]  text-[35px] leading-[40px]  xl:leading-[72px] 2xl:xl:leading-[112px] xl:text-[52px] 2xl:text-[76px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           HOW IS BIDHOUSE <br /> <span className="text-transparent">STRUCTURED?</span>
           </h2>
-          <p className="absolute xl:w-[500px] 2xl:w-[550px] top-[150px] leading-[30px]  xl:top-[270px] font-[300] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
+          <p className="absolute top-[100px] z-40 xl:w-[450px] leading-[30px] 2xl:w-[600px] xl:top-[180px] 2xl:top-[270px] font-[300] xl:text-[16px] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
           The Bidhouse NFT project is an ecosystem structured in two phases which gives its investors access to a number of utilities such as educational content, real estate investment opportunities, exclusive discounts, Solana airdrops and much more.<br />
 
 The blockchain chosen for the project is Solana which unlike the Ethereum Blockchain has much lower gas fees.<br />

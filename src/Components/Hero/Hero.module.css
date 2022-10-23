@@ -199,3 +199,9 @@
     background-color: #9d89fc;
   }
 }
+
+@media only screen and (max-width:1280px) {
+  .playbtn{
+   display: none;
+  }
+}

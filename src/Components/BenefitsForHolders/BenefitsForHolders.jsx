@@ -4,19 +4,19 @@ import CardBenefit from "./CardBenefit";
 const BenefitsForHolders = () => {
   return (
 
-    <div name="Benefits" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
+    <div name="Benefits" className="relative xl:left-5 2xl:left-0  flex flex-col items-center w-full h-[70rem] bg-black">
   
 
-      <div className="flex flex-col items-start w-[78rem]">
+      <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
         {" "}
-        <h1 className="font-[600] text-[45px] 2xl:text-[80px] 3xl:text-[96px] leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+        <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           BENEFITS FOR<span className="text-transparent"> HOLDERS</span>
         </h1>
-        <div className="relative top-[4.5rem] grid grid-cols-3 w-full">
+        <div className="relative top-[4.5rem] flex flex-col xl:grid xl:grid-cols-3 w-full">
           <CardBenefit
             title={
-              <h1 className="relative w-[211px] left-3 top-[33px] text-[32px] text-white font-[700] leading-[29px]">
+              <h1 className="relative w-[211px] left-3 top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
                 FLOOR PRICE <span className="text-[24px]">SECURED</span>
               </h1>
             }
@@ -35,11 +35,11 @@ const BenefitsForHolders = () => {
           />
           <CardBenefit
             title={
-              <h1 className="relative w-[211px] left-3 top-[33px] text-[32px] text-white font-[700] leading-[29px]">
-                FREE
+              <h1 className="relative w-[211px] left-3 top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
+                PASSIVE
                 <span className="text-[24px]">
                   <br />
-                  ACCES
+                  INCOME
                 </span>
               </h1>
             }
@@ -48,40 +48,16 @@ const BenefitsForHolders = () => {
             }
             description={
               <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
-                Legendary and Mythical NFT holders trought a<br /> booking
-                system on our website will be able to
-                <br /> get free acomodation in the community flats <br />
-                around the world.
+                You will own a share in the company that <br/>
+will generate Passive Income.
+
               </p>
             }
           />
+      
           <CardBenefit
             title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
-                100%{" "}
-                <span className="text-[24px]">
-                  <br />
-                  SECURED
-                </span>
-              </h1>
-            }
-            keyimg={
-              <div className="relative bg-[url('/public/100key.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
-            }
-            description={
-              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
-                Behind every action will be a REAL company
-                <br /> that will allow us to buy real asset for our
-                <br /> community and bring profits. Every wallet that
-                <br /> have an nft from our collection will benefit from
-                <br /> it and will be added in a special company
-                <br /> paper as owner.
-              </p>
-            }
-          />
-          <CardBenefit
-            title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
                 STAKING
               </h1>
             }
@@ -96,27 +72,10 @@ const BenefitsForHolders = () => {
               </p>
             }
           />
+        
           <CardBenefit
             title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
-                RARITY
-              </h1>
-            }
-            keyimg={
-              <div className="relative bg-[url('/public/raritykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
-            }
-            description={
-              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
-                We strongly believe in equal opportunity for all <br /> members
-                of the community, everyone will take
-                <br /> profits accordingly to how many NFTs have in
-                <br /> the wallet. 1 NFTs = 1 share
-              </p>
-            }
-          />
-          <CardBenefit
-            title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
                 WHITELIST
               </h1>
             }
@@ -132,8 +91,8 @@ const BenefitsForHolders = () => {
           />
           <CardBenefit
             title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
-                RAFFLES
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
+                DISCOUNTS
               </h1>
             }
             keyimg={
@@ -141,14 +100,15 @@ const BenefitsForHolders = () => {
             }
             description={
               <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
-                Every 2 Sundays our holders have a chance to
-                <br /> win NFTs from Solana Top Projects.
+               Discounts on renting apartments owned<br /> by the
+Bidhouse community. Discounts <br />are calculated
+based on the rarities of<br /> the NFT owned.
               </p>
             }
           />
           <CardBenefit
             title={
-              <h1 className="relative w-[211px] left-3 top-[33px] text-[32px] text-white font-[700] leading-[29px]">
+              <h1 className="relative w-[211px] left-3 top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
                 SOLANA
                 <span className="text-[24px]">
                   <br />
@@ -168,7 +128,7 @@ const BenefitsForHolders = () => {
           />
           <CardBenefit
             title={
-              <h1 className="relative left-3 w-[211px] top-[33px] text-[32px] text-white font-[700] leading-[29px]">
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px] text-white font-[700] leading-[29px]">
                 GIVEAWAY
               </h1>
             }
@@ -179,6 +139,230 @@ const BenefitsForHolders = () => {
               <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
                 Every month a member of our community
                 <br /> will get a free NFT from our collections.
+              </p>
+            }
+          />
+             <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                CRYPTO <span className="text-[24px]">
+                  <br />
+                  FOREST
+                </span>
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/whitelistkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+               Exclusive and Free Access to CryptoForest. <br/>Passive Income
+opportunity and the <br />renting  process of the Headquarter<br />
+will also be detailed on Discord<br /> and in our FAQ
+section on <br />the Website.
+              </p>
+            }
+          />
+            <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                MOBILE APP 
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/raffleskey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 w-[320px] font-[400] text-white text-[14px] leading-[17px]">
+              Access to the App to view the apartments in 3D and the
+possibility to buy unique pieces of Art. (paintings, statues,
+etc.) You will be able to scan the QR code of different
+piece of art ( available in the apartments) throught the
+same app in order to acces our Marketplace. If a holder
+or Someone else decide to buy a piece of art from there,
+75% of the payment will go directly to the artist
+and 25% into de community wallet.
+
+              </p>
+            }
+          />
+             <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                100% <span className="text-[24px]">
+                  <br />
+                 TRANSPARENCY
+                </span>
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/stakingkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+            You will have access to the company financial  <br /> report.
+Every quarter we will update the <br /> financial report
+and you can access and <br /> see how much profit
+each property <br /> brought to the company.
+
+              </p>
+            }
+          />
+          <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+               DAO
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/airdropkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+           Every Member will have the voting power <br /> and will be able
+to get involved in the
+<br /> decision making process
+of the <br />Bidhouse Ecosystem.
+
+
+              </p>
+            }
+          />
+            <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                  STABLE<span className="text-[24px]">
+                  <br />
+                  COIN #BHC
+                </span>
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/floorkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+          We aim to stable this virtual coin through <br /> a simply
+process because in the beginning <br />will exist only inside
+our ecosystem. You<br /> can spend it by booking one of the<br />
+appartment for several days, or by<br /> buying goods from
+our marketplace,<br />in the future you will also be
+able to <br /> convert in stable coin.
+
+
+              </p>
+            }
+          />
+            <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                  MARKETPLACE
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/100key.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+      From here you will be able to buy with #BHC
+different goods for you and your family.
+
+              </p>
+            }
+          />
+           <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                  NEW <span className="text-[24px]">
+                  <br />
+                  LOCATION
+                  < br/>
+                  </span>
+                  <span className="text-[20px]">
+                  AROUND THE
+                  <br />WORLD
+                  </span>
+                
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/giveawaykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+   We aim to Conquest the world by<br/>
+buying several assets worldwide!
+
+              </p>
+            }
+          />
+           <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                 POT 
+<span className="text-[24px]">
+                <br/>
+                (PROOF OF TRAVELING)
+                  </span>
+                
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/raritykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+We are developing a new special system  <br /> for our
+community members, more you  <br />travel the less you pay.
+Everytime you  <br /> are renting one of our location, <br />
+you earn #BHC.
+
+
+              </p>
+            }
+          />
+            <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                 PLAYGROUND
+
+<span className="text-[24px]">
+                <br/>
+                IN THE FOREST
+                  </span>
+                
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/stakingkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+Behind the Headquarter, in the forest,<br/> we want to create
+a Playground for<br/> adults and children. Every Holder of<br/>
+our collection will have free Access<br/> for life.
+
+
+              </p>
+            }
+          />
+          <CardBenefit
+            title={
+              <h1 className="relative left-3 w-[211px] top-[33px] text-[26px] xl:text-[32px]  text-white font-[700] leading-[29px]">
+                 2nd Collection
+
+                
+              </h1>
+            }
+            keyimg={
+              <div className="relative bg-[url('/public/whitelistkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+            }
+            description={
+              <p className="relative left-3 top-9 font-[400] text-white text-[14px] leading-[17px]">
+As part of the Ecosystem development,<br/> Bidhouse will launch
+a second collection.<br/> Details will be avilable in a separate<br/>
+channel on Discord and in Version 2.0<br/> of the Whitepaper.
+
               </p>
             }
           />

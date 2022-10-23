@@ -6,16 +6,16 @@ const Team = () => {
   return (
 
     <div name="Team" className="relative flex flex-col items-center w-full h-[130rem] ">
-    <div className="flex flex-col h-[70rem] items-center w-[78rem]">
-      <h1 className="font-[600] text-[45px] 2xl:text-[76px]  leading-[112px] text-white   ">
+    <div className="flex flex-col h-[70rem] items-center w-[23rem] xl:w-[78rem]">
+      <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white   ">
     TEAM
       </h1>
-      <div  className='relative grid grid-cols-4 w-full h-[50rem] top-[8rem] w-full '>
+      <div  className='relative flex flex-col xl:grid xl:grid-cols-4 w-full h-[50rem] top-[8rem] w-full '>
       <MemberCard rolemember="Founder" namemember="BUJOREA CRISTIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Bujorea_Cristian.jpeg')} />} />
       <MemberCard rolemember="Founder" namemember="BUJOREA DANIEL" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Bujorea_Daniel.jpeg')} />} />
       <MemberCard rolemember="Founder" namemember="MARINESCU MIHAI" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Marinescu_Mihai.jpeg')} />} />
       <MemberCard rolemember="NFT Marketing Analyst" namemember="DOBRE BIANCA" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Dobre_Bianca.jpeg')} />} />
-      <MemberCard rolemember="NFT Designer & Arhitect" namemember="COJOCARI LIUBOVI" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Bujorea_Cristian.jpeg')} />} />
+      <MemberCard rolemember="NFT Designer & Arhitect" namemember="COJOCARI LIUBOVI" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Cojocari_Liubovi.jpeg')} />} />
       <MemberCard rolemember="NFT Designer & Arhitect" namemember="IONESCU CATALIN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Ionescu_Catalin.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="CEHAN IULIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Cehan_Iulian.jpeg')} />} />
       <MemberCard rolemember="Marketing Project Manager" namemember="BURCHIU STEFAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Burchiu_Stefan.jpeg')} />} />
@@ -38,7 +38,7 @@ const Team = () => {
       <MemberCard rolemember="Arhitect" namemember="FLOREA ALEXANDRU" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="FLOREA FABIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
-      <div className='absolute top-[270rem] '>
+      <div className='absolute top-[940rem] xl:top-[270rem] '>
       <DescriptionSlider />
 
 

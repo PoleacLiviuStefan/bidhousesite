@@ -12,13 +12,20 @@
   letter-spacing: -0.04em;
   text-fill-color: transparent;
   font-weight: 600;
-  line-height: 90px;
+  line-height: 70px;
   width: 50px;
   height: 358px;
   width: 70rem;
 }
+
+@media only screen and (max-width: 1536px) {
+  .title {
+    font-size: 52px;
+  }
+}
 @media only screen and (max-width: 1280px) {
   .title {
     font-size: 30px;
+    line-height: 45px;
   }
 }

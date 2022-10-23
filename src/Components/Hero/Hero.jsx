@@ -51,11 +51,11 @@ const Hero = () => {
           to="Contact"
           spy={true}
           smooth={true}
-          offset={50}
+          offset={-50}
           delay={200}
         > <button className={styles.contactbtn}>Contact Us</button>
         </Link>
-          <p className="absolute z-40 text-[16px] text-opacity-80  text-white w-[311px] h-[38px] left-[66%] top-[455px]">
+          <p className="absolute xl:block hidden z-40 text-[16px] text-opacity-80  text-white w-[311px] h-[38px] left-[66%] top-[455px]">
             <span className="font-[700]">We start </span> to buy first{" "}
             <span className=" font-[700]">in Europe </span>
             and then we will conquer the world
