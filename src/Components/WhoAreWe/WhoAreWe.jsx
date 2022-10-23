@@ -5,7 +5,7 @@ const WhoAreWe = () => {
 
     <div name="WhoAreWe" className=" bg-black h-[70rem] w-full">
       <div className="absolute rounded-[20px] z-40 bg-[url('/public/phase1.jpeg')]   bg-cover w-[300px] h-[400px] xl:w-[600px] xl:h-[610px] 2xl:w-[721px] 2xl:h-[733px]" />
-      <div className="absolute bg-[url('/public/bg2.png')]  top-[80px] w-[95%] h-[1000px] xl:h-[934px]  left-0 bg-cover">
+      <div className="absolute bg-[url('/public/bg2.png')]  top-[80px] w-[95%] h-[1160px] xl:h-[934px]  left-0 bg-cover">
         <div className="absolute right-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1282px]" />
         <div className="absolute  z-40 right-[40px] top-[350px] xl:top-[130px] ">
           <h2 className="relative font-[600]  text-[30px]  leading-[40px] xl:leading-[72px] 2xl:xl:leading-[112px] xl:text-[52px] 2xl:text-[76px]   text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
