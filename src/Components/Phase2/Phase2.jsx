@@ -10,7 +10,7 @@ const Phase2 = () => {
 </div>
       <div className="absolute bg-[url('/public/bg.png')] top-[80px] w-[95%] h-[934px] right-0 bg-cover">
         <div className="absolute left-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
-        <div className="absolute z-40 left-[40px] top-[250px] xl:top-[110px] ">
+        <div className="absolute z-40 xl:left-[40px] top-[250px] xl:top-[110px] ">
           <h2 className="font-[600]  text-[35px] leading-[40px]  xl:leading-[72px] 2xl:xl:leading-[112px] xl:text-[52px] 2xl:text-[76px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           HOW IS BIDHOUSE <br /> <span className="text-transparent">STRUCTURED?</span>
           </h2>

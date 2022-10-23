@@ -38,7 +38,7 @@ const Team = () => {
       <MemberCard rolemember="Arhitect" namemember="FLOREA ALEXANDRU" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="FLOREA FABIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
-      <div className='absolute top-[940rem] xl:top-[270rem] '>
+      <div className='absolute top-[920rem] xl:top-[270rem] '>
       <DescriptionSlider />
 
 
