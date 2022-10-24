@@ -8,7 +8,7 @@ const WhenTheMintStart = () => {
     <div className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="absolute z-30 left-[-35rem] top-[-30rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1450px]" />
       <div className="flex flex-col items-start  xl:left-0 w-[23rem] xl:w-[70rem] 2xl:w-[78rem]">
-        <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+        <h1 className="font-[600] text-[30px] z-30 xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           WHEN MINT <span className="text-transparent">START?</span>
         </h1>
@@ -34,21 +34,7 @@ const WhenTheMintStart = () => {
             </h3>
           </div>
         </div>
-        <h3 className="relative  top-[10rem] xl:top-[15rem] text-[16px]  xl:text-[20px] font-[200] opacity-70 text-left text-white">
-          " We are very sincere peoples and we know is unprofessional to say
-          that, but we don't really like paperhands. <br />
-          <br />
-          This is a business model, business model takes time, so if you are not
-          pacient and you can't wait 2-3 months to have a real plan, to solve
-          all the problems we will encounter in the real world, please don't
-          mint because we want to build a healthy community and to achieve this
-          goal we secure our floor and we will buy with the comunity wallet all
-          NFT's on Magic Eden below the mint price and then we will sell it at
-          the fixed price. "
-        </h3>
-        <h1 className="absolute top-[35rem] xl:top-[40rem] tracking-[1px] font-[700] text-[24px]  text-transparent  bg-clip-text bg-gradient-to-r from-[#c291ff] to-[#a75fff] ">
-          -Founders-
-        </h1>
+    
       </div>
     </div>
     </div>

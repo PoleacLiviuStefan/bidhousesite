@@ -7,11 +7,11 @@ const WhatWeWantToDo = () => {
       <div className="absolute  xl:right-[.5rem] right-[3.5rem] xl:top-[25rem] top-[5rem] z-40    z-40 bg-[url('/public/logo.png')] bg-cover w-[300px] h-[68px] xl:w-[710px] xl:h-[159px]" />
       <div className="absolute bg-[url('/public/bg.png')] xl:top-[80px] w-[95%] h-[1100px] xl:h-[934px] right-0 bg-cover">
         <div className="absolute left-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
-        <div className="absolute z-40 left-[40px] top-[200px] xl:top-[110px] ">
+        <div className="absolute z-40 left-[20px] xl:left-[40px] top-[200px] xl:top-[110px] ">
           <h2 className="font-[600] text-[30px] leading-[40px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           HOW IS BIDHOUSE <br /> <span className="text-transparent">STRUCTURED?</span>
           </h2>
-          <p className="absolute w-[300px] top-[100px] xl:w-[450px] 2xl:w-[600px]  leading-[30px] xl:top-[180px] 2xl:top-[270px] font-[300] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
+          <p className="absolute w-[300px] top-[100px] xl:w-[450px] 2xl:w-[600px]  leading-[30px] xl:top-[170px] 2xl:top-[270px] font-[300] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
           The Bidhouse NFT project is an ecosystem structured in two phases which gives its investors access to a number of utilities such as educational content, real estate investment opportunities, exclusive discounts, Solana airdrops and much more.<br />
 
 The blockchain chosen for the project is Solana which unlike the Ethereum Blockchain has much lower gas fees.<br />

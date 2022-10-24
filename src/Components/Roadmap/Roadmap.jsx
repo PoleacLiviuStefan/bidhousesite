@@ -44,7 +44,7 @@ const Roadmap = () => {
                 <li>Smart contract deployment.</li>Pre launch Marketing
                 campaigns.
                 <li>Pre mint phase trought form.</li>
-                <li>VVL competitions.</li>
+                <li>WL competitions.</li>
               </ul>
             }
           />

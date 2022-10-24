@@ -39,7 +39,7 @@ const ApartamentsBucharest = () => {
         console.log("tile:",tile);
   }
   return (
-    <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[110rem] bg-black">
+    <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[115rem] bg-black">
   <div name="showing" className={`absolute ${showImages==0 && "hidden"} w-[20rem]  xl:w-[78rem] h-full flex justify-center items-center `}>
               <div onClick={()=>handleSlide(slideImage-1,0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[400px] h-[300px] rounded-[20px] `}>
                 

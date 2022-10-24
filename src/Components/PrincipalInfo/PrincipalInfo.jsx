@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[2810rem] xl:h-[1500rem]">
+    <div className="relative  bg-black w-full  h-[2800rem] xl:h-[1500rem]">
 
 
 
@@ -61,47 +61,47 @@ const PrincipalInfo = () => {
       <div className="absolute top-[230rem] xl:top-[217rem] 2xl:top-[270rem] w-full">
          <Phase2 />
       </div>
-      <div className="absolute top-[320rem] xl:top-[297rem] 2xl:top-[370rem] w-full">
+      <div className="absolute top-[320rem] xl:top-[297rem] 2xl:top-[360rem] w-full">
         <WhenTheMintStart />
       </div>
-      <div className="absolute top-[373rem] xl:top-[360rem] 2xl:top-[450rem] w-full">
+      <div className="absolute top-[353rem] xl:top-[335rem] 2xl:top-[410rem] w-full">
         <Roadmap />
       </div>
-      <div className="absolute top-[476rem] xl:top-[403rem] 2xl:top-[495rem] w-full">
+      <div className="absolute top-[456rem] xl:top-[378rem] 2xl:top-[455rem] w-full">
         <ApartamentsGoal />
       </div>
-      <div className="absolute top-[500rem] xl:top-[440rem] 2xl:top-[550rem] w-full">
+      <div className="absolute top-[480rem] xl:top-[415rem] 2xl:top-[505em] w-full">
         <ApartamentsBucharest />
       </div>
-      <div className="absolute top-[540rem] xl:top-[535rem] 2xl:top-[660rem] w-full">
+      <div className="absolute top-[520rem] xl:top-[510rem] 2xl:top-[610rem] w-full">
       <ReleaseSoon />
       </div>
-      <div className="absolute top-[640rem] xl:top-[595rem] 2xl:top-[730rem] w-full">
+      <div className="absolute top-[620rem] xl:top-[570rem] 2xl:top-[680rem] w-full">
        <BenefitsForHolders />
       </div>
-      <div className="absolute top-[1080rem] xl:top-[770rem] 2xl:top-[905rem] w-full">
+      <div className="absolute top-[1060rem] xl:top-[745rem] 2xl:top-[868rem] w-full">
       <Rarity />
         
       </div>
-      <div className="absolute top-[1263rem] xl:top-[825rem] 2xl:top-[965rem] w-full">
+      <div className="absolute top-[1243rem] xl:top-[800rem] 2xl:top-[940rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[2340rem] xl:top-[1155rem] 2xl:top-[1300rem] w-full">
+      <div className="absolute top-[2320rem] xl:top-[1130rem] 2xl:top-[1270rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[2470rem] xl:top-[1222rem] 2xl:top-[1360rem] w-full">
+      <div className="absolute top-[2450rem] xl:top-[1197rem] 2xl:top-[1340rem] w-full">
       <WhatInvestorsThink /> 
       </div>
-      <div className="absolute top-[2550rem] xl:top-[1300rem] 2xl:top-[1450rem] w-full">
+      <div className="absolute top-[2530rem] xl:top-[1275rem] 2xl:top-[1437rem] w-full">
       <WhatGaryVeeThink />
       </div>
-      <div className="absolute top-[2625rem] xl:top-[1400rem] 2xl:top-[1540rem] w-full">
+      <div className="absolute top-[2605rem] xl:top-[1368rem] 2xl:top-[1535rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[2730rem] xl:top-[1500rem] 2xl:top-[1650rem] w-full">
+      <div className="absolute top-[2710rem] xl:top-[1475rem] 2xl:top-[1650rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[2785rem] xl:top-[1560rem] 2xl:top-[1710rem] w-full">
+      <div className="absolute top-[2765rem] xl:top-[1535rem] 2xl:top-[1710rem] w-full">
       <JoinOurCommunity />
         
       </div>

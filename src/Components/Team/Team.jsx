@@ -35,8 +35,8 @@ const Team = () => {
       <MemberCard rolemember="Sound Enginner" namemember="STANESCU ALEXANDRU" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Stanescu_Alexandru.jpeg')} />} />
       <MemberCard rolemember="Photoshop Editor" namemember="MARIA SEVASTRE" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Maria_Sevastre.jpeg')} />} />
       <MemberCard rolemember="Telegram Manager" namemember="VISALOM IOAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Visalom_Ioan.jpeg')} />} />
-      <MemberCard rolemember="Arhitect" namemember="FLOREA ALEXANDRU" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
-      <MemberCard rolemember="Arhitect" namemember="FLOREA FABIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
+      <MemberCard rolemember="Arhitect" namemember="FLORESCU ALEXANDRU" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
+      <MemberCard rolemember="Arhitect" namemember="FLORESCU FABIAN" photo={<img className='w-[240px] h-[240px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
       <div className='absolute top-[920rem] xl:top-[270rem] '>
       <DescriptionSlider />

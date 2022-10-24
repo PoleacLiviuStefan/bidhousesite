@@ -4,10 +4,10 @@ const ApartamentsGoal = () => {
   return (
     <div name="ApartamentsGoal" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="flex flex-col items-start w-[23rem] xl:w-[70rem] 2xl:w-[78rem] 2xl:mr-[0] xl:mr-[3rem]">
-        <h1 className="font-[600] text-[30px] leading-[40px] 2xl:text-[76px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+        <h1 className="font-[600] text-[35px] leading-[40px] 2xl:text-[76px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           APARTMENTS <span className="text-transparent">GOALS</span>
         </h1>
-        <div className="relative top-14 bg-gradient-to-r from-[#ab84ff] to-[#9d70ff] w-[20rem] xl:w-[73rem] h-[.7rem] rounded-xl ">
+        <div className="relative top-6 2xl:top-14 bg-gradient-to-r from-[#ab84ff] to-[#9d70ff] w-[20rem] xl:w-[73rem] h-[.7rem] rounded-xl ">
           <div className="absolute top-[-.45rem] left-[2rem] xl:left-[5.5rem] bg-[url('/public/point.png')] w-[24.74px] h-[24.74px] bg-cover">
             <div className="absolute left-[-9.5px] top-[-.60rem] bg-[url('/public/pointcircle.png')] w-[44px] h-[44px] bg-cover" />
           </div>

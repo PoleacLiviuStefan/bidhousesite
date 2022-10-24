@@ -21,8 +21,9 @@ const JoinOurCommunity = () => {
             </a>
         </div>
         <div className='relative xl:left-[18rem] mt-10 xl:mt-0 flex xl:flex-row flex-col items-center'>
-            <div className='text-[110px]'><BsTelegram/> </div>
+        <a className='relative flex  xl:flex-row flex-col items-center' href="https://t.me/TheBidhouseEN" > <div className='text-[110px]'><BsTelegram/> </div>
             <h3 className='relative mt-4 xl:mt-0 xl:left-[4rem]'>CONTACTS</h3>
+            </a>
         </div>
       </div>
       </div></div>
