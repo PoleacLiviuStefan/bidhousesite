@@ -176,7 +176,7 @@ const NavbarMobile = () => {
           to="faq"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-100}
           delay={200}
         >
           <button onClick={menuHandler} className="relative w-full text-center text-left h-full left-4 top-[16.5rem] ">
