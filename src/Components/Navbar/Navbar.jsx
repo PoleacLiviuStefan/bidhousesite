@@ -157,7 +157,7 @@ const Navbar = () => {
           to="Social"
           spy={true}
           smooth={true}
-          offset={-300}
+          offset={-500}
           delay={200}>
           <button className="relative w-[46px] h-full left-0 top-0 ">
             Social
