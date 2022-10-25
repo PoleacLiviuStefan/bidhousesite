@@ -11,7 +11,7 @@ const ReleaseSoon = () => {
           RELEASE <span className="text-transparent">SOON</span>
         </h1>
         <div className="relative top-[8rem] w-full h-[65em] xl:h-[20rem] flex xl:flex-row flex-col items-center xl:item-start justify-between">
-          <div className="flex justify-center items-center  bg-[url('/public/tokenomics1.png')] bg-cover w-[340px] h-[340px] ">
+          <div className="flex justify-center xl:mt-[2.8  rem] items-center  bg-[url('/public/tokenomics1.png')] bg-cover w-[358px] h-[358px] ">
             <h3 className=" text-center w-[232px]  font-[700] text-[20px] xl:text-[26px] text-white">
               TOKENOMICS $BHC
             </h3>
