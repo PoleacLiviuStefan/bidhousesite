@@ -6,7 +6,7 @@ const JoinOurCommunity = () => {
   return (
     <div name="Social" className="relative flex flex-col items-center w-full h-[55rem] xl:h-[30rem] bg-black">
     <div className="flex flex-col items-center w-[23rem] xl:w-[78rem]">
-      <h1 className="font-[600] text-[30px] 2xl:text-[76px] leading-[40px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#231998] via-[#9945FF] to-[#17DD8A] ">
+      <h1 className="font-[600] text-[30px] xl:text-[52px] 2xl:text-[76px] leading-[40px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#231998] via-[#9945FF] to-[#17DD8A] ">
         JOIN OUR<span className="text-transparent"> COMMUNITY</span>
       </h1>
       <div className='flex xl:flex-row flex-col relative  xl:left-[-7em] top-16 text-white text-[24px]'>

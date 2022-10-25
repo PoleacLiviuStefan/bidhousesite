@@ -4,14 +4,14 @@ const WhoAreWe = () => {
   return (
 
     <div name="WhoAreWe" className=" bg-black h-[70rem] w-full">
-      <div className="absolute rounded-[20px] z-40 bg-[url('/public/phase1.jpeg')]   bg-cover w-[300px] h-[400px] xl:w-[600px] xl:h-[610px] 2xl:w-[721px] 2xl:h-[733px]" />
+      <div className="absolute rounded-[20px] z-40 bg-[url('/public/phase1.jpeg')]   bg-cover w-[300px] h-[400px] xl:w-[600px] xl:h-[610px] " />
       <div className="absolute bg-[url('/public/bg2.png')]  top-[80px] w-[95%] h-[1160px] xl:h-[934px]  left-0 bg-cover">
         <div className="absolute right-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1282px]" />
-        <div className="absolute  z-40 right-[185px] xl:right-[415px] top-[350px] xl:top-[130px] ">
+        <div className="absolute  z-40 right-[185px] xl:right-[380px] 2xl:right-[555px] top-[350px] xl:top-[130px] ">
           <h2 className="relative font-[600]  text-[35px]  leading-[40px] xl:leading-[72px] 2xl:xl:leading-[112px] xl:text-[52px] 2xl:text-[76px]   text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
             PHASE<span className="text-transparent"> 1</span>
           </h2>
-          <p className="absolute top-[60px]  w-[300px] xl:w-[450px] 2xl:w-[600px] leading-[30px]  xl:top-[100px] 2xl:top-[150px] font-[300] xl:text-[16px] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
+          <p className="absolute top-[60px]  w-[300px] xl:w-[450px] 2xl:w-[800px] leading-[30px]  xl:top-[100px] 2xl:top-[150px] font-[300] xl:text-[16px] xl:text-[16px] 2xl:text-[20px] leading-[24px] flex align-center left-0 text-white">
           The apartments to be purchased under the project will be offered for rent for three periods of time depending on demand and area: long, medium and short term rental.<br />
 
 Long-term, apartments will be rented to families for a minimum of 1-2 years to ensure financial security for investors and NFT buyers.<br/>

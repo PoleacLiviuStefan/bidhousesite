@@ -8,6 +8,7 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+import {BsChevronRight,BsChevronLeft} from 'react-icons/bs'
 const ApartamentsBucharest = () => {
   const [showImages,setShowImages] = useState(0);
   const [slideImage,setSlideImage] = useState(1);
@@ -17,42 +18,48 @@ const ApartamentsBucharest = () => {
     setShowImages(prev=>!prev);
     setSlideImage(1);
   }
-  const handleSlide= (index,tile)=>{
+  const handleSlide= (index)=>{
       if(index>=0 && index<=2)
       {     
-        if(tile==2 ||tile==0 )  
-      setSlideImage(index);
-       if(!(slideImage==0 &&index==1))
-        if(!(slideImage==2 &&index==1 ))
+      
         setSlideImage(index);
   
        }
-       if(tile==1 && imgWidth==="w-[500px]" && imgHeight==="h-[375px]")
-       {setImgWidth("w-[1000px]");
-       setImgHeight("h-[750px]");}
-       else
-       {
-        setImgWidth("w-[500px]");
-       setImgHeight("h-[375px]");
-       }
+  
         console.log("slideimage:",slideImage);
-        console.log("tile:",tile);
+        
+  }
+  const zoomin= (tile)=>{
+    if(tile==1 && imgWidth==="w-[500px]" && imgHeight==="h-[375px]")
+    {setImgWidth("w-[1000px]");
+    setImgHeight("h-[750px]");}
+    else
+    {
+     setImgWidth("w-[500px]");
+    setImgHeight("h-[375px]");
+    }
   }
   return (
     <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[115rem] bg-black">
-  <div name="showing" className={`absolute ${showImages==0 && "hidden"} w-[20rem]  xl:w-[78rem] h-full flex justify-center items-center `}>
-              <div onClick={()=>handleSlide(slideImage-1,0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[400px] h-[300px] rounded-[20px] `}>
+   
+  <div name="showing" className={`absolute ${showImages==0 && "hidden"} w-[20rem] mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
+              <div onClick={()=>zoomin(0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[400px] h-[300px] rounded-[20px] `}>
                 
                 <div className={`bg-black ${slideImage==0 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
-              <div onClick={()=>handleSlide(1,1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"}  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
+              <div onClick={()=>zoomin(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"}  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
                     
               
                 </div>
-              <div onClick={()=>handleSlide(slideImage+1,2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
+              <div onClick={()=>zoomin(2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
                     
               <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
-                </div></div>
+                </div>
+                
+        <div onClick={()=>handleSlide(slideImage-1)} className="absolute left-[-7rem] z-40 text-slate-400 text-[6rem] hover:text-white"><BsChevronLeft /></div>
+        <div  onClick={()=>handleSlide(slideImage+1)} className="absolute right-[-7rem] text-slate-400  z-40 text-white text-[6rem] hover:text-white"><BsChevronRight /></div>
+      
+                </div>
             <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
       <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
      

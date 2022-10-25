@@ -4,6 +4,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { useState } from "react";
 import herovideo from './herovideo.mp4'
 import {AiOutlineClose} from 'react-icons/ai'
+import downloadpdf from './Whitepaper_Bidhouse_Project.pdf'
 import {
   Link,
   Button,
@@ -45,7 +46,7 @@ const Hero = () => {
             </h3>
           </div>
 
-          <button className={styles.accesbtn}><a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>Whitepaper</a></button>
+          <button className={styles.accesbtn}><a href={downloadpdf}  download>Whitepaper</a></button>
           <Link
           activeClass="active"
           to="Contact"
