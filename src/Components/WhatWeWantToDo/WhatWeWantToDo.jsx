@@ -4,7 +4,7 @@ const WhatWeWantToDo = () => {
   return (
     <div className="   rounded-[20px] h-[70rem] w-full">
 
-      <div className="absolute  xl:right-[.5rem] right-[3.5rem] xl:top-[25rem] top-[5rem] z-40    z-40 bg-[url('/public/logo.png')] bg-cover w-[300px] h-[68px] xl:w-[710px] xl:h-[159px]" />
+      <div className="absolute 2xl:right-[2.5rem] xl:right-[.5rem] right-[3.5rem] xl:top-[25rem] top-[4rem] z-40    z-40 bg-[url('/public/logotxt.png')] bg-cover w-[300px] h-[130px] xl:w-[710px] xl:h-[290px]" />
       <div className="absolute bg-[url('/public/bg.png')] xl:top-[80px] w-[95%] h-[1100px] xl:h-[934px] right-0 bg-cover">
         <div className="absolute left-[-25rem] z-30 bg-opacity-70 top-[-25rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[1304px] h-[1282px]" />
         <div className="absolute z-40 left-[20px] xl:left-[40px] top-[200px] xl:top-[110px] ">

@@ -20,7 +20,7 @@ const Rarity = () => {
                 keyimg=" bg-[url('/public/common.png')] "
                 title="COMMON"
                 color="bg-[#1CF7A01A]"
-                benefit={<h2 className='absolute top-2 font-[700] text-white xl:text-[2-px] text-[18px]'>10% Discount</h2>}
+                benefit={<h2 className='absolute bottom-[0rem] font-[700] text-white xl:text-[2-px] text-[18px]'>10% Discount</h2>}
                 />
                     <RarityCard   
 
@@ -29,12 +29,12 @@ const Rarity = () => {
              
                 title="UNCOMMON"
                 color="bg-[#4EA2D1]"
-                benefit={<h2 className='absolute top-2 font-[700] text-white xl:text-[2-px] text-[18px]'>20% Discount</h2>}/>
+                benefit={<h2 className='absolute bottom-[0rem] font-[700] text-white xl:text-[2-px] text-[18px]'>20% Discount</h2>}/>
                     <RarityCard   
                   keyimg=" bg-[url('/public/rare.png')] "
                 title="RARE"
                 color="bg-[#8D72D9]"
-                benefit={<h2 className='absolute top-2 font-[700] text-white xl:text-[2-px] text-[18px]'>30% Discount</h2>}/>
+                benefit={<h2 className='absolute bottom-[0rem] font-[700] text-white xl:text-[2-px] text-[18px]'>30% Discount</h2>}/>
                     <RarityCard   
 
                    keyimg=" bg-[url('/public/uncommon.png')]"
@@ -42,17 +42,17 @@ const Rarity = () => {
             
                 title="EPIC"
                 color="bg-white"
-                benefit={<h2 className='absolute top-2 font-[700] text-white xl:text-[2-px] text-[18px]'>40% Discount</h2>}/>
+                benefit={<h2 className='absolute bottom-[0rem] font-[700] text-white xl:text-[2-px] text-[18px]'>40% Discount</h2>}/>
                     <RarityCard   
                   keyimg=" bg-[url('/public/legendary.png')] "
                 title="LEGENDARY"
                 color="bg-[#FAFF00]"
-                benefit={<h2 className='absolute top-2 font-[700] text-white xl:text-[2-px] text-[18px]'>50% Discount</h2>}/>
+                benefit={<h2 className='absolute bottom-[0rem]  font-[700] text-white xl:text-[2-px] text-[18px]'>50% Discount</h2>}/>
                     <RarityCard   
                    keyimg=" bg-[url('/public/mythic.png')] "
                 title="MITHIC"
                 color="bg-[#00FF9A]"
-                benefit={<h2 className='absolute top-[24.5rem] xl:top-[-4.5rem] text-center font-[700] text-white xl:text-[2-px] text-[18px]'>5 days free accommodation <br/>+<br/>50% Discount</h2>}/>
+                benefit={<h2 className='absolute bottom-[-5rem] xl:bottom-[-4.5rem] text-center font-[700] text-white xl:text-[2-px] text-[18px]'>5 days free accommodation <br/>+<br/>50% Discount</h2>}/>
                  
            </div>
       </div>
