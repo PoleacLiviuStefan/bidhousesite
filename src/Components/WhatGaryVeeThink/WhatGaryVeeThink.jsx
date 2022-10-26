@@ -1,6 +1,6 @@
 import React from 'react'
 
-import video1 from './GaryVee.mp4'
+
 const WhatGaryVeeThink = () => {
   return (
     <div name="WhatGaryVeeThink" className="relative flex flex-col items-center bg-black w-full h-[98rem] ">
@@ -9,9 +9,7 @@ const WhatGaryVeeThink = () => {
           WHAT GARY VEE <span className="text-transparent"> THINK</span>
         </h1>
         <h3 className='text-white font-[400] text-[26px] xl:text-[32px]'>ABOUT REAL ESTATE</h3>
-        <div className='relative top-[5rem] w-full flex justify-center'>
-        <video src={video1} width="400" height="200" controls="controls" autoplay="true" />
-        </div>
+   
 
 
         </div>

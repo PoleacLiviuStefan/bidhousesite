@@ -145,7 +145,7 @@ const Navbar = () => {
           to="faq"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-200}
           delay={200}
         >
           <button className="relative w-[31px] h-full left-0 top-0 ">

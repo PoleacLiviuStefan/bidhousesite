@@ -37,7 +37,7 @@ const FAQ = () => {
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`}
           />
-          <p className={`absolute ${showQuestion!=0 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>The benefits from Solana Blockchain are greater than Ethereum because it's extremely fast (TPS), gas fees almost inexistent and much higher token appreciation potential.
+          <p className={`absolute ${showQuestion!=0 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>The benefits from Solana Blockchain are greater than Ethereum because it's extremely fast (TPS), gas fees almost inexistent and much higher token appreciation potential.
 <br />That are some of the reasons why we choose Solana.
 </p>
         </div>
@@ -56,7 +56,7 @@ const FAQ = () => {
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=2 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Yes we will release rarity charts on our website shortly after <br/> 
+            <p className={`absolute ${showQuestion!=2 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Yes we will release rarity charts on our website shortly after <br/> 
 sold out.There will be 6 rarities:<br/>
 Common, Uncommon, Rare, Epic, Legendary, Mythic</p>
         </div>
@@ -74,7 +74,7 @@ Common, Uncommon, Rare, Epic, Legendary, Mythic</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=3 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>We have 3 options:
+            <p className={`absolute ${showQuestion!=3 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} delay-500 top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>We have 3 options:
 <br/>
 1.Trought Twitter raids
 2.By buying a special role for Discord as "business man"
@@ -94,7 +94,7 @@ Common, Uncommon, Rare, Epic, Legendary, Mythic</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=4 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>1 NFT will cost around 250$, equivalent in Solana 24 Hours before Mint.<br />
+            <p className={`absolute ${showQuestion!=4 ? "animate-[disappear_.5s_linear_forwards]" :" opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>1 NFT will cost around 250$, equivalent in Solana 24 Hours before Mint.<br />
 However, during the building process of our community you can use our "Form" to get 20%<br/>
 Discount as an early investor in our project.</p>
         </div>
@@ -112,7 +112,7 @@ Discount as an early investor in our project.</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=5 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>The mint will be announced on Community social platform. TBA</p>
+            <p className={`absolute ${showQuestion!=5 ? "animate-[disappear_.5s_linear_forwards]" :" opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>The mint will be announced on Community social platform. TBA</p>
             
         </div>
         <div className={`relative top-[40rem] w-full flex ${
@@ -129,7 +129,7 @@ Discount as an early investor in our project.</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=6 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>We  will be listing on Magic Eden directly after "Sell out".</p>
+            <p className={`absolute ${showQuestion!=6 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>We  will be listing on Magic Eden directly after "Sell out".</p>
             
         </div>
         
@@ -147,7 +147,7 @@ Discount as an early investor in our project.</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=7 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Our collection have 11111 NFTs:<br/>
+            <p className={`absolute ${showQuestion!=7 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"}  top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Our collection have 11111 NFTs:<br/>
 -Only 10000 pieces available for mint.<br />
 -1111 pieces will be used in:marketing campaigns, raffles, giveaways, social<br/>
 influencers, sell and raise community funds, as a reward for every person <br/>
@@ -168,7 +168,7 @@ involved in tihs project from the beginning.</p>
                 ? "animate-[animarrow_.5s_ease-in-out_forwards]"
                 : "animate-[animarrowback_.5s_ease-in-out_forwards]"
             }`} />
-            <p className={`absolute ${showQuestion!=8 ? "animate-[disappear_.3s_linear_forwards]" :"animate-[appear_.3s_linear_forwards]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Check our Discord Channel, Twitter and Whitepaper.</p>
+            <p className={`absolute ${showQuestion!=8 ? "animate-[disappear_.5s_linear_forwards]" :"opacity-0 animate-[appear_.5s_linear_forwards_.3s]"} top-[7rem] text-[16px] xl:text-[20px] text-left text-white`}>Check our Discord Channel, Twitter and Whitepaper.</p>
             
         </div>
       </div>
