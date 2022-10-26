@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[2560rem] xl:h-[1330rem]">
+    <div className="relative  bg-black w-full  h-[2560rem] xl:h-[1270rem]">
 
 
 
@@ -93,17 +93,17 @@ const PrincipalInfo = () => {
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[2456rem] xl:top-[1168rem] 2xl:top-[1242rem] w-full">
+      <div className="absolute top-[2432rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[2538rem] xl:top-[1265rem] 2xl:top-[1343rem] w-full">
+      <div className="absolute top-[2516rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[2587rem] xl:top-[1315rem] 2xl:top-[1400rem] w-full">
+      <div className="absolute top-[2565rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[2640rem] xl:top-[1345rem] 2xl:top-[1430rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[2617rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );
