@@ -29,7 +29,7 @@ const Team = () => {
       <MemberCard rolemember="Website Developer" namemember="VRINCEANU ROBERT" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Vrinceanu_Robert.jpeg')} />} />
       <MemberCard rolemember="Video Editor & Copywriter" namemember="CARCHILAN STEFAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Carchilan_Stefan.jpeg')} />} />
       <MemberCard rolemember="Copywriter" namemember="DASCALU IOANA" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Dascalu_Ioana.jpeg')} />} />
-      <MemberCard rolemember="Copywriter" namemember="CIOLOACA ANDREI" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Cioloaca_Andrei.jpeg')} />} />
+      <MemberCard rolemember="Copywriter" namemember="CIOLOCA ANDREI" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Cioloaca_Andrei.jpeg')} />} />
       <MemberCard rolemember="Cryptoforest Manager" namemember="NEGRES BOGDAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Negres_Bogdan.jpeg')} />} />
       <MemberCard rolemember="Telegram Manager" namemember="LICSANDRU DRAGOS" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Licsandru_Dragos.jpeg')} />} />
       <MemberCard rolemember="Sound Enginner" namemember="STANESCU ALEXANDRU" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Stanescu_Alexandru.jpeg')} />} />
@@ -38,7 +38,7 @@ const Team = () => {
       <MemberCard rolemember="Arhitect" namemember="FLORESCU ALEXANDRU" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="FLORESCU FABIAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
-      <div className='absolute top-[372rem] xl:top-[175rem] '>
+      <div className='absolute hidden xl:block top-[372rem] xl:top-[175rem] '>
       <DescriptionSlider />
 
 

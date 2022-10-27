@@ -86,20 +86,20 @@ const PrincipalInfo = () => {
       <div className="absolute top-[1196rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[1723rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
+      <div className="absolute top-[1573rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[1849rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
+      <div className="absolute top-[1699rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[1951rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
+      <div className="absolute top-[1801rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[2035rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
+      <div className="absolute top-[1885rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[2084rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
+      <div className="absolute top-[1934rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
       <JoinOurCommunity />
         
       </div>

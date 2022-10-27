@@ -42,22 +42,22 @@ const ApartamentsBucharest = () => {
   return (
     <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[115rem] bg-black">
    
-  <div name="showing" className={`absolute ${showImages==0 && "hidden"} w-[20rem] mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
-              <div onClick={()=>zoomin(0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[400px] h-[300px] rounded-[20px] `}>
+  <div name="showing" className={`absolute ${showImages==0 && "hidden"} top-[-42rem] xl:top-[-12rem] w-[18rem] xl:mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
+              <div onClick={()=>zoomin(0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px] `}>
                 
                 <div className={`bg-black ${slideImage==0 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
-              <div onClick={()=>zoomin(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"}  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
+              <div onClick={()=>zoomin(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"} w-[800px] h-[100px] xl:w-[400px] xl:h-[300px]  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
                     
               
                 </div>
-              <div onClick={()=>zoomin(2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[400px] h-[300px] rounded-[20px]`}>
+              <div onClick={()=>zoomin(2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px]`}>
                     
               <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
                 
-        <div onClick={()=>handleSlide(slideImage-1)} className="absolute left-[-7rem] z-40 text-slate-400 text-[6rem] hover:text-white"><BsChevronLeft /></div>
-        <div  onClick={()=>handleSlide(slideImage+1)} className="absolute right-[-7rem] text-slate-400  z-40 text-white text-[6rem] hover:text-white"><BsChevronRight /></div>
+        <div onClick={()=>handleSlide(slideImage-1)} className="absolute left-[-3rem] xl:left-[-7rem] z-40 text-slate-400 text-[3rem] xl:text-[6rem] hover:text-white"><BsChevronLeft /></div>
+        <div  onClick={()=>handleSlide(slideImage+1)} className="absolute right-[-3rem] xl:right-[-7rem] text-slate-400  z-40 text-[3rem] text-white xl:text-[6rem] hover:text-white"><BsChevronRight /></div>
       
                 </div>
             <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
@@ -75,18 +75,21 @@ const ApartamentsBucharest = () => {
             <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
           </div>
+          
           <Link
+          
           activeClass="active"
-          to="ApartmentsBucharest"
+          to="showing"
           spy={true}
           smooth={true}
-          offset={450}
+          offset={150}
           delay={0}
         >
-          <div onClick={handleImages} className="relative flex justify-center items-center left-[2.3rem] xl:left-0 bg-cover xl:w-[339px]  xl:h-[538px]  w-[100px] h-[158px] bg-[url('/public/2ap.png')]" />
+          
+          <div onClick={handleImages} className="relative flex justify-center items-center left-[2.3rem] xl:left-0 bg-cover xl:w-[339px]  xl:h-[538px]  w-[93px] h-[140px] rounded-[8px] bg-[url('/public/2ap.png')]" />
           
           </Link>
-          <div className="relative left-[6.3rem] xl:left-[4.65rem] flex flex-col w-[700px]">
+          <div className="relative left-[5.8rem] xl:left-[4.65rem] flex flex-col w-[700px]">
             <div className="flex">
               <div className="relative flex justify-center items-center bg-cover w-[70px] h-[69px] xl:w-[267px] xl:h-[259px] bg-[url('/public/3ap.png')]">
                 <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
@@ -97,20 +100,20 @@ const ApartamentsBucharest = () => {
                 <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
               </div>
             </div>
-            <div className="relative flex justify-center items-center top-[1rem] xl:top-[1.7rem]  bg-cover w-[150px] h-[70px] xl:w-[554px] xl:h-[259px] bg-[url('/public/4ap.png')]">
+            <div className="relative flex justify-center items-center top-[.4rem] xl:top-[1.7rem]  bg-cover w-[140px] h-[65px] xl:w-[554px] xl:h-[259px] bg-[url('/public/4ap.png')]">
             <div className=" w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
             </div>
           </div>
-          <div className="relative flex justify-center items-center left-0 xl:top-[-15.85rem] top-[-4.85rem] w-[70px] h-[179px] bg-cover xl:w-[265px] xl:h-[677px] bg-[url('/public/5ap.png')]">
+          <div className="relative flex justify-center items-center left-0 xl:top-[-15.85rem] top-[-3.85rem] w-[67px] rounded-[8px] h-[165px] bg-cover xl:w-[265px] xl:h-[677px] bg-[url('/public/5ap.png')]">
             <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
           </div>
-          <div className="relative flex justify-center items-center left-[2.2rem] xl:left-0 top-[0.4rem]   xl:top-8 bg-cover w-[180px] h-[114px] xl:w-[626px] xl:h-[398px] bg-[url('/public/6ap.png')]">
+          <div className="relative flex justify-center items-center left-[2.2rem] xl:left-0 top-[0.4rem]   xl:top-8 bg-cover w-[170px] h-[95px] xl:w-[626px] xl:h-[398px] bg-[url('/public/6ap.png')]">
             <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
           </div>
-          <div className="relative flex justify-center items-center left-[11.2rem]  xl:left-[22.55rem]  top-[.4rem] xl:top-8 bg-cover w-[70px] h-[105px] xl:w-[265px] xl:h-[398px] bg-[url('/public/7ap.png')]">
+          <div className="relative flex justify-center items-center left-[10.7rem]  xl:left-[22.55rem]  top-[.4rem] xl:top-8 bg-cover w-[62px] h-[95px] xl:w-[265px] xl:h-[398px] bg-[url('/public/7ap.png')]">
             <div className="w-full h-full bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
           </div>
