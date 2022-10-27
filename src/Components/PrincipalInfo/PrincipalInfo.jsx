@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[2560rem] xl:h-[1270rem]">
+    <div className="relative  bg-black w-full  h-[2000rem] xl:h-[1270rem]">
 
 
 
@@ -83,27 +83,27 @@ const PrincipalInfo = () => {
       <Rarity />
         
       </div>
-      <div className="absolute top-[1300rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
+      <div className="absolute top-[1196rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[2205rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
+      <div className="absolute top-[1723rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[2330rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
+      <div className="absolute top-[1849rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[2432rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
+      <div className="absolute top-[1951rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[2516rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
+      <div className="absolute top-[2035rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[2565rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
+      <div className="absolute top-[2084rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[2617rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[2136rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );

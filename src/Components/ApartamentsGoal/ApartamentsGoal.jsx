@@ -2,7 +2,7 @@ import React from "react";
 
 const ApartamentsGoal = () => {
   return (
-    <div name="ApartamentsGoal" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
+    <div name="ApartamentsGoal" className="relative ml-2 xl:ml-0 flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="flex flex-col items-start w-[23rem] xl:w-[70rem] 2xl:w-[78rem] 2xl:mr-[0] xl:mr-[3rem]">
         <h1 className="font-[600] text-[35px] leading-[40px] 2xl:text-[76px]  xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           APARTMENTS <span className="text-transparent">GOALS</span>

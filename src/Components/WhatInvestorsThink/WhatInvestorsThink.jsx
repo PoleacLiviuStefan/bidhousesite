@@ -9,7 +9,7 @@ const WhatInvestorsThink = () => {
     changeSlider(index);
   }
   return (
-    <div name="Supporters" className="relative flex flex-col items-center w-full h-[70rem] ">
+    <div name="Supporters" className="relative flex flex-col bg-black   items-center w-full h-[120rem] ">
     
 
     <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">

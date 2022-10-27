@@ -61,7 +61,7 @@ const ApartamentsBucharest = () => {
       
                 </div>
             <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
-      <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
+      <div className="flex ml-2 xl:ml-0 flex-col items-start w-[23rem] xl:w-[78rem]">
      
         <h1 className="relative  font-[600] text-[30px]  leading-[40px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           APARTMENTS{" "}
