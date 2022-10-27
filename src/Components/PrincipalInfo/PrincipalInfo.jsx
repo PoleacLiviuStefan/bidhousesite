@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[2000rem] xl:h-[1270rem]">
+    <div className="relative  bg-black w-full  h-[1976rem] xl:h-[1270rem]">
 
 
 
@@ -103,7 +103,7 @@ const PrincipalInfo = () => {
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[2136rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[1985rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );
