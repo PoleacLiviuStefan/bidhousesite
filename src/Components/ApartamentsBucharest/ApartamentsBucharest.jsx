@@ -11,6 +11,7 @@ import {
 import {BsChevronRight,BsChevronLeft} from 'react-icons/bs'
 const ApartamentsBucharest = () => {
   const [showImages,setShowImages] = useState(0);
+  const [zoom,setZoom]=useState(true);
   const [slideImage,setSlideImage] = useState(1);
   const [imgWidth,setImgWidth]=useState("w-[500px]");
   const [imgHeight,setImgHeight]=useState("h-[375px]");
@@ -29,41 +30,45 @@ const ApartamentsBucharest = () => {
         console.log("slideimage:",slideImage);
         
   }
-  const zoomin= (tile)=>{
-    if(tile==1 && imgWidth==="w-[500px]" && imgHeight==="h-[375px]")
-    {setImgWidth("w-[1000px]");
-    setImgHeight("h-[750px]");}
+  const zoomin= ()=>{
+    console.log(zoom)
+    if(zoom)
+    {setImgWidth("xl:w-[800px]");
+    setImgHeight("xl:h-[600px]");
+    setZoom(false);
+  }
     else
     {
-     setImgWidth("w-[500px]");
-    setImgHeight("h-[375px]");
+     setImgWidth("xl:w-[400px]");
+    setImgHeight("xl:h-[300px]");
+    setZoom(true);
     }
   }
   return (
     <div name="ApartmentsBucharest" className="relative overflow-hidden flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[115rem] bg-black">
    
-  <div name="showing" className={`absolute ${showImages==0 && "hidden"} top-[-42rem] xl:top-[-12rem] w-[18rem] xl:mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
-              <div onClick={()=>zoomin(0)} className={`relative z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px] `}>
+  <div className={`absolute ${showImages==0 && "hidden"} top-[-30rem] xl:top-[-8rem] w-[18rem] xl:mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
+              <div  className={`relative hidden xl:block z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.png')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.png')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px] `}>
                 
                 <div className={`bg-black ${slideImage==0 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
-              <div onClick={()=>zoomin(1)} className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"} w-[800px] h-[100px] xl:w-[400px] xl:h-[300px]  bg-cover ${imgWidth} ${imgHeight}   rounded-[20px]`}>
+              <div onClick={zoomin}  className={`relative z-40 ${slideImage==2 && "bg-[url('/public/2ap3.png')]"} ${slideImage==1 && "bg-[url('/public/2ap2.png')]"} ${slideImage==0 && "bg-[url('/public/2ap1.png')]"} w-[320px] h-[350px] ${imgWidth} ${imgHeight}  bg-cover    rounded-[20px]`}>
                     
               
                 </div>
-              <div onClick={()=>zoomin(2)} className={`relative ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px]`}>
+              <div  className={`relative hidden xl:block ${slideImage==0 && "bg-[url('/public/2ap2.png')]"} ${slideImage==2 && "bg-transparent" } ${slideImage==1 && "bg-[url('/public/2ap3.png')]" } z-40 ml-6  bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px]`}>
                     
               <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
                 
-        <div onClick={()=>handleSlide(slideImage-1)} className="absolute left-[-3rem] xl:left-[-7rem] z-40 text-slate-400 text-[3rem] xl:text-[6rem] hover:text-white"><BsChevronLeft /></div>
-        <div  onClick={()=>handleSlide(slideImage+1)} className="absolute right-[-3rem] xl:right-[-7rem] text-slate-400  z-40 text-[3rem] text-white xl:text-[6rem] hover:text-white"><BsChevronRight /></div>
+        <div onClick={()=>handleSlide(slideImage-1)} className={`absolute ${slideImage==0 && "hidden"} left-[-3rem] xl:left-[-7rem] z-40 text-slate-400 text-[3rem] xl:text-[6rem] hover:text-white`}><BsChevronLeft /></div>
+        <div  onClick={()=>handleSlide(slideImage+1)} className={`absolute ${slideImage==2 && "hidden"} right-[-3rem] xl:right-[-7rem] text-slate-400  z-40 text-[3rem] text-white xl:text-[6rem] hover:text-white`}><BsChevronRight /></div>
       
                 </div>
             <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
       <div className="flex ml-2 xl:ml-0 flex-col items-start w-[23rem] xl:w-[78rem]">
      
-        <h1 className="relative  font-[600] text-[30px]  leading-[40px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+        <h1  name="showing"  className="relative  font-[600] text-[30px]  leading-[40px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           APARTMENTS{" "}
           <span className="text-transparent font-300">
            BUCHAREST - ROMANIA
@@ -82,7 +87,7 @@ const ApartamentsBucharest = () => {
           to="showing"
           spy={true}
           smooth={true}
-          offset={150}
+          offset={200}
           delay={0}
         >
           
