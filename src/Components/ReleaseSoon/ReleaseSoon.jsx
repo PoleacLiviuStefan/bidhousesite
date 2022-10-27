@@ -22,8 +22,8 @@ const ReleaseSoon = () => {
               MINT
             </h3>
           </div>
-          <a href="/public/Whitepaper_Bidhouse_Project.pdf"  download>
-          <div className="relative flex justify-center items-center top-6 bg-[url('/public/whitepaper1.png')] bg-cover w-[308px] h-[308px] rounded-[150px] ">
+          <a  href="/public/Whitepaper_Bidhouse_Project.pdf"  download>
+          <div className="relative flex z-40 cursor-pointer justify-center items-center top-6 bg-[url('/public/whitepaper1.png')] bg-cover w-[308px] h-[308px] rounded-[150px] ">
             <h3 className="relative font-[700] text-[20px] xl:text-[26px] text-white">
               WHITEPAPER
             </h3>
