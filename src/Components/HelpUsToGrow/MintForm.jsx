@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-
+import React,{useState,useRef} from "react";
+import emailjs from '@emailjs/browser';
 const MintForm = ({showFormMint}) => {
   const [mintOption,setMintOption]=useState(0)
   const [mintingNfts,setMintingNfts]=useState(1)
@@ -10,8 +10,22 @@ const MintForm = ({showFormMint}) => {
   const handleNfts=(index)=>{
       setMintingNfts(index);
   } 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ybhrud3', 'template_43fpbv9', form.current, 'jozMc-7QZFygGp596')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <form
+    ref={form}
+    onSubmit={sendEmail}
       className={`absolute text-white flex flex-col items-center w-full top-[9rem] ${
         showFormMint
           ? "h-[130rem] z-30 animate-[appear_.5s_ease-in-out_forwards]"
@@ -24,16 +38,19 @@ const MintForm = ({showFormMint}) => {
 
       <input
         className="relative outline-none px-8 xl:left-[-1.3rem] top-8  text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+        name="user_twitter"
         placeholder="Enter your Twitter account *"
         required
       ></input>
       <input
         className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-16 rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        name="user_discord"
         placeholder="Enter your Discord account *"
         required
       ></input>
  <input
         className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-[6rem] rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        name="user_email"
         placeholder="Enter your Email *"
         required
       ></input>
@@ -141,11 +158,22 @@ const MintForm = ({showFormMint}) => {
         Your opinion is very important to us!{" "}
       </label>
       <textarea
+      name="message"
         placeholder="If you have something to say, we are listening...!"
         className="relative opacity-80  top-[60rem] px-10 py-4 xl:left-[-1.3rem] rounded-[10px] font-[200] text-white text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
       ></textarea>
+         <div  className="hidden">
+            <input name="magiceden"  value={mintOption==0 ? "yes":"no"} readOnly/> 
+            <input name="bidhousewebsite"  value={mintOption==1 ? "yes":"no"} readOnly/> 
+            <input name="formmint"  value={mintOption==2 ? "yes":"no"} readOnly/> 
+            <input name="mint1"  value={mintingNfts==1 ? "yes":"no"} readOnly/> 
+            <input name="mint2"  value={mintingNfts==2 ? "yes":"no"} readOnly/>
+            <input name="mint3"  value={mintingNfts==3 ? "yes":"no"} readOnly/>
+            <input name="mint4"  value={mintingNfts==4 ? "yes":"no"} readOnly/>
+        </div>
       <button
         type="submit"
+        value="Send"
         className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[63rem] xl:top-[64rem] xl:left-[-1.3rem] w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
       >
         Send

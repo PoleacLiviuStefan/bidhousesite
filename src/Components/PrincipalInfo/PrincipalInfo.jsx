@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[1976rem] xl:h-[1270rem]">
+    <div className="relative  bg-black w-full  h-[1939rem] xl:h-[1270rem]">
 
 
 
@@ -76,34 +76,34 @@ const PrincipalInfo = () => {
       <div className="absolute top-[510rem] xl:top-[470rem] 2xl:top-[515rem] w-full">
       <ReleaseSoon />
       </div>
-      <div className="absolute top-[610rem] xl:top-[523rem] 2xl:top-[575rem] w-full">
+      <div className="absolute top-[573rem] xl:top-[523rem] 2xl:top-[575rem] w-full">
        <BenefitsForHolders />
       </div>
-      <div className="absolute top-[1067rem] xl:top-[695rem] 2xl:top-[755rem] w-full">
+      <div className="absolute top-[1030rem] xl:top-[695rem] 2xl:top-[755rem] w-full">
       <Rarity />
         
       </div>
-      <div className="absolute top-[1196rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
+      <div className="absolute top-[1159rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[1573rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
+      <div className="absolute top-[1536rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[1699rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
+      <div className="absolute top-[1662rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[1801rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
+      <div className="absolute top-[1764rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[1885rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
+      <div className="absolute top-[1848rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[1934rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
+      <div className="absolute top-[1897rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[1985rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[1949rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );

@@ -1,14 +1,27 @@
-import React,{useState} from 'react'
-
+import React,{useState,useRef} from 'react'
+import emailjs from '@emailjs/browser';
 const RecruitmentForm = ({showRecruitmentForm}) => {
   const [roleOption,setRoleOption]=useState(0)
   const selectOption = (index)=>{
         setRoleOption(index);
        
   }
- 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ybhrud3', 'template_il04l9q', form.current, 'jozMc-7QZFygGp596')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <form
+    ref={form}
+    onSubmit={sendEmail}
     className={`absolute text-white flex flex-col items-center w-full top-[9rem] ${
       showRecruitmentForm
         ? "z-30 h-[130rem] animate-[appear_.5s_ease-in-out_forwards]"
@@ -21,17 +34,20 @@ const RecruitmentForm = ({showRecruitmentForm}) => {
 
     <input
       className="relative outline-none px-8 top-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px]  rounded-[10px]  w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+      name="user_discord"
       placeholder="Enter your Twitter account *"
       required
     ></input>
     <input
       className="relative outline-none px-8 text-[16px] xl:text-[18px] xl:left-[-1.3rem] top-16 rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+      name="user_discord"
       placeholder="Enter your Discord account *"
       required
     ></input>
 
 <input
         className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-[6rem] rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        name="user_email"
         placeholder="Enter your Email *"
         required
       ></input>
@@ -105,6 +121,7 @@ PLEASE FILL OUT THIS FORM BELOW
       Why us?
     </label>
     <textarea
+    name="whyyouchooseus"
       placeholder="Say a few words, why did you choose us?"
       className="relative opacity-70 px-10 py-4  top-[52rem] xl:left-[-1rem] rounded-[10px] font-[200] text-white text-[18px] xl:text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
     ></textarea>
@@ -112,11 +129,21 @@ PLEASE FILL OUT THIS FORM BELOW
       Something about you
     </label>
     <textarea
+    name="message"
       placeholder="If you have something to say, we are listening...!"
       className="relative opacity-70 px-10 py-4   top-[57rem] xl:left-[-1rem] rounded-[10px] font-[200] text-white text-[18px] xl:text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
     ></textarea>
+         <div  className="hidden">
+          
+            <input name="developer"  value={roleOption==0 ? "yes":"no"} readOnly/> 
+            <input name="twitterrole"  value={roleOption==1 ? "yes":"no"} readOnly/> 
+            <input name="marketingrole"  value={roleOption==2 ? "yes":"no"} readOnly/>
+            <input name="discordrole"  value={roleOption==3 ? "yes":"no"} readOnly/>
+            <input name="nftrole"  value={roleOption==4 ? "yes":"no"} readOnly/>
+        </div>
     <button
       type="submit"
+      value="Send"
       className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[60rem] xl:top-[64rem] xl:left-[-1.3rem] w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
     >
       Send

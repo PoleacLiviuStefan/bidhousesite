@@ -1,13 +1,1 @@
-<svg width="1920" height="900" viewBox="0 0 1920 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_b_153_340)">
-<rect width="1920" height="900" fill="black" fill-opacity="0.1"/>
-</g>
-<defs>
-<filter id="filter0_b_153_340" x="-14" y="-14" width="1948" height="928" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feGaussianBlur in="BackgroundImage" stdDeviation="7"/>
-<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_153_340"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_153_340" result="shape"/>
-</filter>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="900" fill="none" xmlns:v="https://vecta.io/nano"><g filter="url(#A)"><path fill="#000" fill-opacity=".1" d="M0 0h1920v900H0z"/></g><defs><filter id="A" x="-14" y="-14" width="1948" height="928" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0"/><feGaussianBlur in="BackgroundImage" stdDeviation="7"/><feComposite in2="SourceAlpha" operator="in"/><feBlend in="SourceGraphic"/></filter></defs></svg>

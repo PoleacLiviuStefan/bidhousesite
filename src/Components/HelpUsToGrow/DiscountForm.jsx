@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-
+import React,{useState,useRef} from "react";
+import emailjs from '@emailjs/browser';
 const DiscountForm = ({ showDiscountForm }) => {
   const [mintOption,setMintOption]=useState(0)
   const [mintingNfts,setMintingNfts]=useState(1)
@@ -9,8 +9,22 @@ const DiscountForm = ({ showDiscountForm }) => {
   const handleNfts=(index)=>{
       setMintingNfts(index);
   } 
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_dd2l6et', 'template_x5jqfys', form.current, 'bCFO-F4oUHOZzgTNO')
+      .then((result) => {
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <form
+    ref={form}
+    onSubmit={sendEmail}
       className={`absolute z-50 text-white flex flex-col items-center w-full top-[9rem] ${
         showDiscountForm
           ? "z-30 h-[130rem] animate-[appear_.5s_ease-in-out_forwards]"
@@ -23,16 +37,19 @@ const DiscountForm = ({ showDiscountForm }) => {
 
       <input
         className="relative outline-none xl:left-[-1.3rem] px-8 top-8 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+        name="user_twitter"
         placeholder="Enter your Twitter account *"
         required
       ></input>
       <input
         className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-16 rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        name="user_discord"
         placeholder="Enter your Discord account *"
         required
       ></input>
    <input
         className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-[6rem] rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        name="user_email"
         placeholder="Enter your Email *"
         required
       ></input>
@@ -146,11 +163,13 @@ const DiscountForm = ({ showDiscountForm }) => {
       <div className="xl:top-[55rem] top-[70rem] relative flex flex-col">
         <input
           className="relative outline-none px-8 text-[16px] xl:text-[18px] xl:left-[-1.5rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+          name="user_wallet"
           placeholder="Enter your Wallet Adress *"
           required
         ></input>
         <input
           className="relative outline-none top-6 px-8 text-[16px] xl:text-[18px] xl:left-[-1.5rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+          name="user_signature"
           placeholder="Signature Transaction ID (if already deposit) *"
           required
         ></input>
@@ -158,13 +177,24 @@ const DiscountForm = ({ showDiscountForm }) => {
       <label className="relative top-[75rem] xl:top-[58rem] xl:left-[-3.7rem] text-white text-[20px] xl:text-[24px] font-[400]">
         Your opinion is very important to us!{" "}
       </label>
+      <div  className="hidden">
+            <input name="guaranteedwhitelist"  value={mintOption==0 ? "yes":"no"} readOnly /> 
+            <input name="discount20%"  value={mintOption==1 ? "yes":"no"} readOnly /> 
+            <input name="pay2get3"  value={mintOption==2 ? "yes":"no"} readOnly /> 
+            <input name="mint1"  value={mintingNfts==1 ? "yes":"no"} readOnly /> 
+            <input name="mint2"  value={mintingNfts==2 ? "yes":"no"} readOnly />
+            <input name="mint3"  value={mintingNfts==3 ? "yes":"no"} readOnly />
+            <input name="mint4"  value={mintingNfts==4 ? "yes":"no"} readOnly />
+        </div>
       <textarea
+      name="message"
         placeholder="If you have something to say, we are listening...!"
         className="relative opacity-70 px-10 py-4 top-[78rem] xl:top-[60rem] xl:left-[-1.3rem] rounded-[10px] font-[200] text-white text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
       ></textarea>
       <button
         type="submit"
-        className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[81rem] xl:top-[80rem] xl:left-[-1.3rem] w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
+        value="Send"
+        className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[81rem] xl:top-[67rem] xl:left-[-1.3rem] w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
       >
         Send
       </button>

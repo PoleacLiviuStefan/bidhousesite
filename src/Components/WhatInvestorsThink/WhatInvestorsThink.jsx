@@ -21,11 +21,11 @@ const WhatInvestorsThink = () => {
      
     <div className='relative flex xl:flex-row flex-col top-[5rem] justify-center w-full'>
       <div className='relative  w-full flex justify-center'>
-        <video src={video1} width="300" height="200" controls="controls" autoplay="true" />
+        <video src={video1} width="300" height="200" controls="controls" />
         </div>
 
         <div className='relative XL:ml-[-15rem] mt-[4rem] xl:mt-0 w-full flex justify-center'>
-        <video src={video2} width="300" height="200" controls="controls" autoplay="true" />
+        <video src={video2} width="300" height="200" controls="controls" />
         </div>
         </div>
       </div>

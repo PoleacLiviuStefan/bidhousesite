@@ -10,7 +10,8 @@ const Rarity = () => {
     <div name="Rarity" className="relative flex flex-col items-center w-full h-[130rem] ">
     <div className="flex flex-col items-center w-[78rem]">
     
-
+    <div className="absolute top-[18rem] left-[-3rem]  bg-[url('/public/rarityglowl.png')] bg-cover w-[859px] h-[1003px]" />
+    <div className="absolute top-[10rem] right-[-3rem] bg-[url('/public/rarityglowr.png')] bg-cover w-[702px] h-[1003px]" />
       <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-transparent bg-clip-text bg-gradient-to-r from-[#15c796] to-[#17DD8A]   ">
 
        RARITY

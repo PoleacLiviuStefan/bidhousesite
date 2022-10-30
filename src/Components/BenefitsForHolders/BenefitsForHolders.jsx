@@ -7,6 +7,8 @@ const BenefitsForHolders = () => {
     <div name="Benefits" className="relative xl:left-5 2xl:left-0  flex flex-col items-center w-full h-[70rem] bg-black">
   <div className="absolute top-[-32rem] left-0 bg-[url('/public/glowleftbenefit.png')] w-[896px] h-[1101px]"/>
   <div className="absolute top-[-52rem] right-0 bg-[url('/public/glowbenefitright.png')] w-[1176px] h-[1385px]"/>
+  <div className="absolute top-[110rem] right-[-17rem] bg-[url('/public/glowbottomrbenefits.png')] w-[1023px] h-[1003px]"/>
+  <div className="absolute top-[125rem] left-[-15rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
       <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
       
         {" "}
@@ -97,7 +99,7 @@ will generate Passive Income.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/raffleskey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/raritykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
@@ -118,7 +120,7 @@ based on the rarities of<br /> the NFT owned.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/airdropkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/100key.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
@@ -134,7 +136,7 @@ based on the rarities of<br /> the NFT owned.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/giveawaykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/freekey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
@@ -171,7 +173,7 @@ section on <br />the Website.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/raffleskey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/raritykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 w-[280px] font-[400] text-white text-[14px] leading-[17px]">
@@ -216,7 +218,7 @@ each property <br /> brought to the company.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/airdropkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/100key.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
@@ -239,7 +241,7 @@ of the <br />Bidhouse Ecosystem.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/floorkey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/stablekey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
@@ -287,7 +289,7 @@ different goods for you and your family.
               </h1>
             }
             keyimg={
-              <div className="relative bg-[url('/public/giveawaykey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
+              <div className="relative bg-[url('/public/freekey.png')] bg-cover right-[-2.5rem] w-[62px] h-[130px]" />
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
