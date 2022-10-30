@@ -22,7 +22,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@media only screen and size(max-width: 1279px){
+@media only screen and (max-width: 1279px){
 html{
   overflow-x: hidden;
 }
