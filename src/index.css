@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 html{
-  
-  overflow-x: hidden;
+  max-width: 100%;
+
 }
 
 body {
@@ -13,12 +13,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  
+  overflow-x: hidden;
+ 
   height: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media only screen and size(max-width: 1024px){
+html{
+  overflow-x: hidden;
+}
 }
