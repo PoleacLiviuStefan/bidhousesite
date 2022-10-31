@@ -1,5 +1,4 @@
 import React from 'react'
-
 const InvestorsCard = ({photo,rolemember,namemember,discord,telegram,twitter}) => {
   return (
     <div className='flex xl:flex-row flex-col items-center  xl:justify-center'>
