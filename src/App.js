@@ -6,7 +6,6 @@ import NavbarMobile from './Components/Navbar/NavbarMobile';
 import PrincipalInfo from './Components/PrincipalInfo/PrincipalInfo';
 import TheBenefits from './Components/TheBenefits/TheBenefits';
 
-import WeAreBidHouse from './Components/WeAreBidHouse/WeAreBidHouse';
 
 
 function App() {

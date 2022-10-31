@@ -18,7 +18,6 @@ import Rarity from "../Rarity/Rarity";
 import ReleaseSoon from "../ReleaseSoon/ReleaseSoon";
 import Roadmap from "../Roadmap/Roadmap";
 import Team from "../Team/Team";
-import WhatGaryVeeThink from "../WhatGaryVeeThink/WhatGaryVeeThink";
 import WhatInvestorsThink from "../WhatInvestorsThink/WhatInvestorsThink";
 
 import WhatWeWantToDo from "../WhatWeWantToDo/WhatWeWantToDo";

@@ -16,10 +16,12 @@ const ContactUs = () => {
       }, (error) => {
           console.log(error.text);
       });
+      form.reset()
   };
   return (
     <div name="Contact" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
-    <div className="flex flex-col items-center w-[78rem]">
+       <div className="absolute z-10 top-[-30rem] xl:top-[-23rem] left-0 bg-[url('/public/contactusglow.png')] w-[1249px] h-[1003px]"/>
+    <div className="flex z-20 flex-col items-center w-[78rem]">
   
       <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-b from-[#17DD8A] to-[#0d7abf] ">
         CONTACT<span className="text-transparent"> US</span>

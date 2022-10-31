@@ -10,7 +10,7 @@ const Team = () => {
       <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white   ">
     TEAM
       </h1>
-      <div  className='relative  grid grid-cols-2 xl:grid-cols-6 w-full h-[200rem] top-[3rem] xl:top-[8rem] w-full '>
+      <div  className='relative z-20  grid grid-cols-2 xl:grid-cols-6 w-full h-[200rem] top-[3rem] xl:top-[8rem] w-full '>
       <MemberCard rolemember="Founder" namemember="BUJOREA CRISTIAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Bujorea_Cristian.jpeg')} />} />
       <MemberCard rolemember="Founder" namemember="BUJOREA DANIEL" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Bujorea_Daniel.jpeg')} />} />
       <MemberCard rolemember="Founder" namemember="MARINESCU MIHAI" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Marinescu_Mihai.jpeg')} />} />
@@ -38,7 +38,7 @@ const Team = () => {
       <MemberCard rolemember="Arhitect" namemember="FLORESCU ALEXANDRU" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="FLORESCU FABIAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
-      <div className='absolute hidden xl:block top-[372rem] xl:top-[175rem] '>
+      <div className='absolute z-20 hidden xl:block top-[372rem] xl:top-[175rem] '>
       <DescriptionSlider />
 
 

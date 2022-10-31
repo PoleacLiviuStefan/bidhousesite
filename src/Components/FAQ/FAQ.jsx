@@ -10,7 +10,7 @@ const FAQ = () => {
     }
   return (
     <div name="faq" className="relative flex bg-black flex-col items-center w-full h-[130rem] ">
-    <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
+    <div className="flex z-30 flex-col items-start w-[23rem] xl:w-[78rem]">
     <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white   ">
         FAQ
       </h1>

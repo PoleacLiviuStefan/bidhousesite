@@ -12,7 +12,9 @@ const FormsStart = () => {
   }
   return (
     <div name="Forms" className="relative flex flex-col items-center w-full h-[130rem] ">
-    <div className="flex xl:flex-row flex-col items-between xl:justify-between w-[23rem] xl:w-[74.5rem]">
+        <div className="absolute z-10 top-[-45rem] right-0 bg-[url('/public/glowformtopr.png')] w-[1028px] h-[1003px]"/>
+        <div className="absolute z-10 top-[-23rem] left-0 bg-[url('/public/glowformleft.png')] w-[1116px] h-[1003px]"/>
+    <div className="flex z-20 xl:flex-row flex-col items-between xl:justify-between w-[23rem] xl:w-[74.5rem]">
           <div className='relative left-2'><FormCard index={0} title={        <h1 className='relative w-[222px] z-20 left-[-1.1rem] top-6 font-[700] text-[32px] leading-[39px] text-[#2F2175]'>HOW DO YOU <br />PREFER TO <br /> MINT ?</h1>} subtitle="MINTING PREFERENCE" geometricForm="bg-[url('/public/hexagonform.png')] top-[-7.6rem]  left-[2.7rem] bg-cover w-[270px] h-[305px]" />
           <button onClick={()=>handleForm(0)} className={`absolute ${showForm<0 ?"z-40":"z-20"} cursor-pointer top-[28.5rem] z-40 bg-gradient-to-r from-[#2F2175] to-[#7B48ED] font-[700] w-[350px] h-[88px] rounded-[20px]  text-white text-[32px]`}>START</button>
           </div>

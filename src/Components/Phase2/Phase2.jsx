@@ -1,10 +1,12 @@
 import React from 'react'
 import herovideo from '../Hero/herovideo.mp4'
+import thumbnail from './thumbnailphase2.jpg'
+
 const Phase2 = () => {
   return (
     <div className=" bg-black  rounded-[20px] h-[70rem] w-full">
       <div className="absolute top-[2rem] xl:top-[15rem]  right-0   z-40 " >
-      <video className='z-50 xl:w-[600px] xl:h-[400px] 2xl:w-[900px] 2xl:h-[600px]'    controls >
+      <video className='z-50 xl:w-[600px] xl:h-[400px] 2xl:w-[900px] 2xl:h-[600px]'    controls poster={thumbnail} >
       <source src={herovideo} type="video/mp4"/>
 </video>
 </div>

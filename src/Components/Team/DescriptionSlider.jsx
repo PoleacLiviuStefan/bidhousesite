@@ -16,7 +16,7 @@ const DescriptionSlider = () => {
     setDescriptionIndex(24)
   }
   return (
-    <div className='flex h-[138rem] xl:h-[35rem] w-[24rem] xl:w-[78rem] bg-white bg-opacity-20'>
+    <div className='flex h-[138rem] xl:h-[35rem] w-[24rem] xl:w-[78rem] bg-white bg-opacity-10'>
       <div onClick={toLeft} className='absolute left-2 top-[17rem] text-slate-200 text-[50px] hover:text-white cursor-pointer'><BsChevronLeft /></div>
       <div onClick={toRight} className='absolute right-2 top-[17rem] text-slate-200 text-[50px] hover:text-white cursor-pointer'><BsChevronRight /></div>
       <div className={`${descriptionIndex!=0 && "hidden " } flex flex-col justify-start mt-4 xl:mt-0 xl:justify-center items-center px-[5rem]`}>
