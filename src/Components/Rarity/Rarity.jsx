@@ -16,7 +16,7 @@ const Rarity = () => {
 
        RARITY
       </h1>
-           <div className='relative right-3 xl:top-24 xl:flex xl:flex-row  grid grid-cols-2 '>
+           <div className='relative mt-[-11rem] xl:mt-[-5rem] right-3 xl:top-24 xl:flex xl:flex-row  grid grid-cols-2 '>
                 <RarityCard   
                 keyimg=" bg-[url('/public/common.png')] "
                 title="COMMON"

@@ -29,7 +29,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[1939rem] xl:h-[1270rem]">
+    <div className="relative  bg-black w-full  h-[1855rem] xl:h-[1250rem]">
 
 
 
@@ -54,55 +54,55 @@ const PrincipalInfo = () => {
       <div className="absolute top-[52rem] xl:top-[37rem] 2xl:top-[45rem] w-full">
         <WhatWeWantToDo />
       </div>
-      <div className="absolute top-[140rem] xl:top-[117rem] 2xl:top-[130rem] w-full">
+      <div className="absolute top-[137rem] xl:top-[117rem] 2xl:top-[130rem] w-full">
       <WhoAreWe />
       </div>
-      <div className="absolute top-[230rem] xl:top-[192rem] 2xl:top-[212rem] w-full">
+      <div className="absolute top-[227rem] xl:top-[192rem] 2xl:top-[212rem] w-full">
          <Phase2 />
       </div>
-      <div className="absolute top-[320rem] xl:top-[270rem] 2xl:top-[295rem] w-full">
+      <div className="absolute top-[319rem] xl:top-[270rem] 2xl:top-[295rem] w-full">
         <WhenTheMintStart />
       </div>
-      <div className="absolute top-[345rem] xl:top-[297rem] 2xl:top-[335rem] w-full">
+      <div className="absolute top-[339rem] xl:top-[297rem] 2xl:top-[335rem] w-full">
         <Roadmap />
       </div>
-      <div className="absolute top-[448rem] xl:top-[350rem] 2xl:top-[380rem] w-full">
+      <div className="absolute top-[443rem] xl:top-[350rem] 2xl:top-[380rem] w-full">
         <ApartamentsGoal />
       </div>
-      <div className="absolute top-[470rem] xl:top-[380rem] 2xl:top-[415rem] w-full">
+      <div className="absolute top-[462rem] xl:top-[380rem] 2xl:top-[415rem] w-full">
         <ApartamentsBucharest />
       </div>
-      <div className="absolute top-[510rem] xl:top-[470rem] 2xl:top-[515rem] w-full">
+      <div className="absolute top-[497rem] xl:top-[470rem] 2xl:top-[515rem] w-full">
       <ReleaseSoon />
       </div>
-      <div className="absolute top-[573rem] xl:top-[523rem] 2xl:top-[575rem] w-full">
+      <div className="absolute top-[519rem] xl:top-[523rem] 2xl:top-[575rem] w-full">
        <BenefitsForHolders />
       </div>
-      <div className="absolute top-[1030rem] xl:top-[695rem] 2xl:top-[755rem] w-full">
+      <div className="absolute top-[976rem] xl:top-[695rem] 2xl:top-[755rem] w-full">
       <Rarity />
         
       </div>
-      <div className="absolute top-[1159rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
+      <div className="absolute top-[1093rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[1536rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
+      <div className="absolute top-[1459rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[1662rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
+      <div className="absolute top-[1581rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[1764rem] xl:top-[1102rem] 2xl:top-[1175rem] w-full">
+      <div className="absolute top-[1672rem] xl:top-[1095rem] 2xl:top-[1170rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[1848rem] xl:top-[1201rem] 2xl:top-[1277rem] w-full">
+      <div className="absolute top-[1751rem] xl:top-[1184rem] 2xl:top-[1265rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[1897rem] xl:top-[1252rem] 2xl:top-[1330rem] w-full">
+      <div className="absolute top-[1800rem] xl:top-[1233rem] 2xl:top-[1318rem] w-full">
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[1949rem] xl:top-[1281rem] 2xl:top-[1359rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[1852rem] xl:top-[1262rem] 2xl:top-[1347rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );

@@ -5,14 +5,14 @@ const BenefitsForHolders = () => {
   return (
 
     <div name="Benefits" className="relative xl:left-5 2xl:left-0  flex flex-col items-center w-full h-[70rem] bg-black">
-  <div className="absolute top-[-32rem] left-0 bg-[url('/public/glowleftbenefit.png')] w-[896px] h-[1101px]"/>
-  <div className="absolute top-[-52rem] right-0 bg-[url('/public/glowbenefitright.png')] w-[1176px] h-[1385px]"/>
-  <div className="absolute top-[110rem] right-[-17rem] bg-[url('/public/glowbottomrbenefits.png')] w-[1023px] h-[1003px]"/>
-  <div className="absolute top-[125rem] left-[-15rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
+  <div className="absolute top-[-22rem] xl:top-[-32rem] left-0 bg-[url('/public/glowleftbenefit.png')] w-[896px] h-[1101px]"/>
+  <div className="absolute top-[50rem] xl:top-[-52rem] right-0 bg-[url('/public/glowbenefitright.png')] w-[1176px] h-[1385px]"/>
+  <div className="absolute top-[365rem] xl:top-[110rem] right-[-17rem] bg-[url('/public/glowbottomrbenefits.png')] w-[1023px] h-[1003px]"/>
+  <div className="absolute top-[420rem] xl:top-[125rem] left-[-15rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
       <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
       
         {" "}
-        <h1 className="font-[600] z-30 text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+        <h1 className="font-[600] ml-2 xl:ml-0 z-30 text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           BENEFITS FOR<span className="text-transparent"> HOLDERS</span>
         </h1>
