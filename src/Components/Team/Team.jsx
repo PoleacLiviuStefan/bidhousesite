@@ -36,7 +36,7 @@ const Team = () => {
       <MemberCard rolemember="Photoshop Editor" namemember="MARIA SEVASTRE" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Maria_Sevastre.jpeg')} />} />
       <MemberCard rolemember="Telegram Manager" namemember="VISALOM IOAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Visalom_Ioan.jpeg')} />} />
       <MemberCard rolemember="Arhitect" namemember="FLORESCU ALEXANDRU" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Alexandru.jpeg')} />} />
-      <MemberCard rolemember="Arhitect" namemember="FLORESCU FABIAN" photo={<img className='w-[170px] h-[170px] xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
+      <MemberCard rolemember="Arhitect" namemember="FLORESCU FABIAN" photo={<img className='w-[170px] h-[170px]  xl:w-[180px] xl:h-[180px]' src={require('./membersphotos/Florea_Fabian.jpeg')} />} />
       </div>
       <div className='absolute z-20 hidden xl:block top-[372rem] xl:top-[175rem] '>
       <DescriptionSlider />

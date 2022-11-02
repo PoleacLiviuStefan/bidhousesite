@@ -5,7 +5,7 @@ const MemberCard = ({photo,rolemember,namemember,discord,telegram,twitter}) => {
 
     <div className='flex flex-col mt-20 items-center'>
         {photo}
-        <h2 className='font-[700] text-[22px] xl:text-[24px] text-center w-[150px]  text-white mt-6'>{namemember} </h2>
+        <h2 className='font-[700] text-[22px] xl:text-[24px] text-center w-[120px]  text-white mt-6'>{namemember} </h2>
         <h3 className='font-[300] text-center  w-[250px] text-[16px] xl:text-[18px] text-white' >{rolemember} </h3>
 
 
