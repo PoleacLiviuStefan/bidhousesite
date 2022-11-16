@@ -9,12 +9,13 @@ import {
   scroller,
 } from "react-scroll";
 import {signOut} from 'firebase/auth'
-
+import DiscountForm from "../HelpUsToGrow/DiscountForm";
 import SignUp from "../SignUp/SignUp";
 import Fade from 'react-reveal/Fade'
 import useBodyScrollLock from "../Functions/useBodyScrollLock";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
+import {AiOutlineClose} from 'react-icons/ai'
 const NavbarMobile = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuHandler = () => {
@@ -47,7 +48,7 @@ const NavbarMobile = () => {
   }
     else
     {
-        setLoginMenu(prev=>!prev)
+        setLoginMenu(true)
     }
   }
   const logout=()=>{
@@ -101,7 +102,7 @@ const NavbarMobile = () => {
         <li>
         <Link
           activeClass="active"
-          to="hero"
+          to="about"
           spy={true}
           smooth={true}
           offset={50}
@@ -118,7 +119,7 @@ const NavbarMobile = () => {
           smooth={true}
           offset={-100}
           delay={200}
-        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[4.5rem] `}>
+        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[4rem] `}>
             Roadmap
           </button>
           </Link></li>
@@ -131,7 +132,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[6rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[5rem]`}>
             Apartaments
           </button>
           </Link>
@@ -145,7 +146,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[7.5rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[6rem]`}>
             Release Soon
           </button>
           </Link>
@@ -159,7 +160,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[9rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[7rem]`}>
             Benefits
           </button>
           </Link>
@@ -172,7 +173,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[10.5rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[8rem]`}>
             Rarity
           </button>
           </Link></li>
@@ -185,7 +186,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[12rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[9rem] `}>
             Team
           </button>
           </Link>
@@ -199,7 +200,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[13.5rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[10rem] `}>
             Forms
           </button>
           </Link>
@@ -215,7 +216,7 @@ const NavbarMobile = () => {
         >
           
       
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[15rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[11rem] `}>
             Supporters
           </button>
           </Link>
@@ -229,7 +230,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[16.5rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[12rem] `}>
             FAQ
           </button>
           </Link>
@@ -243,25 +244,32 @@ const NavbarMobile = () => {
           smooth={true}
           offset={-250}
           delay={200}>
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[18rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[13rem] `}>
             Social
           </button>
           </Link>
           </li>
           <li>
-          <button onClick={()=>handlelogin(1)} className={`relative ${(username!="Sign Up" && username!=undefined) &&"hidden"} bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[96px] h-[44px] left-[8rem] top-[20rem]`}>
+          <button onClick={()=>handlelogin(1)} className={`relative ${(username!="Sign Up" && username!=undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[96px] h-[44px] left-[8rem] top-[14rem]`}>
            Sign Up
           </button></li>
-          <li>
-          <button onClick={()=>handlelogin(2)} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7.3rem] top-[20rem] `}>
+          <li className="flex ">
+          <button onClick={()=>handlelogin(2)} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7rem] top-[14rem] `}>
            {username}
           </button>
+      
           </li>
           <li>
-          <button  onClick={logout} className={`relative ${!loginMenu && "hidden"}  ${openMenu ?"animate-[appear_1s_linear_forwards]":""}   bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[96px] h-[44px] left-[8.3rem] top-[21rem]`}>
+          <button  onClick={logout} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"}  ${openMenu ?"animate-[appear_1s_linear_forwards]":""}   bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[2rem] top-[15rem]`}>
           Logout
           </button>
+          <button onClick={handleForm} className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[15rem]`}>Form</button>
+   
           </li>
+              <li>
+              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[16rem]`}>My NFT</button>
+              <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[16rem]`}>Staking</button>
+              </li>
           </ul>
           
      
@@ -273,6 +281,11 @@ const NavbarMobile = () => {
             <div onClick={handlelogin} className="w-full h-full z-20 "/>
            
       </div>
+      <div className={`absolute ${!loginForm && "hidden"}   w-screen overflow-y-scroll    h-[88rem] flex justify-center bg-black bg-opacity-90 z-30`}>
+          <DiscountForm showDiscountForm={true} afterLogin={true} />
+          <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
+          <div className={`absolute  text-white z-40 right-[2rem] cursor-pointer w-[30px] h-[30px] top-[2rem] text-[32px]`} onClick={handleForm}><AiOutlineClose /></div>
+          </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import Fade from 'react-reveal/Fade'
 const WhatWeWantToDo = () => {
   return (
-    <div className="   rounded-[20px] h-[70rem] w-full">
+    <div name="about" className="rounded-[20px] h-[70rem] w-full">
 
 <Fade right delay={300}> <div className="absolute 2xl:right-[1.7rem] xl:right-[.5rem] right-[1.5rem] xl:top-[25rem] top-[4rem] z-40    z-40 bg-[url('/public/logotxt.png')] bg-cover w-[315px] h-[130px] xl:w-[710px] xl:h-[290px]" /></Fade>
       <div className="absolute bg-[url('/public/bg.png')] xl:top-[80px] w-[95%] h-[1100px] xl:h-[934px] right-0 bg-cover">

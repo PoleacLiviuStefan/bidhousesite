@@ -5,12 +5,12 @@ import Fade from 'react-reveal/Fade'
 const TheBenefits = () => {
   return (
 
-    <div name="TheBenefits" className="relative bg-black w-full py-[17rem]  h-[80rem] xl:h-[75rem]">
+    <div name="TheBenefits" className="relative bg-black w-full py-[17rem]   h-[80rem] xl:h-[75rem]">
     
 
     
 
-      <div className="relative bg-[url('/public/TheBenefitsbg.png')] flex  justify-center w-full h-[57rem] xl:h-[770px] bg-cover">
+      <div className="relative bg-[url('/public/TheBenefitsbg.png')] flex  z-20 justify-center w-full h-[57rem] xl:h-[770px] bg-cover">
         <div className="w-[80%] flex justify-center ">
           <div className="relative flex xl:flex-row flex-col">
         

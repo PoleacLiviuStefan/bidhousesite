@@ -77,7 +77,7 @@ const DiscountForm = ({ showDiscountForm,afterLogin }) => {
           </span>
         </p>
       </div>
-      <div className={`relative top-[28rem] ${afterLogin ? "xl:top-[12rem]" : "xl:top-[23rem]"}  left-[-4.7rem] xl:left-[-10rem] flex `}>
+      <div className={`relative  ${afterLogin ? "xl:top-[12rem] top-[15rem]" : "xl:top-[23rem] top-[28rem]"}  left-[-4.7rem] xl:left-[-10rem] flex `}>
         <div onClick={()=>selectOption(1)} className="w-[40px] cursor-pointer flex justify-center items-center  h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
           <div  className={`w-[30px] ${mintOption!=1 && "hidden" } h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]`}></div>
         </div>
@@ -100,7 +100,7 @@ const DiscountForm = ({ showDiscountForm,afterLogin }) => {
           </span>
         </p>
       </div>
-      <div className={`relative top-[44.5rem] ${afterLogin?"xl:top-[21.5rem]":"xl:top-[33.5rem]"} left-[-5.3rem] xl:left-[-10.7rem] flex `}>
+      <div className={`relative  ${afterLogin?"xl:top-[21.5rem] top-[29rem]":"xl:top-[33.5rem] top-[44.5rem]"} left-[-5.3rem] xl:left-[-10.7rem] flex `}>
         <div onClick={()=>selectOption(2)}  className="w-[40px] cursor-pointer flex justify-center items-center  h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
           <div className={`w-[30px] ${mintOption!=2 && "hidden" } h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]`}></div>
         </div>
@@ -121,7 +121,7 @@ const DiscountForm = ({ showDiscountForm,afterLogin }) => {
         </p>
       </div>
 
-      <div className={`relative  top-[49rem] ${afterLogin ?"xl:top-[22.5rem]":"xl:top-[36rem]"} xl:left-[-4.7rem] flex flex-col `}>
+      <div className={`relative   ${afterLogin ?"xl:top-[22.5rem] top-[30rem]":"xl:top-[36rem] top-[49rem]"} xl:left-[-4.7rem] flex flex-col `}>
         <label className="relative top-[9rem]  text-white text-[20px] xl:text-[24px] font-[400]">
           How many NFT's plan to mint?
         </label>
@@ -160,7 +160,7 @@ const DiscountForm = ({ showDiscountForm,afterLogin }) => {
           </div>
         </div>
       </div>
-      <div className={` ${afterLogin? "xl:top-[42.5rem]":"xl:top-[55rem]"}  top-[70rem] relative flex flex-col`}>
+      <div className={` ${afterLogin? "xl:top-[42.5rem] top-[49rem]":"xl:top-[55rem] top-[70rem]"}   relative flex flex-col`}>
         <input
           className={`relative  outline-none px-8 text-[16px]  xl:text-[18px] xl:left-[-.2rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]`}
           name="user_wallet"
@@ -194,7 +194,7 @@ const DiscountForm = ({ showDiscountForm,afterLogin }) => {
       <button
         type="submit"
         value="Send"
-        className={`relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[81rem] ${afterLogin ?"xl:top-[47rem]":"xl:top-[67rem]"}  w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
+        className={`relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10  ${afterLogin ?"xl:top-[47rem] top-[52rem]":"xl:top-[67rem] top-[81rem]"}  w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
       >
         Send
       </button>
