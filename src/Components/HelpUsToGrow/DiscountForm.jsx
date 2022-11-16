@@ -1,6 +1,6 @@
 import React,{useState,useRef} from "react";
 import emailjs from '@emailjs/browser';
-const DiscountForm = ({ showDiscountForm }) => {
+const DiscountForm = ({ showDiscountForm,afterLogin }) => {
   const [mintOption,setMintOption]=useState(0)
   const [mintingNfts,setMintingNfts]=useState(1)
   const selectOption = (index)=>{
@@ -25,38 +25,38 @@ const DiscountForm = ({ showDiscountForm }) => {
     <form
     ref={form}
     onSubmit={sendEmail}
-      className={`absolute z-50 text-white flex flex-col items-center w-full top-[9rem] ${
+      className={`absolute  text-white flex flex-col items-center w-full ${afterLogin ?"top-[2rem]": "top-[9rem] left-[2rem]"} ${
         showDiscountForm
           ? "z-30 h-[130rem] animate-[appear_.5s_ease-in-out_forwards]"
           : "z-20 animate-[disappear_.5s_ease-in-out_forwards]"
-      } w-full `}
+      } w-[30rem] `}
     >
-      <label className="relative xl:left-[-12rem] text-white text-[20px] xl:text-[24px] font-[400]">
+      <label className="relative xl:left-[-10.3rem] text-white text-[20px] xl:text-[24px] font-[400]">
         Fill the form
       </label>
 
       <input
-        className="relative outline-none xl:left-[-1.3rem] px-8 top-8 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
+        className={`relative ${afterLogin && "hidden"} outline-none  px-8 top-8 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
         name="user_twitter"
         placeholder="Enter your Twitter account *"
         required
       ></input>
       <input
-        className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-16 rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        className={`relative ${afterLogin && "hidden"} outline-none px-8 text-[16px] xl:text-[18px] top-16 rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]`}
         name="user_discord"
         placeholder="Enter your Discord account *"
         required
       ></input>
    <input
-        className="relative outline-none px-8 xl:left-[-1.3rem] text-[16px] xl:text-[18px] top-[6rem] rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+        className={`relative ${afterLogin && "hidden"} outline-none px-8  text-[16px] xl:text-[18px] top-[6rem] rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]`}
         name="user_email"
         placeholder="Enter your Email *"
         required
       ></input>
-      <label className="relative top-[9rem] xl:left-[-9.8rem] text-white text-[20px] xl:text-[24px] font-[400]">
+      <label className={`relative ${ afterLogin ?"top-[1rem]": "top-[9rem]"} xl:left-[-8.5rem] text-white text-[20px] xl:text-[24px] font-[400]`}>
         Make your choice
       </label>
-      <div className="relative top-[13rem] left-[-3rem] xl:left-[-9.2rem] flex ">
+      <div className={`relative ${afterLogin ? "top-[2.5rem]":"top-[13rem]"} left-[-3rem] xl:left-[-7.9rem] flex `}>
         <div onClick={()=>selectOption(0)} className={`w-[40px] h-[40px] cursor-pointer flex justify-center items-center   border-[1px] border-[#7B48ED] rounded-[10px]`}>
           <div className={`w-[30px] ${mintOption!=0 && "hidden" } h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]`}></div>
         </div>
@@ -77,7 +77,7 @@ const DiscountForm = ({ showDiscountForm }) => {
           </span>
         </p>
       </div>
-      <div className="relative top-[28rem] xl:top-[23rem] left-[-4.7rem] xl:left-[-11.3rem] flex ">
+      <div className={`relative top-[28rem] ${afterLogin ? "xl:top-[12rem]" : "xl:top-[23rem]"}  left-[-4.7rem] xl:left-[-10rem] flex `}>
         <div onClick={()=>selectOption(1)} className="w-[40px] cursor-pointer flex justify-center items-center  h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
           <div  className={`w-[30px] ${mintOption!=1 && "hidden" } h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]`}></div>
         </div>
@@ -100,7 +100,7 @@ const DiscountForm = ({ showDiscountForm }) => {
           </span>
         </p>
       </div>
-      <div className="relative top-[44.5rem] xl:top-[33.5rem] left-[-5.3rem] xl:left-[-12rem] flex ">
+      <div className={`relative top-[44.5rem] ${afterLogin?"xl:top-[21.5rem]":"xl:top-[33.5rem]"} left-[-5.3rem] xl:left-[-10.7rem] flex `}>
         <div onClick={()=>selectOption(2)}  className="w-[40px] cursor-pointer flex justify-center items-center  h-[40px] border-[1px] border-[#7B48ED] rounded-[10px]">
           <div className={`w-[30px] ${mintOption!=2 && "hidden" } h-[30px] bg-gradient-to-l rounded-[6px] from-[#7B48ED] to-[#9b8dff]`}></div>
         </div>
@@ -121,7 +121,7 @@ const DiscountForm = ({ showDiscountForm }) => {
         </p>
       </div>
 
-      <div className="relative top-[49rem] xl:top-[36rem] xl:left-[-6rem] flex flex-col ">
+      <div className={`relative  top-[49rem] ${afterLogin ?"xl:top-[22.5rem]":"xl:top-[36rem]"} xl:left-[-4.7rem] flex flex-col `}>
         <label className="relative top-[9rem]  text-white text-[20px] xl:text-[24px] font-[400]">
           How many NFT's plan to mint?
         </label>
@@ -160,21 +160,21 @@ const DiscountForm = ({ showDiscountForm }) => {
           </div>
         </div>
       </div>
-      <div className="xl:top-[55rem] top-[70rem] relative flex flex-col">
+      <div className={` ${afterLogin? "xl:top-[42.5rem]":"xl:top-[55rem]"}  top-[70rem] relative flex flex-col`}>
         <input
-          className="relative outline-none px-8 text-[16px] xl:text-[18px] xl:left-[-1.5rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+          className={`relative  outline-none px-8 text-[16px]  xl:text-[18px] xl:left-[-.2rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]`}
           name="user_wallet"
           placeholder="Enter your Wallet Adress *"
           required
         ></input>
         <input
-          className="relative outline-none top-6 px-8 text-[16px] xl:text-[18px] xl:left-[-1.5rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]"
+          className={`relative  outline-none top-6 px-8 text-[16px] xl:text-[18px] xl:left-[-.2rem]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80  border-[1px] border-[#7B48ED]`}
           name="user_signature"
           placeholder="Signature Transaction ID (if already deposit) *"
           required
         ></input>
       </div>
-      <label className="relative top-[75rem] xl:top-[58rem] xl:left-[-3.7rem] text-white text-[20px] xl:text-[24px] font-[400]">
+      <label className={`relative ${afterLogin && "hidden"} top-[75rem] xl:top-[58rem] xl:left-[-2.4rem] text-white text-[20px] xl:text-[24px] font-[400]`}>
         Your opinion is very important to us!{" "}
       </label>
       <div  className="hidden">
@@ -189,12 +189,12 @@ const DiscountForm = ({ showDiscountForm }) => {
       <textarea
       name="message"
         placeholder="If you have something to say, we are listening...!"
-        className="relative opacity-70 px-10 py-4 top-[78rem] xl:top-[60rem] xl:left-[-1.3rem] rounded-[10px] font-[200] text-white text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]"
+        className={`relative ${afterLogin && "hidden"} opacity-70 px-10 py-4 top-[78rem] xl:top-[60rem]  rounded-[10px] font-[200] text-white text-[20px] w-[350px] xl:w-[468px] h-[145px] outline-none  bg-transparent border-[1px] border-[#7B48ED]`}
       ></textarea>
       <button
         type="submit"
         value="Send"
-        className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[81rem] xl:top-[67rem] xl:left-[-1.3rem] w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
+        className={`relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 top-[81rem] ${afterLogin ?"xl:top-[47rem]":"xl:top-[67rem]"}  w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
       >
         Send
       </button>

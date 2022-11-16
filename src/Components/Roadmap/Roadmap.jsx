@@ -1,15 +1,17 @@
 import React from "react";
 import RoadmapCard from "./RoadmapCard";
-
+import Fade from 'react-reveal/Fade'
 const Roadmap = () => {
   return (
     <div name="Roadmap" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="flex flex-col items-start h-[70rem] xl:w-[70rem] 2xl:w-[78rem]">
-        <h1 className="font-[600]  z-30 text-[45px] 2xl:text-[76px]  leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#b172ff] to-[#9e4fff] ">
+        <Fade top><h1 className="font-[600]  z-30 text-[45px] 2xl:text-[76px]  leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#b172ff] to-[#9e4fff] ">
           ROAD<span className="text-transparent">MAP</span>
         </h1>
+        </Fade>
+        <Fade bottom >
         <div className="relative top-[20rem] xl:top-[6rem]  flex flex-col justify-center xl:grid xl:grid-cols-3 w-full  h-[55rem] xl:h-[40rem]">
-          <div className="absolute opacity-50 z-10 left-0 xl:top-[-10rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[300px] h-[1300px] xl:w-[1304px] xl:h-[1282px]" />
+          <div className="absolute opacity-50 z-10 left-0 xl:top-[-35rem] bg-[url('/public/whatwewantodoglow.png')] bg-cover w-[300px] h-[1300px] xl:w-[1304px] xl:h-[1282px]" />
           <RoadmapCard
             number="1"
             background="bg-gradient-to-r   rounded-[20px] from-[#9f84ff] via-[#8f6dff] to-[#7c52ff]"
@@ -88,8 +90,12 @@ const Roadmap = () => {
               </ul>
             }
           />
+          
         </div>
+        </Fade>
       </div>
+
+      
     </div>
   );
 };

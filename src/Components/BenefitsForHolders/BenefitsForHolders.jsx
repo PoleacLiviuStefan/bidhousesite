@@ -1,6 +1,6 @@
 import React from "react";
 import CardBenefit from "./CardBenefit";
-
+import Fade from 'react-reveal/Fade'
 const BenefitsForHolders = () => {
   return (
 
@@ -11,12 +11,15 @@ const BenefitsForHolders = () => {
   <div className="absolute top-[420rem] xl:top-[125rem] left-[-15rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
       <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
       
-        {" "}
+        <Fade top>
         <h1 className="font-[600] ml-2 xl:ml-0 z-30 text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           BENEFITS FOR<span className="text-transparent"> HOLDERS</span>
         </h1>
+        </Fade>
+
         <div className="relative top-[4.5rem] flex flex-col xl:grid xl:grid-cols-3 w-full">
+          <Fade bottom >
           <CardBenefit
             title={
               <h1 className="relative w-[211px] left-3 top-[40px] text-[26px] xl:text-[27px] text-white font-[700] leading-[29px]">
@@ -75,7 +78,8 @@ will generate Passive Income.
               </p>
             }
           />
-        
+        </Fade>
+        <Fade bottom >
           <CardBenefit
             title={
               <h1 className="relative left-3 w-[211px] top-[50px] text-[26px] xl:text-[27px] text-white font-[700] leading-[29px]">
@@ -129,6 +133,8 @@ based on the rarities of<br /> the NFT owned.
               </p>
             }
           />
+          </Fade>
+          <Fade bottom >
           <CardBenefit
             title={
               <h1 className="relative left-3 w-[211px] top-[50px] text-[26px] xl:text-[27px] text-white font-[700] leading-[29px]">
@@ -189,6 +195,8 @@ and 25% into de community wallet.
               </p>
             }
           />
+          </Fade>
+          <Fade bottom >
              <CardBenefit
             title={
               <h1 className="relative left-3 w-[211px] top-[40px] text-[26px] xl:text-[27px]  text-white font-[700] leading-[29px]">
@@ -256,6 +264,8 @@ able to <br /> convert in stable coin.
               </p>
             }
           />
+          </Fade>
+          <Fade bottom >
             <CardBenefit
             title={
               <h1 className="relative left-3 w-[211px] top-[50px] text-[26px] xl:text-[27px]  text-white font-[700] leading-[29px]">
@@ -324,6 +334,8 @@ you earn #BHC.
               </p>
             }
           />
+          </Fade>
+          <Fade bottom >
             <CardBenefit
             title={
               <h1 className="relative left-3 w-[211px] top-[40px] text-[26px] xl:text-[27px]  text-white font-[700] leading-[29px]">
@@ -375,6 +387,7 @@ channel on Discord and in Version 2.0<br/> of the Whitepaper.
       
    
     </div>
+    </Fade>
         </div>
       </div>
     </div>

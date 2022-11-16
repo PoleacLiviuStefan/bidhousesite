@@ -10,16 +10,29 @@ module.exports = {
         'ourproject': 'linear-gradient(90deg, rgba(222,216,255,1) 0%, rgba(146,105,241,1) 4%, rgba(123,72,237,1) 100%)',
       },
       keyframes: {
+        extendmenu:{
+            '0%':{
+              width:"0"
+            },
+            '100%':{
+              width:"20rem"
+            },
+        },
         linetop:{
-          transform: 'rotate(135deg)'
+          '0%':{
+            transform:'rotate(0deg)'
+          },
+          '100%':{
+            transform: 'rotate(135deg)'
+          },
         },
         rarityanim:{
           '0%': {
-            height: '344px',
+            height: '344px'
             
           },
           '100%': {
-            height: '424px',
+            height: '424px'
             
           },
         },

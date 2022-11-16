@@ -1,5 +1,5 @@
 import React from "react";
-
+import Fade from 'react-reveal/Fade'
 const WhenTheMintStart = () => {
   return (
     <div name="MintStart" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
@@ -8,10 +8,12 @@ const WhenTheMintStart = () => {
     <div className="relative flex flex-col items-center w-full h-[70rem] bg-black">
       <div className="absolute z-30 left-[-35rem] top-[-30rem] bg-[url('/public/glowsecond.png')] bg-cover w-[1304px] h-[1450px]" />
       <div className="flex flex-col items-start ml-4 xl:ml-0  xl:left-0 w-[23rem] xl:w-[70rem] 2xl:w-[78rem]">
-        <h1 className="font-[600] text-[30px] z-30 xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+       <Fade top> <h1 className="font-[600] text-[30px] z-30 xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
 
           WHEN MINT <span className="text-transparent">START?</span>
         </h1>
+        </Fade>
+        <Fade top delay={300}>
         <h3 className="relative top-4 z-40 font-[400] text-[20px] leading-[28px] text-white">
           To be announced on<span className="text-purple-400 cursor-pointer "> <a href="https://discord.gg/VQghzgJz">Discord </a></span> on{" "}
           <span className="text-blue-400"><a href="https://twitter.com/bidhouse_nft">Twitter</a></span>
@@ -33,8 +35,9 @@ const WhenTheMintStart = () => {
               Mint START
             </h3>
           </div>
+       
         </div>
-    
+        </Fade>
       </div>
     </div>
     </div>

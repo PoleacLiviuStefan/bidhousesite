@@ -25,11 +25,12 @@ import WhenTheMintStart from "../WhenTheMintStart/WhenTheMintStart";
 import WhoAreWe from "../WhoAreWe/WhoAreWe";
 import WhyTheProjectWillBeSuccessful from "../WhyTheProjectWillBeSuccessful/WhyTheProjectWillBeSuccessful";
 import CardInfo from "./CardInfo";
+import Fade from 'react-reveal/Fade'
 import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[1855rem] xl:h-[1250rem]">
+    <div className="relative  bg-black w-full  h-[1840rem] xl:h-[1250rem]">
 
 
 
@@ -38,7 +39,9 @@ const PrincipalInfo = () => {
         <div className="absolute bg-[url('/public/yellowglow.png')] bg-cover bottom-[23rem]  w-[1224px] h-[1132px]" />
         <div className="absolute bg-[url('/public/greenglow.png')] right-0  bottom-[23rem] bg-cover w-[782px] h-[1137px]" />
       </div>
+      
       <div className="absolute top-[200px] w-full h-full flex flex-col items-center">
+      <Fade >
         <h2 className={styles.ourproject}>
           Our project will buy real apartments around the world in order to
           benefit from them as a owner of our
@@ -46,11 +49,12 @@ const PrincipalInfo = () => {
         </h2>
         <div className="relative text-opacity-70 font-[200] text-white leading-[28px] w-[22rem] xl:w-[70rem] top-12 left-0 text-[20px]">
           The NFT phenomenon has revolutionised the Blockchain space and digital
-          ownership. We will walk you through the meaning behind a picture, what
+          ownership. We will walk you   through the meaning behind a picture, what
           makes an NFT valuable and its use cases.
         </div>
-        
+        </Fade>
       </div>
+      
       <div className="absolute top-[52rem] xl:top-[37rem] 2xl:top-[45rem] w-full">
         <WhatWeWantToDo />
       </div>
@@ -95,7 +99,7 @@ const PrincipalInfo = () => {
       <div className="absolute top-[1672rem] xl:top-[1095rem] 2xl:top-[1170rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[1751rem] xl:top-[1184rem] 2xl:top-[1265rem] w-full">
+      <div className="absolute top-[1752rem] xl:top-[1184rem] 2xl:top-[1265rem] w-full">
       <ContactUs />
       </div>
       <div className="absolute top-[1800rem] xl:top-[1233rem] 2xl:top-[1318rem] w-full">

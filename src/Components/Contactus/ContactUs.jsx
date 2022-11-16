@@ -1,5 +1,6 @@
 import React,{useRef,useState} from 'react'
 import emailjs from '@emailjs/browser';
+import Fade from 'react-reveal/Fade'
 const ContactUs = () => {
   const form = useRef();
   const [roleOption,setRoleOption]=useState(0);
@@ -22,11 +23,12 @@ const ContactUs = () => {
     <div name="Contact" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
        <div className="absolute z-10 top-[-30rem] xl:top-[-23rem] left-0 bg-[url('/public/contactusglow.png')] w-[1249px] h-[1003px]"/>
     <div className="flex z-20 flex-col items-center w-[78rem]">
-  
+      <Fade top>
       <h1 className="font-[600] text-[30px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-b from-[#17DD8A] to-[#0d7abf] ">
         CONTACT<span className="text-transparent"> US</span>
       </h1>
-      
+      </Fade>
+      <Fade bottom>
                   <form onSubmit={sendEmail} ref={form} className='relative  xl:left-0 top-[6rem] flex flex-col text-white text-[18px]'>
                     <label className='font-[400] text-[20px] xl:text-[24px]'>Contact us directly on e-mail</label>
                     <input
@@ -63,7 +65,7 @@ const ContactUs = () => {
       >
         Send
       </button>
-                  </form>
+                  </form></Fade>
       </div> </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MemberCard = ({photo,rolemember,namemember,discord,telegram,twitter}) => {
+const MemberCard = ({photo,rolemember,namemember,discord,telegram,twitter,linkedin}) => {
   return (
 
     <div className='flex flex-col mt-20 items-center'>
@@ -10,9 +10,11 @@ const MemberCard = ({photo,rolemember,namemember,discord,telegram,twitter}) => {
 
 
         <div className='relative mt-8 flex'>
-            <a><div className="bg-cover bg-[url('/public/discord.svg')] mr-4 w-[30px] h-[36px]" /></a>
-            <a><div className="bg-cover bg-[url('/public/telegram.svg')] w-[36px] h-[36px]" /></a>
-            <a><div className="bg-cover bg-[url('/public/twitter.svg')] ml-4 w-[36px] h-[36px]" /></a>
+            <a href={discord}><div className="bg-cover cursor-pointer bg-[url('/public/discord.svg')] mr-2 w-[30px] h-[36px]" /></a>
+            <a href={telegram}><div className="bg-cover cursor-pointer bg-[url('/public/telegram.svg')] w-[36px] h-[36px]" /></a>
+            <a href={twitter}><div className="bg-cover cursor-pointer bg-[url('/public/twitter.svg')] ml-2 w-[36px] h-[36px]" /></a>
+            <a href={linkedin}><div className="bg-cover cursor-pointer bg-[url('/public/linkedin.png')] ml-2 w-[37px] h-[37px]" /></a>
+            
         </div>
       
     </div>

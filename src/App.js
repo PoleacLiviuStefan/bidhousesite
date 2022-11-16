@@ -5,13 +5,15 @@ import Navbar from './Components/Navbar/Navbar';
 import NavbarMobile from './Components/Navbar/NavbarMobile';
 import PrincipalInfo from './Components/PrincipalInfo/PrincipalInfo';
 import TheBenefits from './Components/TheBenefits/TheBenefits';
+import { Route, Routes, Link } from "react-router-dom"
 
 
 
 function App() {
   return (
     <div >
-      <div className='hidden xl:block'>
+      <Routes>
+        <Route path="/" element={<>  <div className='hidden xl:block'>
         <Navbar />
       </div>
       <div className='block xl:hidden'>
@@ -19,8 +21,9 @@ function App() {
       </div>
       <Hero />
       <TheBenefits />
-      <PrincipalInfo />
-
+      <PrincipalInfo /></>
+        } />
+      </Routes>
     </div>
   );
 }

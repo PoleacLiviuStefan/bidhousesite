@@ -1,5 +1,6 @@
 import React from "react";
 import downloadpdf from '../Hero/Whitepaper_Bidhouse_Project.pdf'
+import Fade from 'react-reveal/Fade'
 const ReleaseSoon = () => {
   return (
 
@@ -7,9 +8,11 @@ const ReleaseSoon = () => {
     <div className="relative flex flex-col items-center w-full h-[70rem] ">
 
       <div className="flex flex-col  z-30 items-start w-[22.5rem] xl:w-[78rem]">
-        <h1 className="relative  font-[600] text-[35px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+       <Fade top> <h1 className="relative  font-[600] text-[35px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           RELEASE <span className="text-transparent">SOON</span>
         </h1>
+        </Fade>
+        <Fade bottom delay={300}>
         <div className="relative top-[-10rem] xl:top-[3rem] w-full h-[30rem] xl:h-[20rem] flex  items-center xl:item-start justify-between">
           <div className="flex justify-center xl:mt-[2.8rem] items-center  bg-[url('/public/tokenomics1.png')] bg-cover w-[130px] h-[130px] xl:w-[358px] xl:h-[358px] ">
             <h3 className=" text-center w-[100px] xl:w-[232px]  font-[700] text-[13px] xl:text-[26px] text-white">
@@ -30,6 +33,7 @@ const ReleaseSoon = () => {
           </div>
           </a>
         </div>
+        </Fade>
       </div>
     </div>
     </div>
