@@ -40,8 +40,7 @@ const NavbarMobile = () => {
   const handlelogin=(btn)=>{
     console.log(username)
     setShowLogin(prev=>!prev);
-    if(btn===0)
-    setLock(!isLocked)
+ 
     if(username=="Sign Up" || username==undefined)
    { 
     setLoginMenu(false)
@@ -58,15 +57,15 @@ const NavbarMobile = () => {
   }
   const handleForm=()=>{
       setLoginForm(prev=>!prev)
-      setLock(!isLocked)
+    
   }
   return (
     <div className="fixed z-50  w-[23rem] flex justify-start">
       <div
         onClick={menuHandler}
-        className="absolute left-4 flex top-6 flex-col"
+        className="absolute px-4 py-4  flex top-6 flex-col"
       >
-        <div className="absolute left-[-.5rem] top-[-.5rem] bg-black rounded-[50%] w-[40px] h-[40px]" />
+        <div className="absolute left-[.5rem] top-[.5rem] bg-black rounded-[50%] w-[40px] h-[40px]" />
         <div
           className={`w-[1.5rem] ${
             openMenu && "animate-[linetop_.2s_linear_forwards]"
@@ -81,7 +80,7 @@ const NavbarMobile = () => {
         />
         <div
           className={` ${ 
-            openMenu ? "rotate-45 top-[-4.5px]" : "top-[10px]"}  relative  w-[1.5rem] border-[1px] z-30 border-black h-[4px] bg-white`}
+            openMenu ? "rotate-45 top-[-3.8px]" : "top-[10px]"}  relative  w-[1.5rem] border-[1px] z-30 border-black h-[4px] bg-white`}
         />
         
         <div className={` absolute left-[-1rem] ${!openMenu ? "hidden" : "animate-[extendmenu_.5s_linear_forwards]"} top-[-1.5rem]  w-[20rem] h-screen  bg-black`}>
@@ -269,7 +268,7 @@ const NavbarMobile = () => {
       </div>
       
       </div>
-      <div className={`absolute left-3 ${!showLogin  && "hidden"} flex justify-center   top-0 z-30 w-full h-screen bg-black bg-opacity-90`}>
+      <div className={`absolute  ${!showLogin  && "hidden"} flex justify-center   top-0 z-30 w-screen h-screen bg-black bg-opacity-90`}>
             <SignUp />
             <div onClick={handlelogin} className="w-full h-full z-20 "/>
            
