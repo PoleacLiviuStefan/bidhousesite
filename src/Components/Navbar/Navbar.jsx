@@ -27,7 +27,7 @@ const Navbar = () => {
       var name="";
       if(user?.email)
       name=user.email.split('@')
-     
+    
       
       setUsername(name[0])
     })
@@ -51,14 +51,14 @@ const Navbar = () => {
   }
   const handleForm=()=>{
       setLoginForm(prev=>!prev)
-
+     
   }
   return (  
     <Fade top>
     <div className="fixed z-50 flex justify-center gap-[20px] w-full h-[110px] left-0 top-0 bg-gradient-to-b from-black to-transparent ">
     
       <div className={`absolute ${(!showLogin || (username!="Sign Up" && username!=undefined)) && "hidden"} flex justify-center   top-0 z-30 w-full h-screen bg-black bg-opacity-90`}>
-            <SignUp />
+            <SignUp locked={isLocked}/>
             <div onClick={()=>handlelogin(0)} className="w-full h-full z-20 "/>
            
       </div>

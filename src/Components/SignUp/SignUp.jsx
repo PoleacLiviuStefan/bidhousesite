@@ -4,7 +4,7 @@ import {createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPas
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
 import useBodyScrollLock from "../Functions/useBodyScrollLock";
-const SignUp = () => {
+const SignUp = ({locked}) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [isLocked,setLock]=useBodyScrollLock(true);
   const [registerPassword, setRegisterPassword] = useState("");
@@ -40,14 +40,15 @@ const SignUp = () => {
       setSign(prev=>!prev)
     }
     const register = (e) => {
-    
-     
-        
+   
+       
      console.log(registerError)
       
-     e.preventDefault();
+     e.preventDefault()
      if(sign)
-     {setRegisterError('')
+     {     
+      
+      setRegisterError('')
       if(validatePassword()) {
         // Create a new user with email and password using firebase
           createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
@@ -55,6 +56,7 @@ const SignUp = () => {
               console.log(res.user)
             })
           .catch(err => setRegisterError(err.message))
+          
       }
   
       setRegisterEmail('')
@@ -396,26 +398,7 @@ const SignUp = () => {
 <option className='text-black' value="Zimbabwe">Zimbabwe</option>
 </select>
 <div className={`flex flex-col ${!sign && "hidden"}`}>
-<input
-        className="relative outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
-        name="user_twitter"
-        placeholder="Your wallet adress *"
-        value={walletAddress}
-        onChange={(event)=>{
-          setWalletAddress(event.target.value)
-        }}
-        required
-      ></input>
-              <input
-        className="relative outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
-        name="user_twitter"
-        placeholder="Transaction ID (If you already deposited)"
-        value={transactionId}
-        onChange={(event)=>{
-          setTransactionId(event.target.value)
-        }}
-        required
-      ></input>
+
           <input
         className="relative outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
         name="user_twitter"
@@ -456,14 +439,14 @@ const SignUp = () => {
       >
         Sign In
       </button>
-             <div className={`absolute ${ sign?"top-[41.3rem]":"top-[15rem]"} flex`}>
-             <label className="relative left-6 top-2 text-[1  6px] xl:text-[18px] font-[700]">
+             <div className={`absolute ${ sign?"top-[33.3rem]":"top-[15.3rem]"} flex flex-col xl:flex-row`}>
+             <label className="relative left-12 xl:left-6 top-2 text-[16px] xl:text-[18px] font-[700]">
                 You already have an account? {user?.email}
              </label>
              
              <div
       value="Login"
-      className="relative flex justify-center items-center cursor-pointer bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10  left-[2rem] top-1   w-[350px] xl:w-[68px] h-[36px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
+      className="relative flex justify-center items-center cursor-pointer bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10  xl:left-[2rem] top-8 xl:top-1   w-[350px] xl:w-[68px] h-[36px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
       onClick={handleSignIn}
     >
         {sign ?"Sign In":"Sign Up"}

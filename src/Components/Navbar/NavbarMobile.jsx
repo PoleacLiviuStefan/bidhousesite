@@ -30,6 +30,8 @@ const NavbarMobile = () => {
       var name="";
       if(user?.email)
       name=user.email.split('@')
+      if(name!="" && name!="Sign Up")
+      setShowLogin(false);
      if(name=="")
       setUsername("Sign Up")
       else
@@ -267,7 +269,7 @@ const NavbarMobile = () => {
       </div>
       
       </div>
-      <div className={`absolute left-5 ${!showLogin  && "hidden"} flex justify-center   top-0 z-30 w-full h-screen bg-black bg-opacity-90`}>
+      <div className={`absolute left-3 ${!showLogin  && "hidden"} flex justify-center   top-0 z-30 w-full h-screen bg-black bg-opacity-90`}>
             <SignUp />
             <div onClick={handlelogin} className="w-full h-full z-20 "/>
            
