@@ -240,10 +240,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`absolute ${!loginForm &&"hidden"}  w-full overflow-y-scroll    h-[90rem] flex justify-center bg-black bg-opacity-90 z-30`}>
-        <DiscountForm showDiscountForm={true} afterLogin={true} />
-        <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
-        </div>
+        <div className={`absolute ${!loginForm &&"hidden"}  w-full overflow-y-scroll    h-[90rem] flex justify-center bg-black bg-opacity-90 z-30`}>
+          <DiscountForm showDiscountForm={true} afterLogin={true} />
+          <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
+          </div>
     </div>
     </Fade>
   );
