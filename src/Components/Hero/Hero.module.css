@@ -204,4 +204,10 @@
   .playbtn{
    display: none;
   }
+  .contactbtn{
+    display: none;
+  }
+  .accesbtn{
+    display: none;
+  }
 }

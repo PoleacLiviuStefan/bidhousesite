@@ -16,6 +16,7 @@ import useBodyScrollLock from "../Functions/useBodyScrollLock";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
 import DiscountForm from "../HelpUsToGrow/DiscountForm";
+import NotificationCard from '../Notifications/NotificationCard';
 const Navbar = () => {
   const [isLocked,setLock]=useBodyScrollLock(true);
   const [showLogin,setShowLogin]=useState(false);
@@ -23,14 +24,15 @@ const Navbar = () => {
   const [username,setUsername]=useState("Sign Up")
   const [loginMenu,setLoginMenu]=useState(false)
   const [loginForm,setLoginForm]=useState(false)
+  const [showNotification,setShowNotification]=useState(false)
     useEffect(()=>{
       var name="";
       if(user?.email)
       name=user.email.split('@')
-    
-      
+   
       setUsername(name[0])
     })
+ 
   const handlelogin=(btn)=>{
     console.log(username)
     setShowLogin(prev=>!prev);
@@ -240,10 +242,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <div className={`absolute ${!loginForm &&"hidden"}  w-full overflow-y-scroll    h-[90rem] flex justify-center bg-black bg-opacity-90 z-30`}>
+        <div className={`absolute ${!loginForm &&"hidden"}  w-full    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
           <DiscountForm showDiscountForm={true} afterLogin={true} />
           <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
           </div>
+          <div className={`absolute ${!showNotification && "hidden"}  top-[6rem]   right-[1rem] `}>
+
+<NotificationCard title="Welcome to Bidhouse" message={<p className='text-[15px] px-[25px]'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum tempora illum consectetur minima aliquid labore quia enim magnam totam.</p>}/>
+</div>
     </div>
     </Fade>
   );

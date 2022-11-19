@@ -242,7 +242,7 @@ const NavbarMobile = () => {
           to="Social"
           spy={true}
           smooth={true}
-          offset={-250}
+          offset={100}
           delay={200}>
           <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[13rem] `}>
             Social
@@ -267,7 +267,7 @@ const NavbarMobile = () => {
    
           </li>
               <li>
-              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[16rem]`}>My NFT</button>
+              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[16rem]`}>My NFT</button>
               <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[16rem]`}>Staking</button>
               </li>
           </ul>

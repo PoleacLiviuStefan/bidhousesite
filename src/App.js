@@ -20,6 +20,7 @@ function App() {
         <NavbarMobile />
       </div>
       <Hero />
+      
       <TheBenefits />
       <PrincipalInfo /></>
         } />

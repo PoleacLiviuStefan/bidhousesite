@@ -4,6 +4,9 @@ import {createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPas
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
 import useBodyScrollLock from "../Functions/useBodyScrollLock";
+import NotificationCard from '../Notifications/NotificationCard';
+import {CgDanger} from 'react-icons/cg'
+import {AiFillCheckCircle} from 'react-icons/ai'
 const SignUp = ({locked}) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [isLocked,setLock]=useBodyScrollLock(true);
@@ -18,8 +21,11 @@ const SignUp = ({locked}) => {
   const [sign,setSign]=useState(true)
   const [user] = useAuthState(auth);
   const [registerError,setRegisterError]=useState("")
+  const [errorNotification,setErrorNotification]=useState(-1)
+  const [animOn,setAnimOn]=useState(false)
 
-  const validatePassword = () => {
+ 
+  const validateRegister = () => {
     let isValid = true
   
     if (registerPassword !== '' && comfirmRegisterPassword !==''){
@@ -27,13 +33,30 @@ const SignUp = ({locked}) => {
         setRegisterError("The passwords are not the same")
         isValid=false;
       }
-    }
-
-    if (!(/^[0-9A-Za-z]+$/.test(registerPassword)))
+    else
     {
-      setRegisterError("The password should contain at least 1 digit")
-      isValid=false;
+      if(!registerPassword.containsUppercase)
+    {
+      setRegisterError("Your password MUST contain at least 6 characters (12+ recommended),  at least one uppercase letter,  at least one lowercase letter and at least one number")
+      isValid=false;  
     }
+      
+  }}
+    if(!registerEmail.includes("@"))
+    {
+      setRegisterError("Enter a valid email")
+      isValid=false;  
+    }
+  if(!isValid)
+   {
+   
+    setTimeout(()=>{
+        setAnimOn(false)
+        
+        setErrorNotification(-1)
+        
+    },7000)
+  }
     return isValid
   }
     const handleSignIn=()=>{
@@ -42,30 +65,39 @@ const SignUp = ({locked}) => {
     const register = (e) => {
    
        
-     console.log(registerError)
+   
       
      e.preventDefault()
      if(sign)
-     {     
-      
-      setRegisterError('')
-      if(validatePassword()) {
+     {    
+ 
+
+      if(validateRegister()) {
+        
         // Create a new user with email and password using firebase
+        
           createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
           .then((res) => {
-              console.log(res.user)
+              
             })
-          .catch(err => setRegisterError(err.message))
-          
+          .catch(err => {
+            setRegisterError(err.message)
+            setErrorNotification(0)
+              console.log(err.message)
+            })
       }
-  
+      else{
+        setErrorNotification(0)
+    
+      }
       setRegisterEmail('')
       setRegisterPassword('')
       setComfirmRegisterPassword('')
       setWalletAddress('')
       setTransactionId('')
       setDiscordName('')
-      setTwitterName('')}
+      setTwitterName('')
+    }
       else
       {
         signInWithEmailAndPassword(
@@ -74,19 +106,30 @@ const SignUp = ({locked}) => {
           loginPassword
         )
         .then((res) => {
-          console.log(res.user)
+          
         })
-      .catch(err => setRegisterError(err.message))
-     
+      .catch(err => {
+            setRegisterError("Invalid email or password.Please try again")
+        setErrorNotification(0)
+        setTimeout(()=>{
+          setAnimOn(false)
+          
+          setErrorNotification(-1)
+          
+      },7000)
+      })
+      
       setLoginEmail('')
       setLoginPassword('')
       }
+      
     };
   
     const logout=()=>{
      
       signOut(auth);
     }
+
   return (
     <form onSubmit={e=>register(e)} className={`absolute text-white z-30 flex flex-col items-center w-[30rem] top-[1rem]
       } w-full `} noValidate>
@@ -452,6 +495,11 @@ const SignUp = ({locked}) => {
         {sign ?"Sign In":"Sign Up"}
         </div>
         </div>
+        <div className={`absolute ${animOn && "animate-[notificationdisappear_.5s_linear_forwards]"} ${errorNotification==0 ? "animate-[notificationappear_.5s_linear_forwards]":"hidden"} top-0 right-[-24rem] `}>
+     <NotificationCard logo={<div className='text-[40px]'><CgDanger /> </div>} message={registerError} colorbg="bg-[#c62222]" size="w-[380px] h-[100px]" />
+     
+     </div>
+    
     </form>
   )
 }

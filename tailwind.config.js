@@ -83,6 +83,22 @@ module.exports = {
           '100%': {
             opacity: '0'
           },
+        },
+        notificationappear: {
+          '0%': {
+           top:'-10rem'
+          },
+          '100%': {
+            top:'0'
+          },
+        },
+        notificationdisappear: {
+          '0%': {
+           top:'0'
+          },
+          '100%': {
+            top:'-10rem'
+          },
         }
       }
     },
