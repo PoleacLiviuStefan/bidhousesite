@@ -61,7 +61,7 @@ const NavbarMobile = () => {
     
   }
   return (
-    <div className="fixed z-50  w-[23rem] flex justify-start">
+    <div className={`fixed z-50 ${openMenu ?"w-[23rem]": " w-0"} mb-4 h-screen  w-[23rem] flex justify-start`}>
       <div
         onClick={menuHandler}
         className="absolute px-4 py-4  flex top-6 flex-col"
@@ -84,7 +84,7 @@ const NavbarMobile = () => {
             openMenu ? "rotate-45 top-[-3.8px]" : "top-[10px]"}  relative  w-[1.5rem] border-[1px] z-30 border-black h-[4px] bg-white`}
         />
         
-        <div className={` absolute left-[-1rem] ${!openMenu ? "hidden" : "animate-[extendmenu_.5s_linear_forwards]"} top-[-1.5rem]  w-[20rem] h-screen  bg-black`}>
+        <div className={` fixed left-[-1rem] ${!openMenu ? "hidden" : "animate-[extendmenu_.5s_linear_forwards]"} top-[0rem]  w-[20rem] h-screen  bg-black`}>
           <ul className="text-white">
             <li> <Link
           activeClass="active"
@@ -107,7 +107,7 @@ const NavbarMobile = () => {
           smooth={true}
           offset={50}
           delay={200}
-        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[3rem] `}>
+        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[2rem] `}>
             About
           </button>
           </Link>
@@ -119,7 +119,7 @@ const NavbarMobile = () => {
           smooth={true}
           offset={-100}
           delay={200}
-        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[4rem] `}>
+        ><button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[3rem] `}>
             Roadmap
           </button>
           </Link></li>
@@ -132,7 +132,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[5rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[4rem]`}>
             Apartaments
           </button>
           </Link>
@@ -146,7 +146,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[6rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[5rem]`}>
             Release Soon
           </button>
           </Link>
@@ -160,7 +160,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[7rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[6rem]`}>
             Benefits
           </button>
           </Link>
@@ -173,7 +173,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[8rem]`}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[7rem]`}>
             Rarity
           </button>
           </Link></li>
@@ -186,7 +186,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[9rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[8rem] `}>
             Team
           </button>
           </Link>
@@ -200,7 +200,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[10rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[9rem] `}>
             Forms
           </button>
           </Link>
@@ -216,7 +216,7 @@ const NavbarMobile = () => {
         >
           
       
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[11rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[10rem] `}>
             Supporters
           </button>
           </Link>
@@ -230,7 +230,7 @@ const NavbarMobile = () => {
           offset={-100}
           delay={200}
         >
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[12rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center text-left h-full left-4 top-[11rem] `}>
             FAQ
           </button>
           </Link>
@@ -244,31 +244,31 @@ const NavbarMobile = () => {
           smooth={true}
           offset={100}
           delay={200}>
-          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[13rem] `}>
+          <button onClick={menuHandler} className={`relative whitespace-nowrap ${openMenu ?"animate-[appear_1s_linear_forwards]":""} w-full text-center h-full left-4 top-[12rem] `}>
             Social
           </button>
           </Link>
           </li>
           <li>
-          <button onClick={()=>handlelogin(1)} className={`relative ${(username!="Sign Up" && username!=undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[96px] h-[44px] left-[8rem] top-[14rem]`}>
+          <button onClick={()=>handlelogin(1)} className={`relative ${(username!="Sign Up" && username!=undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[96px] h-[44px] left-[8rem] top-[12.5rem]`}>
            Sign Up
           </button></li>
           <li className="flex ">
-          <button onClick={()=>handlelogin(2)} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7rem] top-[14rem] `}>
+          <button onClick={()=>handlelogin(2)} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7rem] top-[12.5rem] `}>
            {username}
           </button>
       
           </li>
           <li>
-          <button  onClick={logout} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"}  ${openMenu ?"animate-[appear_1s_linear_forwards]":""}   bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[2rem] top-[15rem]`}>
+          <button  onClick={logout} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"}  ${openMenu ?"animate-[appear_1s_linear_forwards]":""}   bg-gradient-to-r z-30 from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[2rem] top-[13.5rem]`}>
           Logout
           </button>
-          <button onClick={handleForm} className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[15rem]`}>Form</button>
+          <button onClick={handleForm} className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[13.5rem]`}>Form</button>
    
           </li>
               <li>
-              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[16rem]`}>My NFT</button>
-              <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[16rem]`}>Staking</button>
+              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[14.5rem]`}>My NFT</button>
+              <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[14.5rem]`}>Staking</button>
               </li>
           </ul>
           

@@ -35,9 +35,9 @@ const FormsStart = () => {
                <button onClick={()=>handleForm(2)} className={`absolute ${showForm<0 ?"z-40":"z-20"} top-[28.9rem] cursor-pointer z-40 xl:top-[28.5rem]  bg-gradient-to-r from-[#2F2175] to-[#7B48ED] font-[700] w-[350px] h-[88px] rounded-[20px]  text-white text-[32px]`}>START</button>
           </div>
           </Fade>
-          <div className={`fixed   top-0 left-0 ${showForm<0 ? "animate-[disappear_1s_linear_forwards] w-0 z-0":"z-30" }  w-full h-[145rem] xl:h-[200rem] bg-black bg-opacity-90`} />
-        <div className={`fixed top-[-2rem] overflow-y-scroll overflow-x-hidden   h-screen flex justify-center items-center ${showForm<0 ?" w-0 xl:w-0 z-10" :"z-30 w-[23rem] xl:w-[80rem]"}`}>
-        <div onClick={()=>handleForm(-1)} className={`absolute w-screen h-[220rem] ${!(showForm >=0 && showForm<=2) && "hidden"} `} />
+          <div className={`fixed   top-0 left-0 ${showForm<0 ? "animate-[disappear_1s_linear_forwards] w-0 z-0":"z-50" }  w-full h-[145rem] xl:h-[200rem] bg-black bg-opacity-90`} />
+        <div className={`fixed top-[-2rem] overflow-y-scroll overflow-x-hidden   h-screen flex justify-center items-center ${showForm<0 ?" w-0 xl:w-0 z-10" :"z-50 w-[23rem] xl:w-[80rem]"}`}>
+        <div onClick={()=>handleForm(-1)} className={`absolute w-screen h-[240rem] ${!(showForm >=0 && showForm<=2) && "hidden"} `} />
           <div className={`absolute w-[580px] top-0 ${showForm!=0 ? "hidden z-10" :"z-40" }`}><MintForm  showFormMint={showForm==0} />
           </div>
           <div className={`absolute w-[550px] top-0 ${showForm!=1 ? "hidden z-10" :"z-40" }`}><DiscountForm  showDiscountForm={showForm==1} /></div>

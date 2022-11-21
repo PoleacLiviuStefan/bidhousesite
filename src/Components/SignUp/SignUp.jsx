@@ -34,13 +34,13 @@ const SignUp = ({locked}) => {
         isValid=false;
       }
     else
-    {
-      if(!registerPassword.containsUppercase)
+    {   
+      if(!registerPassword?.match(/[A-Z]/) || !registerPassword?.match(/[0-9]/) )
     {
       setRegisterError("Your password MUST contain at least 6 characters (12+ recommended),  at least one uppercase letter,  at least one lowercase letter and at least one number")
       isValid=false;  
     }
-      
+    console.log(registerPassword?.match(/[A-Z]/))
   }}
     if(!registerEmail.includes("@"))
     {
@@ -55,8 +55,9 @@ const SignUp = ({locked}) => {
         
         setErrorNotification(-1)
         
-    },7000)
+    },5000)
   }
+
     return isValid
   }
     const handleSignIn=()=>{
@@ -71,7 +72,7 @@ const SignUp = ({locked}) => {
      if(sign)
      {    
  
-
+        
       if(validateRegister()) {
         
         // Create a new user with email and password using firebase
@@ -495,8 +496,9 @@ const SignUp = ({locked}) => {
         {sign ?"Sign In":"Sign Up"}
         </div>
         </div>
-        <div className={`absolute ${animOn && "animate-[notificationdisappear_.5s_linear_forwards]"} ${errorNotification==0 ? "animate-[notificationappear_.5s_linear_forwards]":"hidden"} top-0 right-[-24rem] `}>
-     <NotificationCard logo={<div className='text-[40px]'><CgDanger /> </div>} message={registerError} colorbg="bg-[#c62222]" size="w-[380px] h-[100px]" />
+   
+        <div className={`absolute top-0 ${animOn && "animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification==0 ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>
+     <NotificationCard logo={<div className='text-[40px]'><CgDanger /> </div>} message={registerError} messagesize=" text-[14px] "  messagebg="bg-[#e03c3c]" colorbg="bg-[#c62222]" size= " w-[340px] xl:w-[380px] h-[100px]" />
      
      </div>
     

@@ -17,6 +17,7 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
 import DiscountForm from "../HelpUsToGrow/DiscountForm";
 import NotificationCard from '../Notifications/NotificationCard';
+import ProfileDetails from "../Profile/ProfileDetails";
 const Navbar = () => {
   const [isLocked,setLock]=useBodyScrollLock(true);
   const [showLogin,setShowLogin]=useState(false);
@@ -25,6 +26,7 @@ const Navbar = () => {
   const [loginMenu,setLoginMenu]=useState(false)
   const [loginForm,setLoginForm]=useState(false)
   const [showNotification,setShowNotification]=useState(false)
+  const [profileDetails,setProfileDetails]=useState(false)
     useEffect(()=>{
       var name="";
       if(user?.email)
@@ -55,6 +57,10 @@ const Navbar = () => {
       setLoginForm(prev=>!prev)
      
   }
+  const handleProfile=()=>{
+    setProfileDetails(prev=>!prev)
+   
+}
   return (  
     <Fade top>
     <div className="fixed z-50 flex justify-center gap-[20px] w-full h-[110px] left-0 top-0 bg-gradient-to-b from-black to-transparent ">
@@ -231,7 +237,7 @@ const Navbar = () => {
           </button>
           <div className={`absolute ${!loginMenu && "hidden"} flex justify-center right-[0rem] top-[4rem] rounded-[8px]      flex w-[450px] h-[40px]`}>
       <ul className="text-white  flex items-center z-20">
-        <li className="relative cursor-pointer">  <button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Profile</button></li>
+        <li className="relative cursor-pointer">  <button onClick={handleProfile} className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Profile</button></li>
         <li className="relative ml-2   cursor-no-drop"> <div className="absolute bg-black opacity-50 rounded-[16px] h-full w-full z-30" /><button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">My NFT</button></li>
         <li className="relative ml-2  cursor-no-drop"><div className="absolute bg-black opacity-50 rounded-[16px] h-full w-full z-30" /><button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Staking</button></li>
         <li className="relative ml-2 cursor-pointer"><button onClick={handleForm} className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Form</button></li>
@@ -246,7 +252,11 @@ const Navbar = () => {
           <DiscountForm showDiscountForm={true} afterLogin={true} />
           <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
           </div>
-          <div className={`absolute ${!showNotification && "hidden"}  top-[6rem]   right-[1rem] `}>
+          <div className={`absolute ${!profileDetails && "hidden"}  w-full    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
+          <ProfileDetails />
+          <div onClick={handleProfile} className="w-full h-[100rem] z-20 "/>
+          </div>
+          <div className={`fixed ${!showNotification && "hidden"}     right-[1rem] `}>
 
 <NotificationCard title="Welcome to Bidhouse" message={<p className='text-[15px] px-[25px]'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum tempora illum consectetur minima aliquid labore quia enim magnam totam.</p>}/>
 </div>

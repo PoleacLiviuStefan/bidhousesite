@@ -28,7 +28,7 @@ const MintForm = ({showFormMint}) => {
     onSubmit={sendEmail}
       className={`absolute text-white flex flex-col items-center w-full top-[9rem] ${
         showFormMint
-          ? "h-[100rem] z-30 animate-[appear_.5s_ease-in-out_forwards]"
+          ? "h-[90rem] z-30 animate-[appear_.5s_ease-in-out_forwards]"
           : "z-20 animate-[disappear_.5s_ease-in-out_forwards]"
       } w-full `}
     >

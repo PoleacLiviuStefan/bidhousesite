@@ -13,7 +13,7 @@ const JoinOurCommunity = () => {
       <div className='flex xl:flex-row flex-col relative  xl:left-[-7em] top-16 text-white text-[24px]'>
       <Fade left>
         <div className='flex xl:flex-row flex-col items-center'>
-           <a className='relative flex  xl:flex-row flex-col items-center' href="https://discord.gg/HRrFT8hG"> <div className=' text-[110px]'><BsDiscord /></div>
+           <a className='relative flex  xl:flex-row flex-col items-center' href="https://discord.gg/7XXCyuaG"> <div className=' text-[110px]'><BsDiscord /></div>
             <h3 className='relative mt-4 xl:mt-0 xl:left-[4rem]'>COMMUNITY</h3>
             </a>
         </div>

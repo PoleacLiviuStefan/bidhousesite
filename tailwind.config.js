@@ -86,20 +86,37 @@ module.exports = {
         },
         notificationappear: {
           '0%': {
-           top:'-10rem'
+           bottom:'-10rem'
           },
           '100%': {
-            top:'0'
+            bottom:'2rem'
           },
         },
         notificationdisappear: {
           '0%': {
-           top:'0'
+            bottom:'2rem'
+          },
+          '100%': {
+            bottom:'-10rem'
+          },
+        },
+        errornotificationappear: {
+          '0%': {
+            top:'-10rem'
+          },
+          '100%': {
+            top:'1rem'
+          },
+        },
+        errornotificationdisappear: {
+          '0%': {
+           top:'1rem'
           },
           '100%': {
             top:'-10rem'
           },
         }
+        
       }
     },
   },
