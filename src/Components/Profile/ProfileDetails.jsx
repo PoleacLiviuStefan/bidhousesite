@@ -30,7 +30,7 @@ const ProfileDetails = () => {
     </div>
     <div className='relative flex mt-6 justify-center items-center left-[1rem] border-[1px] h-[40px] rounded-[16px] border-[#a98be4]'>
     <h3 className='relative ml-[3rem] text-[20px] text-white mr-2'>Change Avatar</h3>
-    <input type="file"  className='relative left-[2.5rem]' onChange={handleChange}  /> 
+    <input type="file"  className='relative left-[2.5rem] w-[200px] mr-[5rem]' onChange={handleChange}  /> 
     </div>
     
     </div>
