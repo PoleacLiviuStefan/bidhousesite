@@ -41,7 +41,7 @@ const ProfileDetails = () => {
         </div>
         <div className='relative mt-[1rem] left-[17rem]  flex flex-col '>
         <h3 className='text-[20px] xl:text-[24px]'>Email</h3>
-        <input className={`relative caret-transparent outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`} value={localStorage.getItem("email")}></input>
+        <input className={`relative caret-transparent outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`} value={localStorage.getItem("useremail")}></input>
        </div>
      
        </div>
