@@ -183,6 +183,9 @@ const SignUp = ({locked}) => {
   localStorage.setItem("forename",docs[0].forename)
   localStorage.setItem("surname",docs[0].surname)
   localStorage.setItem("birthdate",docs[0].birthDate)
+  localStorage.setItem("discord",docs[0].discord)
+  localStorage.setItem("twitter",docs[0].twitter)
+  localStorage.setItem("country",docs[0].country)
 })()
  }
   return (
