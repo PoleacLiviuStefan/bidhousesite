@@ -36,7 +36,7 @@ const Navbar = () => {
     })
  
   const handlelogin=(btn)=>{
-    console.log(username)
+    
     setShowLogin(prev=>!prev);
    
     if(username=="Sign Up" || username==undefined)
@@ -51,7 +51,16 @@ const Navbar = () => {
   const logout=()=>{
     signOut(auth);
     setLoginMenu(false)
-    console.log(username)
+  
+    localStorage.setItem("twitter","")
+    localStorage.setItem("discord","")
+    localStorage.setItem("useremail","")
+    localStorage.setItem("walletAdress","")
+    localStorage.setItem("country","")
+    localStorage.setItem("avatarimg", require('../logotxt.png'))
+    localStorage.setItem("surname","");
+    localStorage.setItem("forename","");
+    localStorage.setItem("birthdate","")
   }
   const handleForm=()=>{
       setLoginForm(prev=>!prev)

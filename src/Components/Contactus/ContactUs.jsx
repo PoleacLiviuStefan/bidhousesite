@@ -2,22 +2,24 @@ import React,{useRef,useState} from 'react'
 import emailjs from '@emailjs/browser';
 import Fade from 'react-reveal/Fade'
 const ContactUs = () => {
-  const form = useRef();
+
   const [roleOption,setRoleOption]=useState(0);
+ 
   const handleRole=(roleIndex)=>{
         setRoleOption(roleIndex);
         console.log(roleIndex);
   }
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_dd2l6et', 'template_ba8zpxq', form.current, 'bCFO-F4oUHOZzgTNO')
+    emailjs.sendForm('service_dd2l6et', 'template_ba8zpxq', e.target, 'bCFO-F4oUHOZzgTNO')
       .then((result) => {
-          console.log(result.text);
+          console.log("trimis");
       }, (error) => {
           console.log(error.text);
       });
-      form.reset()
+     
   };
   return (
     <div name="Contact" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
@@ -29,7 +31,7 @@ const ContactUs = () => {
       </h1>
       </Fade>
       <Fade bottom>
-                  <form onSubmit={sendEmail} ref={form} className='relative  xl:left-0 top-[6rem] flex flex-col text-white text-[18px]'>
+                  <form onSubmit={sendEmail}  ref={form}  className='relative  xl:left-0 top-[6rem] flex flex-col text-white text-[18px]'>
                     <label className='font-[400] text-[20px] xl:text-[24px]'>Contact us directly on e-mail</label>
                     <input
         className="relative outline-none  px-8 top-8 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"

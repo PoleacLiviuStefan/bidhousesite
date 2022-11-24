@@ -2,11 +2,13 @@ import React from 'react'
 import { useState,useRef,useEffect } from 'react';
 import {createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword, signOut} from 'firebase/auth'
 import {useAuthState} from 'react-firebase-hooks/auth';
-import { auth } from '../DataBase/firebase-config'
+import { auth,db } from '../DataBase/firebase-config'
 import useBodyScrollLock from "../Functions/useBodyScrollLock";
 import NotificationCard from '../Notifications/NotificationCard';
 import {CgDanger} from 'react-icons/cg'
 import {AiFillCheckCircle} from 'react-icons/ai'
+
+import { doc, setDoc,addDoc,collection,getDoc,snapshot,getDocs,query,where } from "firebase/firestore"; 
 const SignUp = ({locked}) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [isLocked,setLock]=useBodyScrollLock(true);
@@ -18,13 +20,14 @@ const SignUp = ({locked}) => {
   const [twitterName,setTwitterName]=useState("")  
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [country,setCountry]=useState("")
   const [sign,setSign]=useState(true)
   const [user] = useAuthState(auth);
   const [registerError,setRegisterError]=useState("")
   const [errorNotification,setErrorNotification]=useState(-1)
   const [animOn,setAnimOn]=useState(false)
+  const [userData,setUserData]=useState();
 
- 
   const validateRegister = () => {
     let isValid = true
   
@@ -65,8 +68,7 @@ const SignUp = ({locked}) => {
     }
     const register = (e) => {
    
-       
-   
+     
       
      e.preventDefault()
      if(sign)
@@ -76,26 +78,54 @@ const SignUp = ({locked}) => {
       if(validateRegister()) {
         
         // Create a new user with email and password using firebase
-        
+
+
           createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+      
+       
+         
           .then((res) => {
-              
+            console.log(discordName)
+            let username=registerEmail.split("@")
+            username=username[0]
+            addDoc(collection(db,"usersinformation"), {
+              discord: discordName,
+              twitter:twitterName,
+              name:username,
+              country:country,
+              wallet:"",
+              surname:"",
+              forename:"",
+              birthDate:"",
+              userid:res.user.uid
+            
+            })
+            gettingData(res.user.uid)
+            console.log(twitterName)
+            localStorage.setItem("username",userData.name)
+            localStorage.setItem("discord",userData.discord)
+            localStorage.setItem("twitter",userData.twitter)
+            localStorage.setItem("country",userData.country)
+            localStorage.setItem("walletAdress",userData.wallet)
+            localStorage.setItem("forename",userData.forename)
+            localStorage.setItem("surname",userData.surname)
+            localStorage.setItem("birthdate",userData.birthDate)
             })
           .catch(err => {
             setRegisterError(err.message)
-            setErrorNotification(0)
-              console.log(err.message)
+            setErrorNotification(0)        
             })
       }
       else{
         setErrorNotification(0)
-    
       }
+ 
+ 
+      
       setRegisterEmail('')
       setRegisterPassword('')
       setComfirmRegisterPassword('')
-      setWalletAddress('')
-      setTransactionId('')
+      setCountry("")
       setDiscordName('')
       setTwitterName('')
     }
@@ -107,7 +137,15 @@ const SignUp = ({locked}) => {
           loginPassword
         )
         .then((res) => {
-          
+          console.log("singin fuctioneaza")
+      gettingData(res.user.uid)
+          localStorage.setItem("username",userData.name)
+          localStorage.setItem("discord",userData.discord)
+          localStorage.setItem("twitter",userData.twitter)
+          localStorage.setItem("country",userData.country)
+         
+          localStorage.setItem("walletAdress",userData.wallet)
+      
         })
       .catch(err => {
             setRegisterError("Invalid email or password.Please try again")
@@ -130,7 +168,23 @@ const SignUp = ({locked}) => {
      
       signOut(auth);
     }
+ const gettingData=(idUser)=>{
+;(async ()=>{
+  const userRef=query(collection(db,"usersinformation"),where("userid","==",idUser))
+  const snapshots=await getDocs(userRef)
+  const docs =snapshots.docs.map((doc)=>{
+   const data= doc.data()
+   data.id=doc.id
+   localStorage.setItem("userid",data.id)
+   return data
+  })
 
+  setUserData(docs[0])
+  localStorage.setItem("forename",docs[0].forename)
+  localStorage.setItem("surname",docs[0].surname)
+  localStorage.setItem("birthdate",docs[0].birthDate)
+})()
+ }
   return (
     <form onSubmit={e=>register(e)} className={`absolute text-white z-30 flex flex-col items-center w-[30rem] top-[1rem]
       } w-full `} noValidate>
@@ -139,7 +193,7 @@ const SignUp = ({locked}) => {
              </label>
              <input
         className={`relative ${!sign&&"hidden"}  outline-none  px-8 mt-6   text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
-        name="user_twitter"
+        name="user_email"
         placeholder="Email *"
         value={registerEmail}
         onChange={(event)=>{
@@ -150,7 +204,7 @@ const SignUp = ({locked}) => {
       ></input>
           <input
         className={`relative ${!sign&&"hidden"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
-        name="user_twitter"
+     
         placeholder="Password"
         type="password"
         value={registerPassword}
@@ -163,7 +217,7 @@ const SignUp = ({locked}) => {
       ></input>
         <input
         className={`relative ${!sign&&"hidden"} outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
-        name="user_twitter"
+     
         placeholder="Comfirm password"
         type="password"
         value={comfirmRegisterPassword}
@@ -199,7 +253,7 @@ const SignUp = ({locked}) => {
         required
       ></input>
      
-      <select  className={`relative ${!sign &&"hidden"} mb-8 top-6 outline-none text-slate-200  bg-transparent   px-8  text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] border-[1px] border-[#7B48ED]`} >
+      <select onChange={e=>setCountry(e.target.value)}  className={`relative ${!sign &&"hidden"} mb-8 top-6 outline-none text-slate-200  bg-transparent   px-8  text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] border-[1px] border-[#7B48ED]`} >
       <option className='text-black'  value="default" selected>Choose Your Country</option>
     <option className='text-black'  value="Afghanistan">Afghanistan</option>
 <option className='text-black' value="Albania">Albania</option>
@@ -445,7 +499,7 @@ const SignUp = ({locked}) => {
 
           <input
         className="relative outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
-        name="user_twitter"
+        name="user_discord"
         placeholder="Discord Username"
         value={discordName}
         onChange={(event)=>{

@@ -2,6 +2,10 @@ import React,{useState,useRef,useEffect} from "react";
 import emailjs from '@emailjs/browser';
 import NotificationCard from "../Notifications/NotificationCard";
 import {AiFillCheckCircle} from 'react-icons/ai'
+import { doc, setDoc,addDoc,updateDoc,collection,getDoc,snapshot,getDocs,query,where } from "firebase/firestore"; 
+
+import { auth,db } from '../DataBase/firebase-config'
+
 const DiscountForm = ({ showDiscountForm,afterLogin }) => {
   const [mintOption,setMintOption]=useState(0)
   const [mintingNfts,setMintingNfts]=useState(1)
@@ -35,8 +39,8 @@ const   [message,setMessage]=useState("")
       .then((result) => {
           console.log("message sent");
           setNotification(true);
-      
-      
+          
+        updateData(localStorage.getItem("userid"))  
         }, (error) => {
           console.log(error.text);
       });
@@ -48,7 +52,16 @@ const   [message,setMessage]=useState("")
       setTransactionId("")
       setMessage("")
   };
-
+  const updateData=(idUser)=>{
+    ;(async ()=>{
+     
+      const docRef=doc(db,"usersinformation",localStorage.getItem("userid"))
+      updateDoc(docRef,{
+        wallet:walletAdress
+      })
+      localStorage.setItem("walletAdress",walletAdress)
+  })()
+     }
   return (
     <form
     ref={form}
@@ -68,7 +81,7 @@ const   [message,setMessage]=useState("")
         name="user_twitter"
         defaultValue=""
         placeholder="Enter your Twitter account *"
-        value={twitter}
+        value={!twitter==="" ?twitter:localStorage.getItem("twitter")}
         onChange={(event)=>{
           setTwitter(event.target.value);
         }}
@@ -79,7 +92,7 @@ const   [message,setMessage]=useState("")
         name="user_discord"
         defaultValue=""
         placeholder="Enter your Discord account *"
-        value={discord}
+        value={!discord==="" ? discord: localStorage.getItem("discord")}
         onChange={(event)=>{
           setDiscord(event.target.value);
         }}
@@ -90,11 +103,11 @@ const   [message,setMessage]=useState("")
         name="user_email"
                defaultValue=""
         placeholder="Enter your Email *"
-        value={email}
+        value={!email==="" ? email: localStorage.getItem("useremail")}
         onChange={(event)=>{
           setEmail(event.target.value);
         }}
-        required={!afterLogin}
+        required
       ></input>
       <label className={`relative ${ afterLogin ?"xl:top-[1rem] left-[5rem]": "xl:top-[9rem]"} xl:left-[-8.5rem] top-[-10rem] left-[-1.5rem] text-white text-[20px] xl:text-[24px] font-[400]`}>
         Make your choice

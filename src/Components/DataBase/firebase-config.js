@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth'
+import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth'
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
+import {getFirestore} from "firebase/firestore"
 const firebaseConfig = {
     apiKey: "AIzaSyDFqkIHKQcuS8Liq8boLAJg9ErgRpF_03w",
     authDomain: "authetificationbidhouse.firebaseapp.com",
@@ -12,5 +14,13 @@ const firebaseConfig = {
   };
 
   const app=initializeApp(firebaseConfig)
+  const auth=getAuth(app)
   const analytics = getAnalytics(app);
-  export const auth=getAuth(app);
+  const db=getFirestore(app)
+export{
+  auth,
+  db,
+  onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+};

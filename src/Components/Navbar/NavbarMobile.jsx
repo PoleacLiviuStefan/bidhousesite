@@ -16,6 +16,7 @@ import useBodyScrollLock from "../Functions/useBodyScrollLock";
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth } from '../DataBase/firebase-config'
 import {AiOutlineClose} from 'react-icons/ai'
+import ProfileDetails from "../Profile/ProfileDetails";
 const NavbarMobile = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuHandler = () => {
@@ -27,6 +28,7 @@ const NavbarMobile = () => {
   const [username,setUsername]=useState("Sign Up")
   const [loginMenu,setLoginMenu]=useState(false)
   const [loginForm,setLoginForm]=useState(false)
+  const [profileDetails,setProfileDetails]=useState(true)
     useEffect(()=>{
       var name="";
       if(user?.email)
@@ -49,17 +51,31 @@ const NavbarMobile = () => {
     else
     {
         setLoginMenu(true)
+        handleProfile()
     }
   }
   const logout=()=>{
     signOut(auth);
     setLoginMenu(false)
     console.log(username)
+    localStorage.setItem("twitter","")
+    localStorage.setItem("discord","")
+    localStorage.setItem("useremail","")
+    localStorage.setItem("walletAdress","")
+    localStorage.setItem("country","")
+    localStorage.setItem("avatarimg", require('../logotxt.png'))
+    localStorage.setItem("surname","");
+    localStorage.setItem("forename","");
+    localStorage.setItem("birthdate","")
   }
   const handleForm=()=>{
       setLoginForm(prev=>!prev)
     
   }
+  const handleProfile=()=>{
+    setProfileDetails(prev=>!prev)
+   
+}
   return (
     <div className={`fixed z-50 ${openMenu ?"w-[23rem]": " w-0"} mb-4 h-screen  w-[23rem] flex justify-start`}>
       <div
@@ -254,7 +270,7 @@ const NavbarMobile = () => {
            Sign Up
           </button></li>
           <li className="flex ">
-          <button onClick={()=>handlelogin(2)} className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7rem] top-[12.5rem] `}>
+          <button onClick={()=>handlelogin(2)}  className={`relative ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""}bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[7rem] top-[12.5rem] `}>
            {username}
           </button>
       
@@ -267,8 +283,8 @@ const NavbarMobile = () => {
    
           </li>
               <li>
-              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[14.5rem]`}>My NFT</button>
-              <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[14.5rem]`}>Staking</button>
+              <button className={`relative ${openMenu ?"animate-[appear_1s_linear_forwards]":""} ${(username=="Sign Up" || username==undefined) &&"hidden"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px]  w-[126px] h-[44px] left-[2rem] top-[14.5rem]`}><div className="absolute bg-black opacity-50 top-0 rounded-[16px] h-full w-full z-30" />My NFT</button>
+              <button className={`relative  ${(username=="Sign Up" || username==undefined) &&"hidden"} ${openMenu ?"animate-[appear_1s_linear_forwards]":""} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[126px] h-[44px] left-[3.3rem] top-[14.5rem]`}><div className="absolute bg-black opacity-50 top-0 rounded-[16px] h-full w-full z-30" />Staking</button>
               </li>
           </ul>
           
@@ -285,6 +301,11 @@ const NavbarMobile = () => {
           <DiscountForm showDiscountForm={true} afterLogin={true} />
           <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
           <div className={`absolute  text-white z-40 right-[2rem] cursor-pointer w-[30px] h-[30px] top-[2rem] text-[32px]`} onClick={handleForm}><AiOutlineClose /></div>
+         
+          </div>
+          <div className={`absolute ${!profileDetails && "hidden"}  w-screen overflow-y-scroll    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
+          <ProfileDetails />
+          <div className={`absolute  text-white z-40 right-[2rem] cursor-pointer w-[30px] h-[30px] top-[2rem] text-[32px]`} onClick={handleProfile}><AiOutlineClose /></div>
           </div>
     </div>
   );
