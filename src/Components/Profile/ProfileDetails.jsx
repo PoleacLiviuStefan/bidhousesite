@@ -7,12 +7,15 @@ import NotificationCard from '../Notifications/NotificationCard';
 import {AiFillCheckCircle} from 'react-icons/ai'
 const ProfileDetails = () => {
     const [user] = useAuthState(auth);
-    const [surname,setSurname]=useState(localStorage.getItem("surname"))
+    const [surname,setSurname]=useState()
     const [forename,setForename]=useState(localStorage.getItem("forename"))
     const [birthDate,setBirthDate]=useState("")
 
     const [errorNotification,setErrorNotification]=useState(false)
     const [animOn,setAnimOn]=useState(false)
+    const [updateForename,setUpdateForename]=useState(false)
+    const [updateSurname,setUpdateSurname]=useState(false)
+    const [updateBirthDate,setUpdateBirth]=useState(false)
            let username="";
            let emailuser="";
            if(!localStorage.getItem("avatarimg"))
@@ -37,7 +40,9 @@ const ProfileDetails = () => {
 
   const updateData=()=>{
     ;(async ()=>{
-     
+      setUpdateForename(prev=>!prev);
+      setUpdateSurname(prev=>!prev);
+      setUpdateBirth(prev=>!prev)
       const docRef=doc(db,"usersinformation",localStorage.getItem("userid"))
       updateDoc(docRef,{
         surname:surname,
@@ -55,6 +60,19 @@ const ProfileDetails = () => {
         
     },5000)
   })()
+     }
+     const updateInput = (nr)=>{
+      switch(nr){
+      case 0:
+      setUpdateSurname(prev=>!prev);
+      break;
+      case 1:
+        setUpdateForename(prev=>!prev);
+        break;
+      case 2:
+        setUpdateBirth(prev=>!prev);
+        break;
+      }
      }
   return (
     <div className={`absolute z-30 text-white flex flex-col xl:h-screen h-[85rem]   w-[31rem] items-center`}>
@@ -103,21 +121,21 @@ const ProfileDetails = () => {
        </div>
        <div className='relative mt-[.5rem] xl:mt-[.5rem] left-[21.5rem] xl:left-0  flex flex-col '>
         <h3 className='text-[20px] xl:text-[24px]'>Surname(modifiable)</h3>
-        <input className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}  onChange={(event)=>{
+        <input onClick={()=>updateInput(0)} className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}  onChange={(event)=>{
           setSurname(event.target.value);
-        }} value={localStorage.getItem("surname")!=null ? localStorage.getItem("surname"):surname}></input>
+        }} value={updateSurname ? surname : localStorage.getItem("surname")}></input>
        </div>
        <div className='relative mt-[.5rem] left-[21.5rem] xl:left-[15rem]  flex flex-col '>
         <h3 className='text-[20px] xl:text-[24px]'>Forename(modifiable)</h3>
-        <input className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}  onChange={(event)=>{
+        <input onClick={()=>updateInput(1)} className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}  onChange={(event)=>{
           setForename(event.target.value);
-        }} value={localStorage.getItem("forename")!=null ? localStorage.getItem("forename"):forename}></input>
+        }} value={updateForename ? forename : localStorage.getItem("forename")}></input>
        </div>
        <div className='relative mt-[.5rem] left-[21.5rem] xl:left-[30rem]  flex flex-col '>
         <h3 className='text-[20px] xl:text-[24px]'>Birth date</h3>
-        <input type="date" onChange={(event)=>{
+        <input onClick={()=>updateInput(2)} type="date" onChange={(event)=>{
           setBirthDate(event.target.value);
-        }} className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`} value={localStorage.getItem("birthdate")!=null ? localStorage.getItem("birthdate"):birthDate}></input>
+        }} className={`relative caret-transparent outline-none  px-8 mt-1 text-[16px] xl:text-[18px]  rounded-[10px] w-[300px] xl:w-[368px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`} value={updateBirthDate ? forename : localStorage.getItem("birthDate")}></input>
        </div>
        </div>
        <div className={`fixed left-2 xl:left-[30rem] xl:absolute top-0 ${animOn && "animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>

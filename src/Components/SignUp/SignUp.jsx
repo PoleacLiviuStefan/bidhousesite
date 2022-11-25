@@ -66,7 +66,7 @@ const SignUp = ({locked}) => {
     const handleSignIn=()=>{
       setSign(prev=>!prev)
     }
-    const register = (e) => {
+    const register =  async (e) => {
    
      
       
@@ -80,7 +80,7 @@ const SignUp = ({locked}) => {
         // Create a new user with email and password using firebase
 
 
-          createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+         await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
       
        
          
@@ -97,6 +97,7 @@ const SignUp = ({locked}) => {
               surname:"",
               forename:"",
               birthDate:"",
+              formCompleted:false,
               userid:res.user.uid
             
             })
@@ -110,6 +111,7 @@ const SignUp = ({locked}) => {
             localStorage.setItem("forename",userData.forename)
             localStorage.setItem("surname",userData.surname)
             localStorage.setItem("birthdate",userData.birthDate)
+            localStorage.setItem("formCompleted",userData.formCompleted)
             })
           .catch(err => {
             setRegisterError(err.message)
@@ -131,7 +133,7 @@ const SignUp = ({locked}) => {
     }
       else
       {
-        signInWithEmailAndPassword(
+        await signInWithEmailAndPassword(
           auth,
           loginEmail,
           loginPassword
@@ -143,7 +145,7 @@ const SignUp = ({locked}) => {
           localStorage.setItem("discord",userData.discord)
           localStorage.setItem("twitter",userData.twitter)
           localStorage.setItem("country",userData.country)
-         
+         localStorage.setItem("formCompleted",userData.formCompleted)
           localStorage.setItem("walletAdress",userData.wallet)
       
         })

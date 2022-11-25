@@ -24,13 +24,13 @@ const   [message,setMessage]=useState("")
       setMintingNfts(index);
   } 
   useEffect(()=>{
-    setTimeout(()=>{
-      setAnimOn(false)
+    
+    
+      if(localStorage.getItem("formComplete"))
+            setNotification(true);
       
-      setNotification(false)
-      
-  },7000)
-  },notification)
+
+  },[])
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -38,6 +38,7 @@ const   [message,setMessage]=useState("")
     emailjs.sendForm('service_dd2l6et', 'template_x5jqfys', form.current, 'bCFO-F4oUHOZzgTNO')
       .then((result) => {
           console.log("message sent");
+          if(!localStorage.getItem("formComplete"))
           setNotification(true);
           
         updateData(localStorage.getItem("userid"))  
@@ -57,8 +58,10 @@ const   [message,setMessage]=useState("")
      
       const docRef=doc(db,"usersinformation",localStorage.getItem("userid"))
       updateDoc(docRef,{
-        wallet:walletAdress
+        wallet:walletAdress,
+        formCompleted:true
       })
+      localStorage.setItem("formCompleted",true)
       localStorage.setItem("walletAdress",walletAdress)
   })()
      }
