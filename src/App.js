@@ -6,6 +6,8 @@ import NavbarMobile from './Components/Navbar/NavbarMobile';
 import PrincipalInfo from './Components/PrincipalInfo/PrincipalInfo';
 import TheBenefits from './Components/TheBenefits/TheBenefits';
 import { Route, Routes, Link } from "react-router-dom"
+import NotificationCard from './Components/Notifications/NotificationCard';
+import {AiFillExclamationCircle} from 'react-icons/ai'
 
 
 
@@ -17,6 +19,7 @@ function App() {
         <Route path="/" element={<>  <div className='hidden xl:block'>
         <Navbar />
       </div>
+  
       <div className='block xl:hidden'>
         <NavbarMobile />
       </div>
@@ -25,6 +28,7 @@ function App() {
       <TheBenefits />
       <PrincipalInfo /></>
         } />
+   
       </Routes>
     </div>
   );
