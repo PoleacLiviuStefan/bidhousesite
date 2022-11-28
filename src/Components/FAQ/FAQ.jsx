@@ -166,7 +166,7 @@ Discount as an early investor in our project.</p>
               : "animate-[retraceform_.5s_ease-in-out_forwards]"
           } `}>
             <Fade bottom>
-          <h3 onClick={()=>handleQuestion(7)} className="relative cursor-pointer text-white text-[18px] xl:text-[32px] font-[700] leading-[38.73px]">
+          <h3 onClick={()=>handleQuestion(7)} className="relative cursor-pointer text-white text-[18px] w-[300px] xl:w-full xl:text-[32px] font-[700] leading-[38.73px]">
           HOW MANY PIECES HAVE OUR COLLECTION ?
           </h3>
           </Fade>

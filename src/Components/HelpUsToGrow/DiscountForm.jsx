@@ -71,7 +71,7 @@ const   [message,setMessage]=useState("")
     onSubmit={sendEmail}
       className={`absolute  text-white flex flex-col  w-full ${afterLogin ?"top-[1.5rem] ": "top-[9rem]  items-center"} ${
         showDiscountForm
-          ? "z-30 xl:h-[110rem] h-[127rem] animate-[appear_.5s_ease-in-out_forwards]"
+          ? "z-30 xl:h-[110rem] h-[108rem] animate-[appear_.5s_ease-in-out_forwards]"
           : "z-20 animate-[disappear_.5s_ease-in-out_forwards]"
       } w-[30rem] `}
     >
