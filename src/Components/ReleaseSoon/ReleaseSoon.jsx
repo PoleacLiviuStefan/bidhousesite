@@ -8,7 +8,7 @@ const ReleaseSoon = () => {
     <div className="relative flex flex-col items-center w-full h-[70rem] ">
 
       <div className="flex flex-col  z-30 items-start w-[22.5rem] xl:w-[78rem]">
-       <Fade top> <h1 className="relative  font-[600] text-[35px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
+       <Fade top> <h1 className="relative ml-1 xl:ml-0  font-[600] text-[35px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           RELEASE <span className="text-transparent">SOON</span>
         </h1>
         </Fade>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState,useRef,useEffect } from 'react';
-import {createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword, signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword, signOut,sendPasswordResetEmail,sendEmailVerification} from 'firebase/auth'
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { auth,db } from '../DataBase/firebase-config'
 import useBodyScrollLock from "../Functions/useBodyScrollLock";
 import NotificationCard from '../Notifications/NotificationCard';
 import {CgDanger} from 'react-icons/cg'
 import {AiFillCheckCircle} from 'react-icons/ai'
+
 
 import { doc, setDoc,addDoc,collection,getDoc,snapshot,getDocs,query,where } from "firebase/firestore"; 
 const SignUp = ({locked}) => {
@@ -27,7 +28,9 @@ const SignUp = ({locked}) => {
   const [errorNotification,setErrorNotification]=useState(-1)
   const [animOn,setAnimOn]=useState(false)
   const [userData,setUserData]=useState();
-
+  const [resetPage,setResetPage]=useState(false)
+  const [emailReset,setEmailReset]=useState("")
+  const [notificationOff,setNotificationOff]=useState(false)
   const validateRegister = () => {
     let isValid = true
   
@@ -85,6 +88,7 @@ const SignUp = ({locked}) => {
        
          
           .then((res) => {
+              verifyEmail()
             console.log(discordName)
             let username=registerEmail.split("@")
             username=username[0]
@@ -170,6 +174,53 @@ const SignUp = ({locked}) => {
      
       signOut(auth);
     }
+    const handleResetPage=()=>{
+        setResetPage(prev=>!prev)
+        console.log(resetPage)
+    }
+    const handleResetPassword=async (e) =>{
+      e.preventDefault()
+      console.log(emailReset)
+      try{
+        await sendPasswordResetEmail(auth,emailReset)
+        
+        setErrorNotification(1)
+        setTimeout(()=>{
+          setNotificationOff(false);
+          setErrorNotification(-1)
+          console.log("a doua")
+          
+      },7000)
+        console.log("merge")
+
+      } catch(error){
+        setErrorNotification(2)
+        if("Firebase: Error (auth/invalid-email)."===error.message)
+        setRegisterError("Please enter a valid email")
+        else
+        if("Firebase: Error (auth/too-many-requests)."===error.message)
+        setRegisterError("You sent to many request.Please try again later.")
+   
+        setTimeout(()=>{
+          setNotificationOff(false);
+          setErrorNotification(-1)
+          console.log("a doua")
+          
+      },7000)
+      
+        console.log(error.message)
+      }
+    }
+    const verifyEmail=async ()=>{
+      try{
+        console.log("email trimis")
+        await sendEmailVerification(auth.currentUser)
+        
+      }
+      catch(error){
+       
+      }
+    }
  const gettingData=(idUser)=>{
 ;(async ()=>{
   const userRef=query(collection(db,"usersinformation"),where("userid","==",idUser))
@@ -190,14 +241,16 @@ const SignUp = ({locked}) => {
   localStorage.setItem("country",docs[0].country)
 })()
  }
+
   return (
-    <form onSubmit={e=>register(e)} className={`absolute text-white z-30 flex flex-col items-center w-[30rem] top-[1rem]
+       <form onSubmit={e=>register(e)} className={`absolute text-white z-30 flex flex-col items-center w-[30rem] top-[1rem]
       } w-full `} noValidate>
+      
              <label className="relative  text-white text-[20px] xl:text-[24px] font-[400]">
                     {sign ? "Sign Up":"Sign In"}
              </label>
              <input
-        className={`relative ${!sign&&"hidden"}  outline-none  px-8 mt-6   text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        className={`relative ${(!sign || resetPage) &&"hidden"}  outline-none  px-8 mt-6   text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
         name="user_email"
         placeholder="Email *"
         value={registerEmail}
@@ -207,8 +260,19 @@ const SignUp = ({locked}) => {
        
         required
       ></input>
+           <input
+        className={`relative ${!resetPage &&"hidden"}  outline-none  px-8 mt-6   text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        name="user_email"
+        placeholder="Email *"
+        value={emailReset}
+        onChange={(event)=>{
+          setEmailReset(event.target.value);
+        }}
+       
+        required
+      ></input>
           <input
-        className={`relative ${!sign&&"hidden"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        className={`relative ${(!sign || resetPage)&&"hidden"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
      
         placeholder="Password"
         type="password"
@@ -221,7 +285,7 @@ const SignUp = ({locked}) => {
         required
       ></input>
         <input
-        className={`relative ${!sign&&"hidden"} outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        className={`relative ${(!sign || resetPage)&&"hidden"} outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
      
         placeholder="Comfirm password"
         type="password"
@@ -234,7 +298,7 @@ const SignUp = ({locked}) => {
       ></input>
           
           <input
-        className={`relative ${sign&&"absolute hidden top-[9999rem]"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        className={`relative ${(sign || resetPage)&&"absolute hidden top-[9999rem]"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
         name="user_twitter"
         placeholder="Email *"
         value={loginEmail}
@@ -245,7 +309,7 @@ const SignUp = ({locked}) => {
         required
       ></input>
           <input
-        className={`relative ${sign&&"absolute hidden top-[9999rem]"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
+        className={`relative ${(sign || resetPage)&&"absolute hidden top-[9999rem]"}  outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]`}
         name="user_twitter"
         placeholder="Password"
         type="password"
@@ -258,7 +322,7 @@ const SignUp = ({locked}) => {
         required
       ></input>
      
-      <select onChange={e=>setCountry(e.target.value)}  className={`relative ${!sign &&"hidden"} mb-8 top-6 outline-none text-slate-200  bg-transparent   px-8  text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] border-[1px] border-[#7B48ED]`} >
+      <select onChange={e=>setCountry(e.target.value)}  className={`relative ${(!sign || resetPage) &&"hidden"} mb-8 top-6 outline-none text-slate-200  bg-transparent   px-8  text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] border-[1px] border-[#7B48ED]`} >
       <option className='text-black'  value="default" selected>Choose Your Country</option>
     <option className='text-black'  value="Afghanistan">Afghanistan</option>
 <option className='text-black' value="Albania">Albania</option>
@@ -500,7 +564,7 @@ const SignUp = ({locked}) => {
 <option className='text-black' value="Zambia">Zambia</option>
 <option className='text-black' value="Zimbabwe">Zimbabwe</option>
 </select>
-<div className={`flex flex-col ${!sign && "hidden"}`}>
+<div className={`flex flex-col ${(!sign || resetPage) && "hidden"}`}>
 
           <input
         className="relative outline-none  px-8 mt-4 text-[16px] xl:text-[18px]  rounded-[10px] w-[350px] xl:w-[468px] h-[50px] bg-transparent opacity-80 border-[1px] border-[#7B48ED]"
@@ -537,14 +601,14 @@ const SignUp = ({locked}) => {
         type="submit"
         value="Send"
        
-        className={`relative ${sign && "hidden"} bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 mt-4 w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
+        className={`relative ${(sign || resetPage) && "hidden"} bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 mt-4 w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
      
       >
         Sign In
       </button>
-             <div className={`absolute ${ sign?"top-[33.3rem]":"top-[15.3rem]"} flex flex-col xl:flex-row`}>
+             <div className={`absolute ${resetPage && "hidden"} ${ sign ?"top-[33.3rem]":"top-[15.3rem]"} flex flex-col xl:flex-row`}>
              <label className="relative left-12 xl:left-6 top-2 text-[16px] xl:text-[18px] font-[700]">
-                You already have an account? {user?.email}
+                You already have an account?
              </label>
              
              <div
@@ -555,13 +619,60 @@ const SignUp = ({locked}) => {
         {sign ?"Sign In":"Sign Up"}
         </div>
         </div>
-   
-        <div className={`absolute top-0 ${animOn && "animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification==0 ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>
+        <div className={`absolute ${resetPage && "hidden"} ${ sign&&"hidden"} top-[22rem] xl:top-[18rem] flex flex-col xl:flex-row`}>
+             <label className="relative left-12 xl:left-6 top-2 text-[16px] xl:text-[18px] font-[700]">
+                You forgot your password?
+             </label>
+             
+             <div
+      value="Login"
+      onClick={handleResetPage}
+      className={`relative flex justify-center items-center cursor-pointer bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10  xl:left-[2rem] top-8 xl:top-1   w-[350px] xl:w-[180px] h-[36px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
+      
+    >
+        Reset your password
+        </div>
+        </div>
+        <div
+        
+     
+        onClick={e=>handleResetPassword(e)}
+        className={`relative ${!resetPage && "hidden"} cursor-pointer flex justify-center items-center bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 mt-4 w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
+     
+      >
+    
+        Reset Password
+      </div>
+      <div className={`absolute ${!resetPage && "hidden"} top-[12rem] flex flex-col xl:flex-row`}>
+             <label className="relative left-12 xl:left-6 top-2 text-[16px] xl:text-[18px] font-[700]">
+                Go back to:
+             </label>
+             
+             <div
+      value="Login"
+      onClick={handleResetPage}
+      className={`relative flex justify-center items-center cursor-pointer bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10  xl:left-[2rem] top-8 xl:top-1   w-[350px] xl:w-[180px] h-[36px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] `}
+      
+    >
+       Sign In
+        </div>
+        </div>
+        <div className={`absolute top-0 ${animOn || "animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification==0 ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>
      <NotificationCard logo={<div className='text-[40px]'><CgDanger /> </div>} message={registerError} messagesize=" text-[14px] "  messagebg="bg-[#e03c3c]" colorbg="bg-[#c62222]" size= " w-[340px] xl:w-[380px] h-[100px]" />
      
      </div>
-    
+     <div className={`absolute  ${notificationOff && "top-[5rem] animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification==1 ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>
+     <NotificationCard logo={<div className='text-[40px]'><AiFillCheckCircle /> </div>} message="We sent an email to your adress!Please check your Spam to complete the password reset! " messagesize=" text-[14px] "  messagebg="bg-green-300" colorbg="bg-green-300" size= " w-[340px] xl:w-[380px] h-[100px]" />
+     
+     </div>
+     <div className={`absolute  ${notificationOff && "top-[5rem] animate-[errornotificationdisappear_.5s_linear_forwards]"} ${errorNotification==2 ? "animate-[errornotificationappear_.5s_linear_forwards]":"hidden"}  right-[4.5rem] xl:right-[-24rem] `}>
+     <NotificationCard logo={<div className='text-[40px]'><CgDanger /> </div>} message={registerError} messagesize=" text-[14px] "  messagebg="bg-[#e03c3c]" colorbg="bg-[#c62222]"  size= " w-[340px] xl:w-[380px] h-[100px]" />
+     
+     </div>
     </form>
+
+    
+
   )
 }
 

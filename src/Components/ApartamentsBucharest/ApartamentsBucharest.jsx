@@ -10,15 +10,18 @@ import {
 } from "react-scroll";
 import Fade from 'react-reveal/Fade'
 import {BsChevronRight,BsChevronLeft} from 'react-icons/bs'
+import useBodyScrollLock from "../Functions/useBodyScrollLock";
 const ApartamentsBucharest = () => {
   const [showImages,setShowImages] = useState(0);
   const [zoom,setZoom]=useState(true);
   const [slideImage,setSlideImage] = useState(1);
   const [imgWidth,setImgWidth]=useState("w-[500px]");
   const [imgHeight,setImgHeight]=useState("h-[375px]");
+  const [isLocked,setLock]=useBodyScrollLock(false);
   const handleImages=()=>{
     setShowImages(prev=>!prev);
     setSlideImage(1);
+    setLock(prev=>!prev)
   }
   const handleSlide= (index)=>{
       if(index>=0 && index<=2)
@@ -46,9 +49,9 @@ const ApartamentsBucharest = () => {
     }
   }
   return (
-    <div name="ApartmentsBucharest" className="relative  flex flex-col items-center w-full xl:left-5 2xl:left-0 h-[115rem] bg-black">
+    <div name="ApartmentsBucharest" className="relative  flex flex-col items-center w-full  xl:left-5 2xl:left-0 h-[115rem] bg-black">
    
-  <div className={`absolute ${showImages==0 && "hidden"} top-[-30rem] xl:top-[-8rem] w-[18rem] xl:mr-[2.2rem] xl:w-[67rem] 2xl:w-[75rem] h-full flex justify-center items-center `}>
+  <div className={`fixed top-0 left-0 z-50 ${showImages==0 && "hidden"}  w-[18rem] xl:mr-[2.2rem] w-screen h-screen flex justify-center items-center `}>
               <div  className={`relative hidden xl:block z-40 mr-6 ${slideImage==1 && "bg-[url('/public/2ap1.webp')]"  } ${slideImage==2 && "bg-[url('/public/2ap2.webp')]"  } ${slideImage==0 && "bg-transparent "} bg-cover w-[800px] h-[100px] xl:w-[400px] xl:h-[300px] rounded-[20px] `}>
                 
                 <div className={`bg-black ${slideImage==0 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
@@ -62,12 +65,12 @@ const ApartamentsBucharest = () => {
               <div className={`bg-black ${slideImage==2 && 'hidden'}  bg-opacity-60 w-full h-full `}/>
                 </div>
                 
-        <div onClick={()=>handleSlide(slideImage-1)} className={`absolute ${slideImage==0 && "hidden"} left-[-3rem] xl:left-[-7rem] z-40 text-slate-400 text-[3rem] xl:text-[6rem] hover:text-white`}><BsChevronLeft /></div>
-        <div  onClick={()=>handleSlide(slideImage+1)} className={`absolute ${slideImage==2 && "hidden"} right-[-3rem] xl:right-[-7rem] text-slate-400  z-40 text-[3rem] text-white xl:text-[6rem] hover:text-white`}><BsChevronRight /></div>
-      
+        <div onClick={()=>handleSlide(slideImage-1)} className={`absolute ${slideImage==0 && "hidden"} z-50 left-[2rem]  z-40 text-slate-400 text-[3rem] xl:text-[6rem] hover:text-white`}><BsChevronLeft /></div>
+        <div  onClick={()=>handleSlide(slideImage+1)} className={`absolute ${slideImage==2 && "hidden"} right-[2rem] text-slate-400  z-40 text-[3rem]  xl:text-[6rem] hover:text-white`}><BsChevronRight /></div>
+        <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-screen h-screen bg-black opacity-80 `}/>
                 </div>
-            <div onClick={handleImages} className={`absolute cursor-pointer  z-30 ${showImages==0 && 'hidden'} left-0 top-0 w-full h-[200rem] bg-black opacity-80 `}/>
-      <div className="flex ml-2 xl:ml-0 flex-col items-start w-[23rem] xl:w-[78rem]">
+         
+      <div className="flex ml-3 xl:ml-0 flex-col items-start w-[23rem] xl:w-[78rem]">
      <Fade top>
         <h1  name="showing"  className="relative z-20  font-[600] text-[30px]  leading-[40px] xl:text-[52px] xl:leading-[72px] 2xl:text-[76px]  2xl:xl:leading-[112px] text-white  bg-clip-text bg-gradient-to-r from-[#9945FF] to-[#17DD8A] ">
           APARTMENTS{" "}
@@ -77,10 +80,10 @@ const ApartamentsBucharest = () => {
           </span>
         </h1>
         </Fade>
-        <div className="relative top-10 w-[8rem] xl:w-[55rem] grid grid-cols-3">
+        <div className="relative top-10 left-5 xl:left-0 w-[8rem] xl:w-[55rem] grid grid-cols-3">
           <div className="absolute left-[-15rem] top-[-60rem] xl:top-[3rem] opacity-80 bg-cover w-[1920px] h-[1650px] bg-[url('/public/apartmentsglow.png')]" />
           <Fade bottom delay={300}>
-          <div className="bg-cover rounded-[20px] flex justify-center items-center w-[70px] h-[69px] xl:w-[265px] xl:h-[259px] bg-[url('/public/1ap.png')]">
+          <div className="bg-cover rounded-[20px] flex justify-center items-center w-[70px] h-[69px] xl:w-[265px] xl:h-[259px] bg-[url('/public/1ap.webp')]">
             <div className="w-full h-full rounded-[20px] bg-[#2F2175CC] opacity-60" />
             <div className="absolute bg-[url('/public/lock.svg')] bg-cover w-[40px] h-[40px] xl:w-[100px] xl:h-[100px]" />
           </div>

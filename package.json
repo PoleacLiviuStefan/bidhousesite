@@ -24,6 +24,7 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.7",
+    "react-toastify": "^9.1.1",
     "tailwindcss-border-gradient-radius": "^3.0.1",
     "uid": "^2.0.1",
     "web-vitals": "^2.1.4"

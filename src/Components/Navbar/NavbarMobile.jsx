@@ -28,7 +28,7 @@ const NavbarMobile = () => {
   const [username,setUsername]=useState("Sign Up")
   const [loginMenu,setLoginMenu]=useState(false)
   const [loginForm,setLoginForm]=useState(false)
-  const [profileDetails,setProfileDetails]=useState(true)
+  const [profileDetails,setProfileDetails]=useState(false)
     useEffect(()=>{
       var name="";
       if(user?.email)
