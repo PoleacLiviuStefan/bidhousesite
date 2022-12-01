@@ -18,6 +18,7 @@ import { auth } from '../DataBase/firebase-config'
 import DiscountForm from "../HelpUsToGrow/DiscountForm";
 import NotificationCard from '../Notifications/NotificationCard';
 import ProfileDetails from "../Profile/ProfileDetails";
+
 const Navbar = () => {
   const [isLocked,setLock]=useBodyScrollLock(true);
   const [showLogin,setShowLogin]=useState(false);
@@ -51,7 +52,6 @@ const Navbar = () => {
   const logout=()=>{
     signOut(auth);
     setLoginMenu(false)
-  
     localStorage.setItem("twitter","")
     localStorage.setItem("discord","")
     localStorage.setItem("useremail","")
@@ -68,9 +68,9 @@ const Navbar = () => {
   }
   const handleProfile=()=>{
     setProfileDetails(prev=>!prev)
-   
 }
   return (  
+
     <Fade top>
     <div className="fixed z-50 flex justify-center gap-[20px] w-full h-[110px] left-0 top-0 bg-gradient-to-b from-black to-transparent ">
     
@@ -271,6 +271,7 @@ const Navbar = () => {
 </div>
     </div>
     </Fade>
+   
   );
 };
 
