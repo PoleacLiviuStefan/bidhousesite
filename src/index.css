@@ -44,4 +44,10 @@ html{
 body{
   overflow: hidden;
 }
+body::-webkit-scrollbar {
+  width: 0;
+ 
+}
+ 
+
 }
