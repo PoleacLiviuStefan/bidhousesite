@@ -110,7 +110,7 @@ const NavbarMobile = () => {
             openMenu ? "animate-[linebottom_.2s_linear_forwards] top-[-3.8px]":"animate-[slidedown_.2s_linear_forwards]" }  ${retratAnimation && " animate-[retractbottom_.2s_linear_forwards]"} relative  w-[1.5rem] border-[1px] z-30 border-black h-[4px] bg-white`}
         />
         
-        <div className={` fixed left-[-1rem] ${retratAnimation && "animate-[retractmenu_.5s_linear_forwards]"} ${!openMenu ? "hidden" : "animate-[extendmenu_.5s_linear_forwards]"} top-[0rem]   h-screen  bg-black`}>
+        <div className={` fixed left-[-1rem]  ${!openMenu ? "hidden" : "animate-[extendmenu_.5s_linear_forwards]"} ${retratAnimation && "animate-[retractmenu_.5s_linear_forwards]"} top-[0rem]   h-screen  bg-black`}>
           <ul className="text-white">
             <li> <Link
           activeClass="active"
