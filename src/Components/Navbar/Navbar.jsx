@@ -230,9 +230,7 @@ const Navbar = () => {
             Social
           </button>
           </Link>
-          <button className="relative w-[62px] h-full left-0 top-0 ">
-            Booking
-          </button>
+    
           <div className="relative left-0 top-4 w-[1px] h-[1rem] bg-white"/>
           <button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[138px] h-[44px] left-0 top-0 ">
           <div className="absolute top-0 bg-black opacity-50 rounded-[16px] h-full w-full z-30" />
@@ -249,7 +247,7 @@ const Navbar = () => {
         <li className="relative cursor-pointer">  <button onClick={handleProfile} className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Profile</button></li>
         <li className="relative ml-2   cursor-no-drop"> <div className="absolute bg-black opacity-50 rounded-[16px] h-full w-full z-30" /><button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">My NFT</button></li>
         <li className="relative ml-2  cursor-no-drop"><div className="absolute bg-black opacity-50 rounded-[16px] h-full w-full z-30" /><button className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Staking</button></li>
-        <li className="relative ml-2 cursor-pointer"><button onClick={handleForm} className={`relative shadow-xl shadow-[0px_0px_34px_-4px_#FFFFFF] bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0`}>Form</button></li>
+        <li className="relative ml-2 cursor-pointer"><button onClick={handleForm} className={`relative ${localStorage.getItem("formCompleted") && " shadow-xl shadow-[0px_0px_34px_-4px_#FFFFFF]"} bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0`}>Form</button></li>
        
         <li className="relative ml-2 cursor-pointer"><button onClick={logout} className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Logout</button></li>
       </ul>
@@ -258,7 +256,7 @@ const Navbar = () => {
         </div>
       </div>
         <div className={`absolute ${!loginForm &&"hidden"}  w-full    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
-          <DiscountForm showDiscountForm={true} afterLogin={true} />
+          <DiscountForm showDiscountForm={true} afterLogin={true}  />
           <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
           </div>
           <div className={`absolute ${profileDetails ?"animate-[appear_.3s_linear_forwards]": "hidden"}  w-full    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
@@ -267,7 +265,7 @@ const Navbar = () => {
           </div>
           <div className={`fixed ${!showNotification && "hidden"}     right-[1rem] `}>
 
-<NotificationCard title="Welcome to Bidhouse" message={<p className='text-[15px] px-[25px]'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum tempora illum consectetur minima aliquid labore quia enim magnam totam.</p>}/>
+<NotificationCard title="Welcome to Bidhouse" message={<p className='text-[15px] px-[25px]'></p>}/>
 </div>
     </div>
     </Fade>

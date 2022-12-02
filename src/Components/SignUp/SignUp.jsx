@@ -88,7 +88,7 @@ const SignUp = ({locked}) => {
        
          
           .then((res) => {
-              verifyEmail()
+             
             console.log(discordName)
             let username=registerEmail.split("@")
             username=username[0]
