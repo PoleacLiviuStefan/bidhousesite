@@ -205,9 +205,11 @@
    display: none;
   }
   .contactbtn{
-    display: none;
+    top:20rem;
+    left:35rem;
   }
   .accesbtn{
-    display: none;
+    top:20rem;
+    left:23rem;
   }
 }

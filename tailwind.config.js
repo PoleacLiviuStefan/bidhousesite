@@ -18,12 +18,54 @@ module.exports = {
               width:"20rem"
             },
         },
+        retractmenu:{
+          '0%':{
+            width:"20rem"
+          },
+          '100%':{
+            width:"0rem"
+          },
+      },
         linetop:{
           '0%':{
             transform:'rotate(0deg)'
           },
           '100%':{
             transform: 'rotate(135deg)'
+          },
+        },
+        slidedown:{
+          '0%':{
+            top:'0px'
+          },
+          '100%':{
+            top: '10px'
+          },
+        },
+        linebottom:{
+          '0%':{
+            transform:'rotate(0deg)'
+          },
+          '100%':{
+            transform: 'rotate(45deg)'
+          },
+        },
+        retracttop:{
+          '0%':{
+            
+            transform: 'rotate(135deg)'
+          },
+          '100%':{
+            transform:'rotate(0deg)'
+          },
+        },
+        retractbottom:{
+          '0%':{
+            transform: 'rotate(45deg)'
+            
+          },
+          '100%':{
+            transform:'rotate(0deg)'
           },
         },
         rarityanim:{
@@ -76,6 +118,16 @@ module.exports = {
             opacity: '100%'
           },
         },
+        middleappear: {
+          '0%': {
+            opacity: '0',
+            left:'-5rem'
+          },
+          '100%': {
+            opacity: '100%',
+            left:'0'
+          },
+        },
         disappear: {
           '0%': {
             opacity: '100%'
@@ -106,6 +158,22 @@ module.exports = {
           },
           '100%': {
             top:'1rem'
+          },
+        },
+        errornotificationappearmobile: {
+          '0%': {
+            bottom:'-100rem'
+          },
+          '100%': {
+            bottom:'-33rem'
+          },
+        },
+        errornotificationresetappearmobile: {
+          '0%': {
+            bottom:'-100rem'
+          },
+          '100%': {
+            bottom:'-28rem'
           },
         },
         errornotificationdisappear: {
