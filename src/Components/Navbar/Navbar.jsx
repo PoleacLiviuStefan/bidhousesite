@@ -255,7 +255,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <div className={`absolute ${!loginForm &&"hidden"}  w-full    h-screen flex justify-center bg-black bg-opacity-90 z-30`}>
+        <div className={`absolute ${!loginForm &&"hidden"}  w-full  overflow-y-scroll overflow-x-hidden  h-[100rem] flex justify-center bg-black bg-opacity-90 z-30`}>
           <DiscountForm showDiscountForm={true} afterLogin={true}  />
           <div onClick={handleForm} className="w-full h-[100rem] z-20 "/>
           </div>
