@@ -33,8 +33,8 @@ const Team = () => {
       <Fade bottom >
         <div className=' grid grid-cols-2 xl:flex xl:flex-row  xl:justify-center mt-[10rem] xl:mt-40' >
           <h1 className='absolute top-[-5rem] xl:top-[-6rem] text-white text-[34px] xl:text-[48px] font-[600] left-[6rem]  xl:left-[13rem]'>Technology</h1>
-          <div className='absolute h-[4rem] w-[.5rem] bg-white top-[-1rem] left-[.3rem] xl:left-[1rem]' />
-          <div className='absolute h-[4rem] w-[.5rem] bg-white top-[-1rem] right-[0.3rem] xl:right-[17rem]' />
+          <div className='absolute z-20 h-[4rem] w-[.5rem] bg-white top-[-1rem] left-[.3rem] xl:left-[1rem]' />
+          <div className='absolute z-20 h-[4rem] w-[.5rem] bg-white top-[-1rem] right-[0.3rem] xl:right-[17rem]' />
           <div className='absolute h-[.5rem] w-[22.2rem] xl:w-[15rem] xl:w-[37rem] bg-white top-[-1rem] left-[.3rem] xl:left-[1rem]' />
          
           <h1 className='absolute top-[77rem] xl:top-[-6rem]  text-white text-[34px] xl:text-[48px] font-[600] left-[7rem] xl:left-[42.5rem]'>Marketing</h1>
