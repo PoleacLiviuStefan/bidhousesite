@@ -1,10 +1,12 @@
 import React,{useRef,useState} from 'react'
 import emailjs from '@emailjs/browser';
 import Fade from 'react-reveal/Fade'
+import NotificationCard from '../Notifications/NotificationCard';
+import {AiFillCheckCircle} from 'react-icons/ai'
 const ContactUs = () => {
 
   const [roleOption,setRoleOption]=useState(0);
- 
+  const [notificationShow,setNotificationShow]=useState(false)
   const handleRole=(roleIndex)=>{
         setRoleOption(roleIndex);
         console.log(roleIndex);
@@ -15,12 +17,19 @@ const ContactUs = () => {
 
     emailjs.sendForm('service_dd2l6et', 'template_ba8zpxq', e.target, 'bCFO-F4oUHOZzgTNO')
       .then((result) => {
-          console.log("trimis");
+
+          setNotificationShow(true)
+          setTimeout(()=>{
+              setNotificationShow(false)
+          },7000)
       }, (error) => {
           console.log(error.text);
       });
      
   };
+  const showNotification= ()=>{
+
+  }
   return (
     <div name="Contact" className="relative flex flex-col items-center w-full h-[70rem] bg-black">
        <div className="absolute z-10 top-[-30rem] xl:top-[-23rem] left-0 bg-[url('/public/contactusglow.png')] w-[1249px] h-[1003px]"/>
@@ -63,12 +72,17 @@ const ContactUs = () => {
          <button
          value="Send"
         type="submit"
+        onClick={showNotification}
         className="relative bg-gradient-to-r from-[#FFFFFF00]/10 to-[#523F83]/10 mt-[2.5rem]  w-[350px] xl:w-[468px] h-[56px] text-[16px] font-[600] border-[1px] rounded-[16px] border-[#a98be4] "
       >
         Send
       </button>
                   </form></Fade>
-      </div> </div>
+      </div>
+      <div className={`fixed  w-screen h-screen z-50  ${notificationShow? "animate-[errornotificationresetappearmobilecontact_.5s_linear_forwards] xl:animate-[errornotificationappearcontact_.5s_linear_forwards]":"hidden"} left-2 `}>
+      <NotificationCard logo={<div className='text-[40px]'><AiFillCheckCircle /> </div>} message="Form Sent" messagesize=" text-[14px] "  messagebg="bg-green-300" colorbg="bg-green-300" size= " w-[340px] xl:w-[380px] h-[100px]" />
+     
+     </div> </div>
   )
 }
 

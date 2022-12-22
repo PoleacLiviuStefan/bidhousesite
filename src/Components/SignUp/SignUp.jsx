@@ -66,7 +66,7 @@ const SignUp = ({locked}) => {
         
         setErrorNotification(-1)
         
-    },5000)
+    },7000)
   }
 
     return isValid

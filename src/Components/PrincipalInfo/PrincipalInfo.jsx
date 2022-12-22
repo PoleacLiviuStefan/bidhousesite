@@ -30,7 +30,7 @@ import styles from "./PrincipalInfo.module.css";
 const PrincipalInfo = () => {
   return (
 
-    <div className="relative  bg-black w-full  h-[1840rem] xl:h-[1250rem]">
+    <div className="relative  bg-black w-full  h-[1750rem] xl:h-[1250rem]">
 
 
 
@@ -82,31 +82,31 @@ const PrincipalInfo = () => {
       <div className="absolute top-[519rem] xl:top-[523rem] 2xl:top-[575rem] w-full">
        <BenefitsForHolders />
       </div>
-      <div className="absolute top-[976rem] xl:top-[695rem] 2xl:top-[755rem] w-full">
+      <div className="absolute top-[1088rem] xl:top-[815rem] 2xl:top-[875rem] w-full">
       <Rarity />
         
       </div>
-      <div className="absolute top-[1093rem] xl:top-[747rem] 2xl:top-[812rem] w-full">
+      <div className="absolute top-[1205rem] xl:top-[867rem] 2xl:top-[932rem] w-full">
       <Team /> 
       </div>
-      <div className="absolute top-[1459rem] xl:top-[970rem] 2xl:top-[1040rem] w-full">
+      <div className="absolute top-[1481rem] xl:top-[1065rem] 2xl:top-[1135rem] w-full">
       <Forms />
       </div>
-      <div className="absolute top-[1581rem] xl:top-[1028rem] 2xl:top-[1097rem] w-full">
+      <div className="absolute top-[1603rem] xl:top-[1123rem] 2xl:top-[1192rem] w-full">
       <WhatInvestorsThink /> 
       </div>
    
-      <div className="absolute top-[1672rem] xl:top-[1095rem] 2xl:top-[1170rem] w-full">
+      <div className="absolute top-[1694rem] xl:top-[1190rem] 2xl:top-[1265rem] w-full">
       <FAQ />
       </div>
-      <div className="absolute top-[1752rem] xl:top-[1184rem] 2xl:top-[1265rem] w-full">
+      <div className="absolute top-[1774rem] xl:top-[1279rem] 2xl:top-[1360rem] w-full">
       <ContactUs />
       </div>
-      <div className="absolute top-[1800rem] xl:top-[1233rem] 2xl:top-[1318rem] w-full">
+      <div className="absolute top-[1823rem] xl:top-[1328rem] 2xl:top-[1413rem] w-full">
       <JoinOurCommunity />
         
       </div>
-      <div className="absolute flex justify-center items-center top-[1852rem] xl:top-[1262rem] 2xl:top-[1347rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
+      <div className="absolute flex justify-center items-center top-[1874rem] xl:top-[1357rem] 2xl:top-[1442rem] w-full"><h2 className="text-white text-[14px] xl:text-[18px] ">Copyright ©2022 Bidhouse</h2> </div>
       </div>
   
   );

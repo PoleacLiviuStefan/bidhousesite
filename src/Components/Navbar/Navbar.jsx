@@ -90,7 +90,7 @@ const Navbar = () => {
           delay={200}
         >
 
-          <div className="relative ml-[12rem] 2xl:w-[181px] 2xl:h-[41px] xl:w-[140px] xl:h-[32px] cursor-pointer left-[105px] xl:top-[35px] 2xl:top-[30px] bg-[url('/public/logo.png')] bg-cover" />
+          <div className="relative ml-[12rem] 2xl:w-[181px]  2xl:h-[41px] xl:w-[140px] xl:h-[32px] cursor-pointer left-[105px] xl:top-[35px] 2xl:top-[30px] bg-[url('/public/logonavbar.svg')] bg-cover" />
 
         </Link>
         <div className="relative mr-[19rem] flex justify-center align-end  xl:gap-[10px] 2xl:gap-[20px] font-[400] xl:text-[14px] 2xl:text-[16px] text-white top-[30px]  xl:w-[80%] h-full">
@@ -251,7 +251,7 @@ const Navbar = () => {
        
         <li className="relative ml-2 cursor-pointer"><button onClick={logout} className="relative bg-gradient-to-r from-[#2d2348] border-[2px] border-[#523F83] rounded-[16px] w-[80px] h-[30px] left-0 top-0">Logout</button></li>
       </ul>
-      <div className="absolute bg-black opacity-80 h-full w-full z-10 blur-xl"/>
+      <div className="absolute bg-black opacity-80 h-full w-full z-10 "/>
           </div>
         </div>
       </div>

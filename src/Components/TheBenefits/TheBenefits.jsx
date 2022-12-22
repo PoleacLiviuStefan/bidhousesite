@@ -34,7 +34,7 @@ const TheBenefits = () => {
             </div>
             <Fade bottom>
             <div className="relative  top-[15rem] xl:top-[11rem] left-[.2rem] xl:left-[6rem] 2xl:left-40 w-full xl:w-[90%] h-[23rem] xl:h-[44rem] grid grid-cols-3">
-            <div className="absolute  xl:right-[11rem] w-[317px] h-[72px]  top-[-7rem] bg-[url('/public/logo.png')] bg-cover" />
+            <div className="absolute right-[3.5rem] xl:right-[11rem] w-[317px] h-[72px]  top-[-7rem] bg-[url('/public/logo.png')] bg-cover" />
               <BenefitsCard
                 icon="bg-[url('/public/secureicon.svg')] w-[43px] xl:w-[82.81px] bg-cover"
                 title="Floor Price Secured"

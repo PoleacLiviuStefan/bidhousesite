@@ -8,7 +8,7 @@ const CardBenefit = ({ title, keyimg, description }) => {
         {keyimg}
       </div>
       {description}
-      <div className="absolute top-0 left-0 backdrop-blur-[8px] z-[-1] w-full h-full"/>
+      <div className="absolute top-0 left-0  z-[-1] w-full h-full"/>
     </div>
   );
 };

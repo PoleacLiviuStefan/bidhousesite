@@ -160,6 +160,14 @@ module.exports = {
             top:'1rem'
           },
         },
+        errornotificationappearcontact: {
+          '0%': {
+            top:'-10rem'
+          },
+          '100%': {
+            top:'5rem'
+          },
+        },
         errornotificationappearmobile: {
           '0%': {
             bottom:'-100rem'
@@ -176,6 +184,14 @@ module.exports = {
             bottom:'-28rem'
           },
         },
+        errornotificationresetappearmobilecontact: {
+          '0%': {
+            bottom:'-100rem'
+          },
+          '100%': {
+            bottom:'-2rem'
+          },
+        },
         errornotificationdisappear: {
           '0%': {
            top:'1rem'
@@ -188,5 +204,6 @@ module.exports = {
       }
     },
   },
-  plugins: [require('@tailwindcss/forms'),],
+  plugins: [require('@tailwindcss/forms'), require('tailwind-scrollbar'),]
+  ,
 }

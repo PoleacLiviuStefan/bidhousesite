@@ -7,8 +7,12 @@ const BenefitsForHolders = () => {
     <div name="Benefits" className="relative xl:left-5 2xl:left-0  flex flex-col items-center w-full h-[70rem] bg-black">
   <div className="absolute top-[-22rem] xl:top-[-32rem] left-0 bg-[url('/public/glowleftbenefit.png')] w-[896px] h-[1101px]"/>
   <div className="absolute top-[50rem] xl:top-[-52rem] right-0 bg-[url('/public/glowbenefitright.png')] w-[1176px] h-[1385px]"/>
+  <div className="absolute hidden xl:block top-[50rem] xl:top-[42rem] left-[-60rem]  bg-[url('/public/apartmentsglow.png')] w-[1920px] h-[1650px]"/>
   <div className="absolute top-[365rem] xl:top-[110rem] right-[-17rem] bg-[url('/public/glowbottomrbenefits.png')] w-[1023px] h-[1003px]"/>
   <div className="absolute top-[420rem] xl:top-[125rem] left-[-15rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
+  <div className="absolute top-[470rem] xl:top-[185rem] right-[-27rem] bg-[url('/public/glowbottomlbenefits.png')] w-[1222px] h-[1003px]"/>
+  <div className="absolute top-[530rem] xl:top-[255rem] left-0 bg-[url('/public/glowleftbenefit.png')] w-[896px] h-[1101px]"/>
+ 
       <div className="flex flex-col items-start w-[23rem] xl:w-[78rem]">
       
         <Fade top>
@@ -17,7 +21,38 @@ const BenefitsForHolders = () => {
           BENEFITS FOR<span className="text-transparent"> HOLDERS</span>
         </h1>
         </Fade>
+            <div className="flex w-full items-center flex-col text-white z-20 2xl:text-[64px] bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#9e4fff] xl:text-[40px] text-[28px] font-[500]">
+              <h1 className="text-white   ">4 LIFE BENEFITS </h1>
+              <div className=" h-[.3rem] w-[12.5rem]  xl:w-[18.3rem] 2xl:w-[29rem] bg-gradient-to-r rounded-xl from-[#c595ff] to-[#9e4fff]   xl:top-[-.7rem] 2xl:top-[-1rem] relative" />
+              <h2>Exclusive <span className="text-transparent"> 1 collection </span></h2>
 
+              <div className="flex flex-col items-center mt-[5rem] ">
+                <div className="flex flex-col">
+                <div className="relative left-[4rem] xl:left-[6rem] bg-cover w-[184px] h-[170px] xl:w-[215px] xl:h-[200px] bg-[url('/public/coinstack.png')] " />
+                <h2 className="xl:text-[36px] text-[28px] text-center"> 100% Cashback In #BHC</h2>
+                </div>
+                <div className="flex flex-col items-center mt-[5rem]">
+                <div className="relative bg-cover w-[190px] h-[190px] xl:w-[220px] xl:h-[220px] bg-[url('/public/discounticon.png')] " />
+                <h2 className="xl:text-[36px] text-[28px] text-center"> Exclusive Renting Discounts</h2>
+                
+                </div>
+                <div className="flex flex-col items-center mt-[5rem]">
+                <div className="relative bg-cover w-[240px] h-[170px] xl:w-[270px] xl:h-[200px] bg-[url('/public/bookicon.png')] " />
+                <h2 className="xl:text-[36px] text-[28px] ml-4 text-center"> Guarantee Whitelist For Future Collection</h2>
+                </div>
+              
+                <div className="flex flex-col items-center mt-[5rem]">
+                <div className="relative bg-cover w-[240px] h-[220px] xl:w-[270px] xl:h-[250px] bg-[url('/public/parkicon.png')] " />
+                <h2 className="xl:text-[36px] text-[28px] ml-4 text-center"> Free Access In Aventura Park &
+Cryptoforest
+</h2>
+                </div>
+                <div className="flex flex-col items-center mt-[5rem]">
+                <div className="relative bg-cover w-[220px] h-[220px] xl:w-[250px] xl:h-[250px] bg-[url('/public/foresticon.png')] " />
+                <h2 className="xl:text-[36px] text-[28px] ml-4 text-center"> 50% Discount Renting Cabin In Cryptoforest</h2>
+                </div>
+              </div>
+            </div>
         <div className="relative top-[4.5rem] flex flex-col xl:grid xl:grid-cols-3 w-full">
           <Fade bottom >
           <CardBenefit
@@ -31,11 +66,10 @@ const BenefitsForHolders = () => {
             }
             description={
               <p className="relative left-3 top-2 font-[400] text-white text-[14px] leading-[17px]">
-                If paperhands list on marketplaces our NFTs
-                <br /> below the mint price we will buy it in 48h with
-                <br /> the Hot wallet and list it with a fixed price. Hold{" "}
-                <br />
-                to see the real power of the community !
+             If our NFT is listed on one of the official Solana
+marketplaces with a lower value than the mint<br/>value,
+within 72 hours one of our strategic<br/> investor will buy it in
+order to secure <br/> the floor price.
               </p>
             }
           />
@@ -381,7 +415,7 @@ channel on Discord and in Version 2.0<br/> of the Whitepaper.
               </p>
             }
           />
-           <div className="relative mt-9 flex justify-center items-center px-4 py-7  bg-white bg-opacity-10 backdrop-blur-[8px] w-[372px] h-[354px] rounded-[20px]">
+           <div className="relative mt-9 flex justify-center items-center px-4 py-7  bg-white bg-opacity-10  w-[372px] h-[354px] rounded-[20px]">
       <div className="relative  bg-[url('/public/logotxt.png')] bg-cover w-[300px] h-[124px]" />
        
       
